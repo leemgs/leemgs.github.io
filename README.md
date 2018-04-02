@@ -1,6 +1,7 @@
 # leemgs.github.com
-http://leemgs.github.io
-http://leemgs.fedorapeople.org
+
+* http://leemgs.github.io
+* http://leemgs.fedorapeople.org
 
 
 <b>Geunsik Lim, Principle Software Engineer</b>
