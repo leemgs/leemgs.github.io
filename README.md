@@ -1,2 +1,4 @@
 # leemgs.github.com
-* https://leemgs.github.io/
+Press https://leemgs.github.io/ to visit my personal homepage.
+
+ ![GitHub Logo](/images/homepage.png)
