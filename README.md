@@ -1,6 +1,7 @@
 # Homepage
-Press https://leemgs.github.io/ to visit my personal homepage.
+Press the below webpage to visit my personal homepage.
 <br><br>
+* Homepage: https://leemgs.github.io/index.html
 * Plan: https://leemgs.github.io/plan.html
 
 
