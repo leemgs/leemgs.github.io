@@ -1,89 +1,559 @@
-<style type='text/css'>
-ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
-code.escaped { white-space: nowrap; }
-.vspace { margin-top:1.33em; }
-.indent { margin-left:40px; }
-.outdent { margin-left:40px; text-indent:-40px; }
+/*
+ * Vanilla5 
+ * A skin for PmWiki 2  (http://pmwiki.org)
+ * Version 1.0.0  (10-08-2012)
+ * Copyright (c) 2012 Paul Wiegmans(p.wiegmans@inter.nl.net)
+ * you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published
+ * by the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ */
+/* 20140625 google fonts downloaded, stored local and used from there
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
+@import url(//fonts.googleapis.com/css?family=Lobster); */
 
-a.createlinktext { 
-	text-decoration:none; 
-	border-bottom:1px dotted gray; 
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), url(../fonts/Lobster.woff) format('woff');
 }
-a.createlink { 
-	text-decoration:none; 
-	position:relative; 
-	top:-0.5em; 
-	font-weight:bold; 
-	font-size:smaller; 
-	border-bottom:none; 
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu'), url(../fonts/Ubuntu.woff) format('woff');
 }
-
-img { border:0px; }
-  
-.rtl, .rtl * {direction:rtl; unicode-bidi:bidi-override;}
-.ltr, .ltr * {direction:ltr; unicode-bidi:bidi-override;}
-.rtl .indent, .rtl.indent, .rtl .outdent, .rtl.outdent { margin-left:0; margin-right: 40px; }
-  
-span.anchor {
-	float: left;
-	font-size: 10px;
-	margin-left: -10px;
-	width: 10px;
-        position:relative; top:-0.1em;
-        text-align: center;
-}
-span.anchor a { text-decoration: none; }
-span.anchor a:hover { text-decoration: underline; }
-
-ol.toc { text-indent:-25px; list-style: none; margin-bottom:5px; }
-ol ol.toc { margin-left:-24px; text-indent:-24px; }
-div.tocfloat { 
-    font-size: smaller; margin-bottom: 10px;
-    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
-    padding-top: 5px; 
-    width: 38%; float: right; margin-left: 10px; clear: right;
-    margin-right:-21px; padding-right: 13px; padding-left: 13px;
-    background-color: #eeeeee; 
-}
-div.toc { 
-    font-size: smaller; 
-    border: 1px dotted #cccccc;
-    background: #f7f7f7;
-    margin-bottom: 10px; }
-
-div.toc p { 
-    background-color: #f9f6d6;
-    padding: 5px;
-    border-bottom:  1px dotted #cccccc;
+@font-face {
+  font-family: 'Iceland';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Iceland'), local('Iceland-Regular'), url(../fonts/Iceland.woff) format('woff');
 }
 
-.editconflict { 
-	color:green; 
-        font-style:italic; 
-	margin-top:1.33em; 
-	margin-bottom:1.33em; 
+/* reset.css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{border: 0;font: inherit;font-size: 100%;margin: 0;padding: 0;vertical-align: baseline;}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, article{display: block;}
+body{line-height: 1;}
+ol, ul{list-style: none;}
+blockquote, q{quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after{content: '';content: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+
+/* sensibledefaults.css */
+body{
+    line-height: 1.5em;
+    width: 880px;
+    margin: 0 auto;
+}
+body, select, input, textarea,button {
+    color: #444;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+h1{ font-weight: bold; font-size: 2em; }
+h3{ font-weight: bold; font-size: 1.4em; }
+h2{ font-size: 1.5em; }
+h4{ font-size: 1.2em; }
+h5{ font-weight: normal; font-size: 1.1em;}
+h6{ font-weight: normal;font-size: 1em;}
+p{  padding: 0 0 1em 0; }
+a{ text-decoration: none; }
+ul, ol, dl{ margin: 0 0  1em; }
+ul li{ list-style: disc; margin-left: 24px;}
+ul li li{ list-style: circle; margin-left: 24px;}
+ol li{ list-style: decimal; margin-left: 24px;}
+ol li li{ list-style: lower-roman; }
+blockquote{ text-align: left; padding: 0 20px; margin: 20px}
+table{ margin: 0 0 10px 0; }
+td, th{ border-collapse: collapse; padding: 3px 3px;}
+header{ margin: 30px 0 20px 0; }
+hr{
+    border-radius: 3px;
+    height: 6px;
+    margin: 0px 5px 20px;
+    border: 0;
+    clear: both;
+}
+q:before{ content: "\201C ";}
+q:after{ content: " \201D";}
+sub,sup{ font-size: 0.8em; }
+sup{ padding-top: 0em;}
+sub{ padding-top: 1.5em;}
+dl dt{ font-style: italic; }
+dl dd{ padding-left: 10px; }
+dl dd:before{ content: "- "; }
+cite{ font-style: italic; }
+input, input[type=text],input[type=password],input[type=submit],input[type=button], textarea, button{
+    overflow: hidden;
+    padding: 7px 10px;
+    margin: 0 5px 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px; 
+    font-size: 16px; 
+    line-height: 1em;
 }
 
-table.markup { border:2px dotted #ccf; width:90%; }
-td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
-table.vert td.markup1 { border-bottom:1px solid #ccf; }
-table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
-table.markup caption { text-align:left; }
-div.faq p, div.faq pre { margin-left:2em; }
-div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
-div.faqtoc div.faq * { display:none; }
-div.faqtoc div.faq p.question { display:block; font-weight:normal; margin:0.5em 0 0.5em 20px; line-height:normal; }
-div.faqtoc div.faq p.question * { display:inline; }
-td.markup1 pre { white-space: pre-wrap; }
-   
-.frame { 
-	border:1px solid #cccccc; 
-	padding:4px; 
-	background-color:#f9f9f9; 
+/* core.css */
+
+
+/* basic style */
+body {
+    font-size: 16px;
+}
+body, select, input, textarea,button {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}header h1 {
+    font-size:3em;
+    line-height:2em;
 }
 
-.lfloat { float:left; margin-right:0.5em; }
-.rfloat { float:right; margin-left:0.5em; }
-a.varlink { text-decoration:none;}
 
-</style>
+/* more fun colors: chartreuse hotpink firebrick lightsteelblue forestgreen goldenrod */
+/********* CUSTOMIZATIONS **********/
+
+/********* SKIP NAVIGATION **********/
+#skiplinks{ 
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+} 
+#skiplinks:focus{ 
+    left: 0;
+    position:static;
+    width:auto;
+    height:auto;
+} 
+
+/********* PAGE ACTION MENU **********/
+.wikicmds {
+    float: right;
+    font-size:0.8em;
+    color:rgba(0,0,0,0.2);
+	border-radius:2px;
+}
+.wikicmds ul {
+    margin:0px;
+}
+.wikicmds ul li {
+    display: inline;
+	margin: 0;
+}
+.wikicmds a{ 
+    text-decoration: none; 
+    color:#999;
+    padding: 2px 6px;
+	border-radius:2px;
+}
+header #topnav a:hover {
+	color: black;
+}
+
+/********* HORIZONTAL MENU **********/
+nav .yhlist ul {
+    margin: 0;
+    padding: 0.5em 0;
+    line-height: 1.5;
+    display: inline;
+}
+nav .yhlist ul li {
+    float: left;
+    margin: 0 0.25em 0.5em 0;
+    padding: 0;
+    line-height: 1;
+    list-style-type: none;
+}
+
+nav .yhlist li a { 
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    display: block;
+    padding: 0 0.5em;
+    font-size: 1.04em;
+    line-height: 2.2em;
+    color: rgb(87,87,87);
+    background-color: rgb(227,227,227);
+}
+nav .yhlist li a:hover {
+    color: white;
+    background-color: rgb(0, 84, 148);
+    border: 1px solid rgb(0, 84, 148);
+}
+
+/* positionering van zoekveld in navigatiemenu */
+
+/********* VERTICAL MENU **********/
+
+/* Stijl */
+#sidebar, #sidebar ul , #side li{
+    padding: 0;
+    margin: 0;
+    line-height: 1.5em;
+}
+#sidebar h6{
+    border: 0px solid lightgray;
+    border-radius: 3px;
+    margin: 0 0.5em 1em 0;
+    outline: medium none;
+    padding: 7px 10px 7px 0;
+}
+
+#sidebar li {
+    list-style: none;
+    display: block;
+    margin-left: 0;
+    width: 100%;
+}
+#sidebar li  li{
+    margin-left: 0;
+}
+#sidebar li a { 
+    display: block;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin: 0 0.5em 0.3em 0;
+    outline: medium none;
+    padding: 0 0.5em; /*7px 10px;*/
+    line-height: 2.2em;
+    color: rgb(87,87,87);
+    background-color: rgb(227,227,227);
+}
+#sidebar li a:hover {	
+    color: white;
+    background-color: rgb(0, 84, 148);
+}
+
+/* Primaire kleuren */
+
+a {
+color: rgb(25, 135, 221);
+}
+
+/* Accenten */
+
+/* lichte verfraaiing */
+
+
+/******** BASE LAYOUT *********/
+
+ /* basis layout */
+ body {
+    width: 870px;
+    margin: 0 auto;
+}
+ .page {
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    margin: 0px 0 0 0;
+}
+
+section {
+    padding: 4px 4px;
+}
+
+/* twee-koloms layout */
+#main {
+    overflow:hidden;
+}
+#content {
+    float:right; 
+    width: 640px; 
+}
+aside {
+    width: auto;
+    margin: 0 660px 0 0;    
+}
+
+h2.wikiaction {
+    margin-bottom: 12px;
+}
+
+/* textarea  wiki-editor */
+
+textarea, input, input[type="text"], input[type="password"]  {
+    font-size: 16px;
+    border: medium none;
+    border: 1px solid lightgray;
+    border-radius: 3px 3px 3px 3px;
+    margin: 5px 5px 15px 0 ;
+    outline: medium none;
+    padding: 7px 10px;
+}
+textarea {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, Monospace;
+}
+textarea {
+    overflow: visible;
+}
+
+form {
+    padding: 0 0.5em 0.5em 0;
+}
+
+input[type="submit"], input[type="button"], button {
+    color: rgb(87,87,87);
+    background-color: rgb(227,227,227);
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, button:hover {
+    color: white;
+    background-color: rgb(0, 84, 148);
+}
+
+input, input[type=text], input[type=password], input[type=submit], input[type=button], textarea, button {
+    border: 1px solid lightgray;
+    margin: 0 0.25em 0.5em 0;
+    padding: 0 0.5em;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+textarea {
+    line-height: 1.1em;
+} 
+nav .yhlist input, nav .yhlist input[type=text], nav .yhlist input[type=password], nav .yhlist input[type=submit], nav .yhlist input[type=button], nav .yhlist textarea, nav .yhlist button {
+    line-height: 2.2em;
+}
+
+    
+/* button en input kleuren */
+div#wikiedit textarea:hover, div#wikiedit input[type=text]:hover {
+    color: black;
+    border: 1px solid red;
+    background-color: white;
+}
+div#wikiedit input[type=submit]:hover, div#wikiedit input[type=button]:hover {
+    color: white;
+    border: 1px solid lightcoral;
+    background-color: lightcoral;
+}
+div#wikiedit input[name=post]:hover, div#wikiedit input[name=postedit]:hover {
+    color: white;
+    border: 1px solid lightgreen;
+    background-color: lightgreen;
+}
+div#wikiedit input[name=preview]:hover {
+    color: white;
+    border: 1px solid lightblue;
+    background-color: lightblue;
+}
+
+
+/* ======= FIXED POSITION PAGE ACTION MENU =======  */
+/* 
+ *  To enable fixed position page action menu , uncomment the following block.
+ */
+
+ 
+/*
+header {
+	padding-top: 24px;
+}
+header #topnav {
+	
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	width: 970px;
+	margin: 0 auto;
+}
+.wikicmds {
+	background-color: white;
+	box-shadow: 0 2px 5px #666;
+}
+.wikicmds a {
+	line-height:1.2em;
+}
+*/
+
+
+/* mobile.css */
+
+/* Layout for desktops (width > 970px) */ 
+@media only screen and (min-width: 971px) {
+    body {
+        width: 969px;
+    }
+    aside {
+        margin: 0 760px 0 0;
+    }
+    #content {
+        width: 969px;
+    }
+	
+	#mydiv {
+    background-image: url('http://camelab.org/camel.gif');
+    background-repeat:no-repeat;
+    background-position:right;
+	}	
+}
+
+/* Layout for small devices */ 
+/*  for testing purpose, use mediaquery max-width. 
+    Replace with max-device-width in final version.
+	Match max-width with body width in file customize.css ! */
+@media only screen and (max-width: 970px) {
+    body {
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .page {
+        width:auto;
+        margin: 0;
+        padding: 0px;
+    }
+    header {
+        margin: 0;
+    }
+    header h1 {
+        font-size:2em;
+        line-height:1em;
+        padding-bottom:20px;
+    }
+    #content, aside {
+        float: none;
+        width: inherit;
+        margin: 0;
+    } 
+	header #topnav {
+		width: 100%;
+	}
+	
+
+}
+
+/* print.css */
+
+@media print {
+    body, page { 
+        width:auto; 
+        margin:0; 
+        padding:0; 
+    }
+    header, footer, #nav, .noprint {
+        display: none;
+    }
+    #content {
+        width: 100%; 
+        margin: 0; 
+        float: none;
+    }
+    a:link, a:visited {
+        color: #781351
+    }
+    /* Links worden uitgeschreven. Achter de link komt de URL tussen haakjes. */
+    a:after {
+        content: " (" attr(href) ") ";
+    }
+}
+
+/* customize.css */
+ 
+ /********* colors for debugging *********/ 
+/*
+body {		background:gainsboro;}
+.page {		background:antiquewhite;}
+header {	background: yellow;}
+nav .yhlist {		background: thistle;}
+#main {		background: lavender;}
+#content {	background: papayawhip;}
+aside {	background: wheat;}
+footer {	background: hotpink;}
+
+#sidebar ul{	background-color: lightgreen;}
+#sidebar li {	background-color: dodgerblue;}
+#sidebar li  ul{	background-color: lightyellow;}
+#sidebar li  li{	background-color: paleturquoise;}
+#sidebar li a { 	background-color: coral;}
+#sidebar li a:hover {	background-color: crimson;}
+*/
+
+/* PMwiki selflink styles */
+/*
+nav .yhlist a.selflink {
+    color: white;
+    background-color: darkgray;
+}*/
+#sidebar a.selflink {
+    color: white;
+    background-color: darkgray;
+}
+/* Stilering van selflink gebeurt nu via 
+  (:if group Main:) %item class=grouplink% (:ifend:)[[Recepten/]]
+  Element li krijgt class grouplink
+*/
+.grouplink {
+    color: white;
+    background-color: chartreuse;
+}
+.warn {
+    color: white;
+    background-color: red;
+}
+/* word wrap in codeblock */
+pre.escaped {
+    word-wrap: normal;   /* normal, break-word, initial, inherit */
+}
+
+#main {
+    overflow:visible;   /* inhibits word wrap in [@..@] blok */
+}
+
+/* style for code */
+code, pre {
+    background-color: white;
+    border: 1px solid #999;
+    padding: 2px;
+    font-family:'Lucida Console','Andale Mono','Courier New',Courier,monospace;
+    font-size: 95%;
+    color: #549400;
+}   
+
+h1,h2,h3 { font-family: Lobster, sans-serif;}
+
+/* cursief */
+em {
+    font-style: italic;
+}
+strong {
+    font-weight:bold;
+}
+
+/* tables */
+table{ margin: 0 0 10px 0; }
+th { font-weight: bolder; }
+
+/* class for tables with visible borders */
+table.border1 td , table.border1 th{ border: 1px solid lightgrey; }
+table.border2 td , table.border2 th{ border: 2px solid lightgrey; }
+
+/* underline hover links , but only content  */
+div#content a:hover, footer a:hover {
+    text-decoration: underline; 
+}
+
