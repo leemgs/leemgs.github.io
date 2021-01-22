@@ -544,6 +544,11 @@ strong {
     font-weight:bold;
 }
 
+
+b {
+    font-weight:bold;
+}
+
 /* tables */
 table{ margin: 0 0 10px 0; }
 th { font-weight: bolder; }
