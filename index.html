@@ -6,6 +6,21 @@
 </head>
 
 <body>
+<script type="text/javascript">
+function toggle(obj, hide, show) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if(!hide) { var hide = "hide"; }
+    if(!show) { var show = "show"; }
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML  = hide;
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML  = show;
+    }
+}
+</script>
 <br>
 <br>
 <div style="width: 100%; font-size: 40px; font-weight: bold; text-align: left;">
