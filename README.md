@@ -8,3 +8,5 @@ Press one between two links.
 
 [![Photo music]](./audio/my_photo01.wav)
 
+
+<video src='./audio/my_photo01.wav' width=180/>
