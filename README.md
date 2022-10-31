@@ -6,5 +6,5 @@ Press one between two links.
 * Plan: https://leemgs.github.io/plan.html
 <br><br>
 
-[![Photo music]](./music/my_photo01.wav)
+[![Photo music]](./audio/my_photo01.wav)
 
