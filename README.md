@@ -5,8 +5,3 @@ Press one between two links.
 * Homepage: https://leemgs.github.io
 * Plan: https://leemgs.github.io/plan.html
 <br><br>
-
-[![Photo music]](./audio/my_photo01.wav)
-
-
-<video src='./audio/my_photo01.wav' width=180/>
