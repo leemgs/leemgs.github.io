@@ -20,6 +20,7 @@ In particular, you can make a homepage more easily by using the template provide
 * https://cgrhyu.github.io/
 * https://akariasai.github.io/
 * https://yuresearch.github.io/
+* https://multics69.github.io/
 
 
 ## How to create a website with templates
