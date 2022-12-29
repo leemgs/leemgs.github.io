@@ -14,7 +14,7 @@ In particular, you can make a homepage more easily by using the template provide
 * https://uw-cryo.github.io/
 * https://github.com/getzlab/getzlab.github.io
 
-## Personalwebsites using github.io service
+## Personal websites using github.io service
 * https://shmsw25.github.io/
 * https://reina-kawai.github.io/
 * https://cgrhyu.github.io/
