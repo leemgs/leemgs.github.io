@@ -2,11 +2,11 @@ Recently, the number of graduate schools and personal websites using github.io t
 In particular, you can make a homepage more easily by using the template provided by github.io.
 
 ## Graduate school websites using github.io service
+* http://pyanglab.github.io/
 * https://dash-lab.github.io/
 * https://ipl-uw.github.io/
 * https://gts3.org/
 * https://mindlab-snu.github.io/
-* http://pyanglab.github.io/
 * https://joonanlab.github.io/
 * https://sampl.cs.washington.edu/
 * https://uwdirect.github.io/
