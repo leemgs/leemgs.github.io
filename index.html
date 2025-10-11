@@ -1,529 +1,443 @@
-<html>
-<title>Geunsik Lim's Homepage</title>
+<!doctype html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="style-extension.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-</head>
-
-<body>
-<script type="text/javascript">
-function toggle(obj, hide, show) {
-    var elstyle = document.getElementById(obj).style;
-    var text    = document.getElementById(obj + "tog");
-    if(!hide) { var hide = "hide"; }
-    if(!show) { var show = "show"; }
-    if (elstyle.display == 'none') {
-        elstyle.display = 'block';
-        text.innerHTML  = hide;
-    } else {
-        elstyle.display = 'none';
-        text.innerHTML  = show;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Geunsik Lim — Profile & Resume</title>
+  <meta name="description" content="Homepage of Geunsik Lim (임근식), software engineer & researcher focusing on embedded systems, OS, and on-device AI." />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style>
+    :root{
+      --bg:#0b0c10; --bg-soft:#11131a; --card:#151824;
+      --text:#e6e8ef; --muted:#99a1b3; --brand:#ff8a00; --link:#5ab1ff;
+      --shadow:0 10px 30px rgba(0,0,0,.35); --radius:16px; --maxw:1100px;
     }
-}
+    @media (prefers-color-scheme: light){
+      :root{--bg:#f6f7fb; --bg-soft:#fff; --card:#fff; --text:#1c2230; --muted:#5d6a85; --shadow:0 10px 30px rgba(21,34,66,.08)}
+    }
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic","Nanum Gothic",Arial,sans-serif}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:24px}
+    .hero{
+      background:
+        radial-gradient(1200px 600px at 10% -20%, rgba(255,138,0,.2), transparent 60%),
+        radial-gradient(900px 500px at 100% -10%, rgba(90,177,255,.2), transparent 60%);
+      padding:56px 24px 24px; border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .hero-inner{max-width:var(--maxw); margin:0 auto; display:grid; grid-template-columns:120px 1fr; gap:24px; align-items:center}
+    .avatar{width:120px; height:120px; border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,.12); box-shadow:var(--shadow)}
+    .title{font-size:28px; font-weight:800; letter-spacing:.2px}
+    .subtitle{color:var(--muted); margin-top:6px; line-height:1.5}
+    .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+    .badge{background:linear-gradient(135deg, rgba(255,138,0,.14), rgba(255,138,0,.06)); color:#ffd9b0; border:1px solid rgba(255,138,0,.35); padding:6px 10px; border-radius:999px; font-size:12px}
+    @media (prefers-color-scheme: light){ .badge{color:#5a3200; border-color:#ffcf8d} }
+    .grid{display:grid; grid-template-columns:270px 1fr; gap:24px}
+    @media (max-width:1000px){ .grid{grid-template-columns:1fr} }
+    .tocbar{position:sticky; top:12px; align-self:start; background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+    .tocbar h3{margin:0 0 8px; font-size:14px; letter-spacing:.6px; color:var(--muted); text-transform:uppercase}
+    .tocbar a{display:block; padding:8px 10px; border-radius:10px; color:var(--text)}
+    .tocbar a:hover{background:rgba(255,255,255,.06)}
+    section{scroll-margin-top:90px}
+    .section-card{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:20px; box-shadow:var(--shadow)}
+    .section-header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:10px}
+    .section-title{font-size:20px; font-weight:800}
+    .pill{font-size:12px; color:var(--muted); border:1px solid rgba(255,255,255,.12); border-radius:999px; padding:5px 10px}
+    ol,ul{margin:10px 0 0 20px}
+    li{margin:8px 0}
+    .kv{display:grid; grid-template-columns:180px 1fr; gap:8px 18px; margin-top:8px}
+    @media (max-width:700px){ .kv{grid-template-columns:1fr} }
+    .btns{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg, rgba(90,177,255,.14), rgba(90,177,255,.06)); color:#d8ecff; border:1px solid rgba(90,177,255,.35); padding:8px 12px; border-radius:12px}
+    @media (prefers-color-scheme: light){ .btn{color:#123a5a; border-color:#aaddff} }
+    .btn:hover{filter:brightness(1.08); text-decoration:none}
+    footer{color:var(--muted); text-align:center; padding:40px 10px}
+    .hr{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent); margin:26px 0}
+    .chip{display:inline-block; padding:2px 8px; border:1px solid rgba(255,255,255,.14); border-radius:999px; font-size:11px; color:#b6bed1}
+    .link-row{display:flex; gap:10px; flex-wrap:wrap}
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <img class="avatar" src="./images/1758065931669.jpg" alt="Geunsik Lim photo" />
+    <div>
+      <div class="title">Geunsik Lim (임근식, 林根植)</div>
+      <div class="subtitle">Software Engineer & Researcher @ Samsung Electronics — Embedded Platforms · OS · On-Device AI</div>
+      <div class="badges">
+        <span class="badge">Linux kernel · GCC · Glibc · Android · Tizen</span>
+        <span class="badge">Memory management · Scheduling · Edge AI</span>
+        <span class="badge">IEEE T-CE · EuroSys · ICSE</span>
+      </div>
+      <div style="margin-top:10px">
+        <audio controls>
+          <source src="./audio/my_photo01.wav" type="audio/wav" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="btns" style="margin-top:12px">
+        <a class="btn" href="https://github.com/leemgs/leemgs.github.io/blob/master/index.html" target="_blank" rel="noopener">Edit on GitHub</a>
+        <a class="btn" href="#toc">Jump to TOC</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap grid">
+  <aside class="tocbar" id="toc">
+    <h3>Contents</h3>
+    <a href="#profile">My Profile</a>
+    <a href="#intl-journals">International Journals</a>
+    <a href="#intl-confs-1st">International Conferences (1st/Corresponding)</a>
+    <a href="#intl-confs-co">International Conferences (Co-author)</a>
+    <a href="#dom-journals">Domestic Journals</a>
+    <a href="#dom-confs">Domestic Conferences</a>
+    <a href="#android-cons">Domestic Android Conferences</a>
+    <a href="#patents">Patents</a>
+    <a href="#ack">Acknowledgements</a>
+    <a href="#awards">Awards</a>
+    <a href="#pubs">Publications</a>
+    <a href="#education">Education</a>
+    <a href="#certs">Certifications</a>
+    <a href="#memberships">Membership</a>
+    <a href="#friends">Friends</a>
+    <div class="hr"></div>
+    <div class="chip">Last updated: Oct-11-2025</div>
+  </aside>
+
+  <div class="content">
+
+    <!-- Profile -->
+    <section id="profile" class="section-card">
+      <div class="section-header">
+        <div class="section-title">My Profile</div>
+        <span class="pill">Overview</span>
+      </div>
+      <div class="kv">
+        <div><b>Full name</b></div><div><b>Geunsik Lim</b> (임근식, 林根植)</div>
+        <div><b>Home (road address)</b></div><div>Dongtanwoncheon-ro 915beon-gil, Youngtong-gu, Suwon-si, South Korea</div>
+        <div><b>Nickname</b></div><div>chiphead (like geek), invain (to no purpose, aimlessly)</div>
+        <div><b>Memories</b></div><div><a href="https://leemgs.github.io/with-people/" target="_blank" rel="noopener">A picture of memories</a> with friends and companions</div>
+        <div><b>E-mail</b></div><div><b>leemgs.at.gmail.com</b></div>
+        <div><b>Gtalker (Hangout)</b></div><div>leemgs.agmail.com</div>
+        <div><b>ICQ</b></div><div>46455794</div>
+        <div><b>EDAS identifier</b></div><div>743415</div>
+        <div><b>IEEE identifier</b></div><div>92541846</div>
+        <div><b>EasyChair identifier</b></div><div>leemgs</div>
+        <div><b>Skype</b></div><div>geunsik.lim</div>
+        <div><b>Blog</b></div><div><a href="http://blog.naver.com/invain" target="_blank" rel="noopener">http://blog.naver.com/invain</a></div>
+        <div><b>Jumpit</b></div><div><a href="https://www.jumpit.co.kr/myjumpit" target="_blank" rel="noopener">https://www.jumpit.co.kr/myjumpit</a></div>
+        <div><b>Twitter</b></div><div><a href="http://www.twitter.com/leemgs" target="_blank" rel="noopener">http://www.twitter.com/leemgs</a></div>
+        <div><b>Facebook</b></div><div><a href="http://www.facebook.com/leemgs" target="_blank" rel="noopener">http://www.facebook.com/leemgs</a></div>
+        <div><b>GitHub Account</b></div><div><a href="https://www.github.com/leemgs/" target="_blank" rel="noopener">https://www.github.com/leemgs/</a></div>
+        <div><b>MBTI Test</b></div>
+        <div>
+          <a href="https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-enfj?utm_source=results-assertive-protagonist&utm_medium=email&utm_campaign=ko&utm_content=type-personality-0" target="_blank" rel="noopener">ENFJ</a>
+          <a href="enfj-geunsiklim.pdf" target="_blank" rel="noopener">(Download the MBTI file)</a>
+        </div>
+        <div><b>Tanagement Test</b></div><div><a href="https://tanagement.co.kr/evwfvumuea" title="당신은 다양한 시나리오를 그리며 본질적인 대안을 탐구하는 사람입니다." target="_blank" rel="noopener">탐구(Explore)</a></div>
+        <div><b>Atlassian Account</b></div><div><a href="https://leemgs.atlassian.net" target="_blank" rel="noopener">https://leemgs.atlassian.net</a></div>
+        <div><b>GitHub Memory</b></div><div><a href="https://www.gitmemory.com/leemgs/" target="_blank" rel="noopener">https://www.gitmemory.com/leemgs/</a></div>
+        <div><b>Google Scholar Citations</b></div><div><a href="http://scholar.google.com/citations?hl=en&user=Oy8m5Z8AAAAJ" target="_blank" rel="noopener">http://scholar.google.com/citations?hl=en&user=Oy8m5Z8AAAAJ</a></div>
+        <div><b>ORCID</b></div><div><a href="https://orcid.org/0000-0003-1845-7132" target="_blank" rel="noopener">https://orcid.org/0000-0003-1845-7132</a></div>
+        <div><b>My articles on arXiv</b></div><div><a href="http://arxiv.org/a/lim_g_1" target="_blank" rel="noopener">http://arxiv.org/a/lim_g_1</a></div>
+        <div><b>Communications ACM account</b></div><div><a href="https://cacm.acm.org/" target="_blank" rel="noopener">https://cacm.acm.org/</a> (id: geunsikl)</div>
+        <div><b>IEEE account</b></div><div><a href="https://www.ieee.org/" target="_blank" rel="noopener">https://www.ieee.org/</a> (id: leemgs@gmail.com)</div>
+        <div><b>ScienseWISE</b></div><div><a href="http://sciencewise.info/users/Geunsik_Lim" target="_blank" rel="noopener">http://sciencewise.info/users/Geunsik_Lim</a></div>
+        <div><b>OpenReview Account</b></div><div><a href="https://openreview.net/profile?id=~Geunsik_Lim1" target="_blank" rel="noopener">https://openreview.net/profile?id=~Geunsik_Lim1</a></div>
+        <div><b>Researcher ID</b></div><div><a href="https://publons.com/researcher/AAJ-5623-2020" target="_blank" rel="noopener">https://publons.com/researcher/AAJ-5623-2020</a></div>
+        <div><b>Publons ID</b></div><div><a href="https://publons.com/researcher/1390521/geunsik-lim/" target="_blank" rel="noopener">https://publons.com/researcher/1390521/geunsik-lim/</a></div>
+        <div><b>DBLP ID</b></div><div><a href="https://dblp.org/pid/20/9588" target="_blank" rel="noopener">https://dblp.org/pid/20/9588</a></div>
+        <div><b>Semantic Scholar</b></div><div><a href="https://www.semanticscholar.org/author/Geunsik-Lim/8537854" target="_blank" rel="noopener">https://www.semanticscholar.org/author/Geunsik-Lim/8537854</a></div>
+        <div><b>Community (Fedora)</b></div><div><a href="http://leemgs.fedorapeople.org/" target="_blank" rel="noopener">http://leemgs.fedorapeople.org/</a></div>
+        <div><b>Community (Kandroid)</b></div><div><a href="http://www.kandroid.org/" target="_blank" rel="noopener">http://www.kandroid.org/</a></div>
+        <div><b>HomePage (restricted area)</b></div><div><b><a href="http://leemgs.mooo.com" target="_blank" rel="noopener">http://leemgs.mooo.com</a></b> &nbsp; <span class="chip">Power outage period: 23:30 ~ 07:30 (KST)</span></div>
+        <div><b>HomePage (open area)</b></div><div><b><a href="https://leemgs.github.io" target="_blank" rel="noopener">https://leemgs.github.io</a></b></div>
+        <div><b>Affiliation</b></div><div>Samsung Electronics (Suwon city, South Korea)</div>
+        <div><b>Work Experience</b></div><div>Refer to <a href="http://kr.linkedin.com/in/leemgs" target="_blank" rel="noopener">Linkedin</a></div>
+        <div><b>Military Service</b></div><div>Army 7273 Troop Infantry Branch (26 months)</div>
+        <div><b>Bio</b></div>
+        <div>I am a software engineer and researcher specializing in embedded platforms, operating systems, and AI-driven system software at Samsung Electronics. My work focuses on optimizing low-level system components for consumer electronics and IoT devices, including smartphones, TVs, and edge systems. I have strong expertise in Linux kernel internals, memory management, runtime scheduling, and on-device AI. I have contributed to major open-source projects such as Linux, GCC, Glibc, Android, and Tizen, and have shared my work as a speaker and reviewer at conferences like OLS, LCA, ACM/IEEE ICSE, and ACM MobiCom. My research has appeared in top-tier venues such as IEEE T-CE, ACM EuroSys, and ACM/IEEE ICSE, and I have received awards including the IEEE Chester Sall Award and multiple Samsung Best Paper Awards. I also hold several patents related to system optimization and embedded AI deployment. I am passionate about advancing intelligent edge computing and embedded AI, building practical solutions that combine system software and AI to power the next generation of devices</div>
+      </div>
+      <div class="hr"></div>
+      <div class="btns">
+        <a class="btn" href="./images/conf.png" target="_blank" rel="noopener">Conference Shortcut</a>
+        <a class="btn" href="https://leemgs.mooo.com/open/conference/" target="_blank" rel="noopener">Open Conference Page</a>
+      </div>
+    </section>
+
+    <!-- International Journals -->
+    <section id="intl-journals" class="section-card">
+      <div class="section-header">
+        <div class="section-title">International Journals (1st author or corresponding author)</div>
+        <span class="pill">Peer-reviewed</span>
+      </div>
+      <ol>
+        <li><b>Geunsik Lim</b>, Donghyun Kang, and Young Ik Eom, “<a href="https://ieeexplore.ieee.org/document/9237948" target="_blank" rel="noopener">Thread Evolution Kit for Optimizing Thread Operations on CE/IoT Devices</a>,” IEEE Transactions on Consumer Electronics <b><code><span style="color:red;">SCI</span></code></b>, vol. 66, issue 4, pp. 289-298, Nov. 2020.</li>
+        <li><b>Geunsik Lim</b>, Donghwa Lee, and Sang-bum Suh, “<a href="https://ieeexplore.ieee.org/document/7062593/" target="_blank" rel="noopener">Cloud-Based Content Synchronization Method for Collaborative Learning Environment</a>,” International Journal of Advanced Corporate Learning (iJAC), <code>Invited Paper</code>, vol. 8, no. 1, pp. 24-30, Mar. 2015.</li>
+        <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, “<a href="https://ieeexplore.ieee.org/document/6689690" target="_blank" rel="noopener">Virtual memory partitioning for enhancing application performance in mobile devices</a>,” IEEE Transactions on Consumer Electronics <b><code><span style="color:red;">SCI</span></code></b>, vol. 59, issue 4, pp. 786-794, Nov. 2013.</li>
+      </ol>
+    </section>
+
+    <!-- International Conferences (1st/Corresponding) -->
+    <section id="intl-confs-1st" class="section-card">
+      <div class="section-header">
+        <div class="section-title">International Conferences (1st author or corressponding author)</div>
+        <span class="pill">All items visible</span>
+      </div>
+      <ol>
+        <li><b>Geunsik Lim</b>, Donghyun Kang, MyungJoo Ham, and Young Ik Eom, “<a href="https://dl.acm.org/doi/abs/10.1145/3570361.3592518" target="_blank" rel="noopener">SWAM: Revisiting Swap and OOMK for Improving Application Responsiveness on Mobile Devices</a>,” MobiCom 2023 (29th Annual International Conference On Mobile Computing And Networking), Oct-2023. <b><code><span style="color:red;">TOP-TIER</span></code></b></li>
+        <li><b>Geunsik Lim</b>, MyungJoo Ham, Jijoong Moon, and Wook Song, “<a href="https://arxiv.org/abs/2101.07961" target="_blank" rel="noopener">LightSys: Lightweight and Efficient CI System for Improving Integration Speed of Software</a>,” 43rd ACM/IEEE International Conference on Software Engineering (ICSE)-SEIP, Madrid, Spain, May. 2021. <b><code><span style="color:red;">TOP-TIER</span></code></b></li>
+        <li><b>Geunsik Lim</b>, MyungJoo Ham, Jijoong Moon, Wook Song, Sangjung Woo, and Sewon Oh, “<a href="https://ieeexplore.ieee.org/document/8662017" target="_blank" rel="noopener">TAOS-CI: Lightweight & Modular Continuous Integration System for Edge Computing</a>,” 37th IEEE International Conference on Consumer Electronics (ICCE), Las Vegas, USA, Jan. 2019.</li>
+        <li><b>Geunsik Lim</b> and MyungJoo Ham, “<a href="https://dl.acm.org/doi/10.1145/2901318.2901320" target="_blank" rel="noopener">BB: Booting Booster for Consumer Electronics with Modern OS</a>,” The European Conference on Computer Systems (EuroSys), London, UK, Apr. 2016. <b><code><span style="color:red;">TOP-TIER</span></code></b></li>
+        <li><b>Geunsik Lim</b> and  MyungJoo Ham, “<a href="https://www.usenix.org/conference/atc15/call-for-talks" target="_blank" rel="noopener">Faster Booting in Consumer Electronics</a>,” USENIX Annual Technical Conference (ATC), <b>Practitioner Talk</b>, Santa Clara city, CA, USA, Jul. 2015. <b><code><span style="color:red;">TOP-TIER</span></code></b></li>
+        <li><b>Geunsik Lim</b> and  MyungJoo Ham, “<a href="https://www.usenix.org/conference/atc15/technical-session/presentation/lim" target="_blank" rel="noopener">Faster Booting in Consumer Electronics</a>,” USENIX Annual Technical Conference (ATC), <b>Poster</b>, Santa Clara city, CA, USA, Jul. 2015. <b><code><span style="color:red;">TOP-TIER</span></code></b></li>
+        <li><b>Geunsik Lim</b>, Jae-young Hwang, Kyungmin Park, and Sang-Bum Suh, “<a href="https://www.computer.org/csdl/proceedings-article/icmu/2015/07061058/12OmNzEVRWV" target="_blank" rel="noopener">Enhancing Init Scheme for Improving Bootup Time in Mobile Devices</a>,” IEEE International Conference on Mobile Computing and Ubiquitous Networking (ICMU), <b>Invited Session Chair</b>, Hakodate City, Hokkaido, Japan, Jan. 2015. Accepted (Acceptance Rate: 28%).</li>
+        <li><b>Geunsik Lim</b>, Downghwa Lee, and Sang-Bum Suh, “Cloud-Based Content Cooperation System to Assist Collaborative Learning Environment,” IEEE International Conference on Teaching, Assessment, and Learning for Engineering (TALE), <b>Invited Session Chair</b>, Wellington, New Zealand, Dec. 2014. Accepted (Acceptance Rate: 34%).</li>
+        <li><b>Geunsik Lim</b> and Sang-Bum Suh, “<a href="https://arxiv.org/pdf/2101.09284" target="_blank" rel="noopener">User-Level memory scheduler for optimizing application performance in NUMA-based multicore systems</a>,” IEEE International Conference on Software Engineering and Service Science (IEEE ICSESS), Beijing, China, Jun. 2014. (Acceptance Rate: 27%).</li>
+        <li><b>Geunsik Lim</b>, Minho Lee, R.J.W.E. Lahaye, and Young Ik Eom, “<a href="https://arxiv.org/abs/2101.08887" target="_blank" rel="noopener">Distributed compilation system for high-speed software build processes</a>,” IEEE International Conference on Big Data and Smart Computing (BigComp), Bangkok, Thailand, Jan. 2014.</li>
+        <li><b>Geunsik Lim</b>, Young Ik Eom, “Accelerating software compilation using HTCondor and Distcc,” Linux Conference on Australia (LCA), “Developer, Testing, Release and CI Automation” Miniconference, Perth, Australia, Jan. 2014.</li>
+        <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, “<a href="https://arxiv.org/abs/2101.08885" target="_blank" rel="noopener">User-aware power management for mobile devices</a>,” IEEE Global Conference on Consumer Electronics (GCCE), Tokyo, Japan, Oct. 2013.</li>
+        <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, “<a href="https://arxiv.org/abs/2101.10707" target="_blank" rel="noopener">Enhancing application performance by memory partitioning in Android platforms</a>,” 31st IEEE International Conference on Consumer Electronics (ICCE), Las Vegas, USA, Jan. 2013.</li>
+        <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, “Optimized lightweight thread framework for mobile devices,” 3rd International Conference of Institution of Engineering and Technology [IET] Brunei Darussalam, Brunei, Sep. 2012.</li>
+        <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, “<a href="https://arxiv.org/abs/2101.09359" target="_blank" rel="noopener">Load-balancing for improving user responsiveness on multicore-based embedded systems</a>,” 14th Linux Symposium (OLS), Ottawa, Canada, Jul. 2012.</li>
+        <li><b>Geunsik Lim</b>, Hyun-Jin Choi, Sang-Bum Suh, “NPTL Optimization for Lightweight Embedded Devices,” 13th Linux Symposium (OLS), Ottawa, Canada, Jun-13-2011.</li>
+        <li><b>Geunsik Lim</b>, Jupyung Lee, Sangbum Suh, “Deploying Preemptible Linux in the Latest Samsung Camcorder,” 12th Linux Symposium (OLS), Ottawa, Canada, Jul-13-2010.</li>
+        <li><b>Geunsik Lim</b>, “Android Platform on S3C6410 board,” 3G Mobile Phone Design Conference, Simcheon/Hongkong, China, 2009.</li>
+        <li><b>Geunsik Lim</b>, “Android Platform on X86 Netbook,” Beijing Asia Pacific Android Conference (APAC), Beijing, China, 2009.</li>
+        <li><b>Geunsik Lim</b>, “Android Platform on X86 Netbook,” Shanghai Asia Pacific Android Conference (APAC), 2009, Shanghai, China.</li>
+        <li><b>Geunsik Lim</b>, “Mobile Experience with Linux (Android Internals and Prototype on S3c6410),” Linux Conference on Australia (LCA), Mobile Miniconference, Tasmania, Australia, Jan. 2009.</li>
+        <li><b>Geunsik Lim</b>, “Linux-Based Open Mobile Platform: Android features and Enhancement,” International Symposium on Embedded Technology (ISET), Daegu, Korea, 2008.</li>
+      </ol>
+    </section>
+
+    <!-- International Conferences (Co-author) -->
+    <section id="intl-confs-co" class="section-card">
+      <div class="section-header">
+        <div class="section-title">International Conferences (2nd or co-work author)</div>
+        <span class="pill">All items visible</span>
+      </div>
+      <ol>
+        <li>MyungJoo Ham, Jijoong Moon, <b>Geunsik Lim</b>, Jaeyun Jung, Hyoungjoo Ahn, Wook Song, Sangjung Woo, Parichay Kapoor, Dongju Chae, Gichan Jang, Yongjoo Ahn, and Jihoon Lee, “<a href="https://arxiv.org/abs/2101.06371" target="_blank" rel="noopener">Nnstreamer: Efficient and Agile Development of On-Device AI System</a>,” 43rd ACM/IEEE International Conference on Software Engineering (ICSE)-SEIP, Madrid, Spain, May. 2021. <b><code><span style="color:red;">TOP-TIER</span></code></b></li>
+        <li>MyungJoo Ham and <b>Geunsik Lim</b>, “<a href="https://dl.acm.org/doi/10.1109/ICSE-SEIP.2019.00023" target="_blank" rel="noopener">Making Configurable and Unified Platform, Ready for Broader Future Devices</a>,” 41st ACM/IEEE International Conference on Software Engineering (ICSE)-SEIP, Montreal, QC, Canada, May. 2019. <b><code><span style="color:red;">TOP-TIER</span></code></b></li>
+      </ol>
+    </section>
+
+    <!-- Domestic Journals -->
+    <section id="dom-journals" class="section-card">
+      <div class="section-header">
+        <div class="section-title">Domestic Journals (1st author or corresponding author)</div>
+        <span class="pill">All items visible</span>
+      </div>
+      <ol>
+        <li><b>Geunsik Lim</b>, MyungJoo Ham, and Jaeyun Jung, “<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09289753" target="_blank" rel="noopener">VTS: Virtual Testbed System for Cloud-based On-Device AI Application</a>,” KIISE Transactions on Computing Practices : Computing Practices and Letter (CPL), vol. 26, No. 1, Jan. 2020. https://doi.org/10.5626/KTCP.2020.26.1.12. <code>Invited Paper</code></li>
+        <li><b>Geunsik Lim</b>, Dong Hyun Kang, and Young Ik Eom, “<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09277389" target="_blank" rel="noopener">CPU Mediator for Optimizing Thread Operations on IoT Devices</a>,” KIISE Transactions on Computing Practices : Computing Practices and Letter (CPL), vol. 25, No. 12, Dec. 2019. https://doi.org/10.5626/KTCP.2019.25.12.616. <code>Invited Paper</code></li>
+        <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, “<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE02257901" target="_blank" rel="noopener">Resource management framework for improving thread performance on mobile platform</a>,” Journal of the Korean Institute of Information Scientists and Engineers (Journal of KIISE) : Computer Systems and Theory, vol. 40, issue 5, Oct. 2013.</li>
+        <li><b>Geunsik Lim</b>, Seho Lee, and Young Ik Eom, “<a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE02194664" target="_blank" rel="noopener">Task parallelism system of application for multicore-based mobile platform</a>,” Journal of Korea Information and Communications Society (Journal of KICS), vol.38, issue 6, May 2013. <code>Invited Paper</code></li>
+      </ol>
+    </section>
+
+    <!-- Domestic Conferences -->
+    <section id="dom-confs" class="section-card">
+      <div class="section-header">
+        <div class="section-title">Domestic Conferences (1st author or corresponding author)</div>
+        <span class="pill">All items visible</span>
+      </div>
+      <ol>
+        <li><b>Geunsik Lim</b> and Young Ik Eom, “<a href="https://www.cseric.or.kr/literature/ser_view.php?SnxGubun=INME&mode=total&searchCate=literature&literature=Y&more=Y&research=Y&pg=1&gu=INME000G0&cmd=qryview&SnxIndxNum=217617&rownum=1&totalCnt=7&q1_t=R2V1bnNpayBMaW0=&listUrl=L2xpdGVyYXR1cmUvcmVzdWx0LnBocD9TbnhHdWJ1bj1JTk1FJm1vZGU9dG90YWwmc2VhcmNoQ2F0ZT1saXRlcmF0dXJlJmxpdGVyYXR1cmU9WSZxMT1HZXVuc2lrJTIwTGltJm1vcmU9WSZmMT1NTiZyZXNlYXJjaD1ZJnBnPTE=&f1=MN&q1=Geunsik%20Lim" target="_blank" rel="noopener">Analysis of the Impact of OS Memory Management Policy on the Buildup of Large-scale Software</a>,” Proc. of KIISE Korea Computer Congress (KCC), Jul. 2020.</li>
+        <li><b>Geunsik Lim</b>, Dong Hyun Kang, and Young Ik Eom, “Optimizing Thread Operation for IoT Application,” Proc. of KIISE Korea Computer Congress (KCC), <code>Excellent Presentation Paper Award</code>, Jun. 2019.</li>
+        <li><b>Geunsik Lim</b>, MyungJoo Ham, and Jaeyun Jung, “Cloud-based Testbed for On-Device AI Application,” Proc. of KIISE Korea Computer Congress (KCC), <code>Excellent Presentation Paper Award</code>, Jun. 2019.</li>
+        <li><b>Geunsik Lim</b> and Young Ik Eom, “UNAS: User-space NUMA-aware scheduler for optimizing memory utilization and performance,” Proc. of KICS Winter Conference, Jan. 2014.</li>
+        <li><b>Geunsik Lim</b>, Taehun Kim, R.J.W.E. Lahaye, and Young Ik Eom, “HTCondor-based distributed compiler network,” Proc. of KIISE Fall Conference, <code>Excellent Paper Award</code>, Nov. 2013.</li>
+        <li><b>Geunsik Lim</b>, Keonwoo Kim, and Young Ik Eom, “Notrace32-based real-time remote debugging method for optimization of mobile OS,” Proc. of KICS Summer Conference, Jun. 2013.</li>
+        <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, “Dynamic thread scheduling framework for improving user responsiveness,” Proc. of KIISE Korea Computer Congress, Jun. 2013.</li>
+        <li><b>Geunsik Lim</b>, Younghyun Joo, and Young Ik Eom, “CoCloud: Revision control based collaborative cloud system for contents cooperation,” Proc. of KICS Joint Conference on Communications and Information, May 2013.</li>
+        <li><b>Geunsik Lim</b>, Seho Lee, and Young Ik Eom, “BioMP: Migrating OpenMP into Bionic library for Android platform based on ARM multicore,” Proc. of KICS Winter Conference, <code>Excellent Paper Award</code>, Jan. 2013.</li>
+        <li><b>Geunsik Lim</b>, Keonwoo Kim, and Young Ik Eom, “Notrace32: Tracing technology to analyze kernel of Android platform in real-time,” Proc. of KIISE Summer Workshop on Computer Communications, Information Network Society, Aug. 2012.</li>
+        <li><b>Geunsik Lim</b> “Android Platform Internals”, 3rd CELF Korea Technical Jamboree, 2008, Seoul, Korea</li>
+        <li><b>Geunsik Lim</b> “Opensource Business Model and Android Platform”, KIPA (Korea IT Industry Promotion Agency), 2008, Seoul, Korea</li>
+      </ol>
+    </section>
+
+    <!-- Domestic Android Conferences -->
+    <section id="android-cons" class="section-card">
+      <div class="section-header">
+        <div class="section-title">Domestic Android Conferences (Presenter)</div>
+        <span class="pill">All items visible</span>
+      </div>
+      <ol>
+        <li><b>Geunsik Lim</b> “Task parallelism with KTC & Bionic/OpenMP for Multicore-Based Android”, 11th Korea Android Conference, 2013, www.kandroid.org</li>
+        <li><b>Geunsik Lim</b> “Multicore-Based Memory Issues and Development Tips on ICS”, Samsung Developer Day 2012 (Galaxy S III), Samsung Electronics, Seoul, Korea</li>
+        <li><b>Geunsik Lim</b> “Solving memory leak to avoid LMK operation of Android applications: Valgrind on ARM”, 9th Korea Android Conference, 2012, www.kandroid.org</li>
+        <li><b>Geunsik Lim</b> “Issues that smart device platform developers must know”, Smart Device Developer Conf, KOSTA(Korea Software Technology Association)/MDS Technology, Seoul, Korea, 2011</li>
+        <li><b>Geunsik Lim</b> “Android Kernel Debugging : Ftrace”, 8th Korea Android Conference, 2011, www.kandroid.org</li>
+        <li><b>Geunsik Lim</b> “Android Network and Enhancement”, 7th Korea Android Conference, 2011, www.kandroid.org</li>
+        <li><b>Geunsik Lim</b> “Chrome WebOS Based on Cloud Computing”, 6th Korea Android Conference, 2010, www.kandroid.org</li>
+        <li><b>Geunsik Lim</b> “Optimization Android Performance with GCC Compiler”, 5th Korea Android Conference, 2010, www.kandroid.org</li>
+        <li><b>Geunsik Lim</b> “Prelink and Preload Based Zygote Analysis”, 4th Korea Android Conference, 2009, www.kandroid.org</li>
+        <li><b>Geunsik Lim</b> “Understanding repo to manage android full sources”, 3rd Korea Android Conference, 2009, www.kandroid.org</li>
+        <li><b>Geunsik Lim</b> “Android Porting and Understanding Development Process”, 2nd Korea Android Conference, 2008, www.kandroid.org</li>
+        <li><b>Geunsik Lim</b> “Linux Based Android Kernel Issues”, 1st Korea Android Conference, 2008, www.kandroid.org</li>
+      </ol>
+    </section>
+
+    <!-- Patents -->
+    <section id="patents" class="section-card">
+      <div class="section-header">
+        <div class="section-title">Patents (Applied): Since 2010 (Main inventor)</div>
+        <span class="pill">All items visible</span>
+      </div>
+      <ol>
+        <li><b>Geunsik Lim</b>, “A method and a lightweight and efficient code inspection system for continuous software integration”, 2020</li>
+        <li><b>Geunsik Lim</b>, “Virtual Testbed System for Cloud-based On-Device AI Application”, 2019</li>
+        <li><b>Geunsik Lim</b>, “A method and configurable system for generating User-defined software platform image”, 2017</li>
+        <li><b>Geunsik Lim</b>, “Enhancing application performance with virtual memory partitioning technique”, 2013</li>
+        <li><b>Geunsik Lim</b>, “Operation Zone Based SMP Scheduler for Effective Task Migration on Multicore Systems”, 2012</li>
+        <li><b>Geunsik Lim</b>, Myung-June Jung, Sang-Bum Suh, Sung-Min Lee, “Apparatus and method for snapshot image segmentation”, Application number 13/105,007, US 2012/0101996</li>
+        <li><b>Geunsik Lim</b>, “Apparatus and method for managing memory in consideration of user response time”, European Patent Application EP2386957, EP20110165602, Publication Date 11/16/2011</li>
+        <li><b>Geunsik Lim</b>, Sang-bum Suh, Ju-pyung Lee, “Apparatus and method for managing memory”, United States Patent Application 20110283080, Publication Date 11/17/2011</li>
+      </ol>
+    </section>
+
+    <!-- Acknowledgements -->
+    <section id="ack" class="section-card">
+      <div class="section-header">
+        <div class="section-title">Acknowledgements Related Papers</div>
+        <span class="pill">All items visible</span>
+      </div>
+      <ol>
+        <li>Paul E. McKenney, “<a href="https://www.semanticscholar.org/paper/When-Do-Real-Time-Systems-Need-Multiple-CPUs-McKenney/a09afb2a5ea136b7ad248bd8e42d70df327cd6b4" target="_blank" rel="noopener">When Do Real Time Systems Need Multiple CPUs?</a>”, IBM Linux Technology Center, Real Time Linux Workshops 2010, Oct-24-2010, <a href="https://www.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html" target="_blank" rel="noopener">perf-book (PDF)</a>, <a href="https://github.com/paulmckrcu/perfbook" target="_blank" rel="noopener">perf-book (GitHub)</a></li>
+      </ol>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards" class="section-card">
+      <div class="section-header">
+        <div class="section-title">Awards</div>
+        <span class="pill">All items visible</span>
+      </div>
+      <ol>
+        <li><b>Popularity Award</b>, <a href="https://aem-auth-prod.mathworks.com/content/mathworks/blueprint/default/campaigns/products/matlab-ai-model-challenge/awards.html?wcmmode=disabled" target="_blank" rel="noopener">MathWorks Korea</a>, <a href="https://www.ikld.kr/news/articleView.html?idxno=308958" target="_blank" rel="noopener">'2025 MatLab AI Model Challenge’</a>, Feb-27-2025</li>
+        <li><b>Samsung Best Paper Award 2023</b>, <a href="https://www.sait.samsung.co.kr/" target="_blank" rel="noopener">SAIT</a> Samsung Electronics, "SWAM: Revisiting Swap and OOMK for Improving Application Responsiveness on Mobile Devices", Seoul, KR, Sep-02-2023, <code>Silver Award</code></li>
+        <li><b>Long Service Award</b> from Samsung Electronics, <a href="https://www.samsung.com/" target="_blank" rel="noopener">Samsung Electronics</a>, Jan-03-2023, <code>20 Years Long Service Award</code></li>
+        <li><b>Gold Winner</b> from ST Micro Electronics Korea, "STM32 Quest Challenge: STM32Cube.AI Recognition 2022", <a href="https://www.e4ds.com/" target="_blank" rel="noopener">E4ds</a>, Nove-06-2022</li>
+        <li><b>1st Opensource Award</b> from Opensource Source Group, Samsung Research, "Inner-source with Opensource culture for the 2021 year", <a href="https://www.samsung.com/" target="_blank" rel="noopener">Samsung Electronics</a>, Nov-20-2021, <code>Open Source Award (Personal sector)</code></li>
+        <li><b>1st Opensource Award</b> from Opensource Source Group, Samsung Research, "Best practice with opensource for the 2021 year", <a href="https://www.samsung.com/" target="_blank" rel="noopener">Samsung Electronics</a>, Nov-20-2021, <code>Open Source Award (Team sector)</code></li>
+        <li><b>Samsung Best Paper Award 2021</b>, <a href="https://www.sait.samsung.co.kr/" target="_blank" rel="noopener">SAIT</a> Samsung Electronics, "Nnstreamer: Efficient and Agile Development of On-Device AI System", Seoul, KR, Nov-08-2021, <code>Gold Award</code></li>
+        <li><b>Embedded Software Industry 有功 褒賞 (Meritorious Service Praise)</b> from The Federation of Korean Information Industries (<a href="https://www.kessia.kr/bbs/board.php?tbl=notice&mode=VIEW&num=258&chr=&category=&findType=&findWord=&sort1=&sort2=&page=1/" target="_blank" rel="noopener">FKII & KEESIA</a>), Korea Embedded Software and System Industry Association (KESSIA), Dec-22-2020, <code>Embedded Software Industry Association President Award</code>, FKII20210125-4-1</li>
+        <li><b>Excellent Award</b> from ST Micro Electronics, "STM32MP1 Complete Conquest Quest Challenge", <a href="https://www.e4ds.com/" target="_blank" rel="noopener">E4ds</a>, Aug-03-2020</li>
+        <li><b>Best Code Review Award 2019</b> from DevXday, "Code Review Contest for the 2019 year", <a href="https://www.samsung.com/" target="_blank" rel="noopener">Samsung Electronics</a>, Sep-25-2019, <code>2nd Place Award</code></li>
+        <li><b>Best Opinion Award</b> from 2019 Post Conference, <a href="https://www.eiric.or.kr/" target="_blank" rel="noopener">EIRIC</a> (Electronic & Information Research Information Center), "Best Opinion Event for 2019 year", Jul-30-2019</li>
+        <li><b>Samsung Best Paper Award 2019</b>, <a href="https://www.sait.samsung.co.kr/" target="_blank" rel="noopener">SAIT</a> Samsung Electronics, "Making Configurable and Unified Platform, Ready for Broader Future Devices", Seoul, KR, Nov-15-2019, <code>Silver Award</code></li>
+        <li><b>Samsung Best Paper Award 2016</b>, <a href="https://www.sait.samsung.co.kr/" target="_blank" rel="noopener">SAIT</a> Samsung Electronics, "BB: Booting Booster for Consumer Electronics with Modern OS", Seoul, KR, Nov-28-2016, <code>Gold Award</code></li>
+        <li><b>IEEE CE Chester Sall Award</b>, <a href="https://ctsoc.ieee.org/awards/sall.html" target="_blank" rel="noopener">IEEE Consumer Electronics(CE) Society</a>, "Virtual memory partitioning for enhancing application performance in mobile devices," Lasvegas, US, Jan-11-2016, <code>1st Place Best Paper</code></li>
+        <li><b>Excellent Research Award</b>, <a href="https://ice.skku.edu/" target="_blank" rel="noopener">College of Information & Communication Engineering</a>, Sungkyunkwan University, "Excellent Research Paper for 2013 year", No. 662, 2014</li>
+        <li><b>Product Innovation Award</b> from <a href="https://www.sait.samsung.co.kr/" target="_blank" rel="noopener">SAIT</a>, Samsung Electronics, "Deploying the Full-HD Camcorder with Realtime Linux", 2010</li>
+        <li><b>Bravo Award</b>, <a href="https://www.samsung.com/" target="_blank" rel="noopener">Samsung Electronics</a>, "Linux-Based DTV Enhancement and Deployment (VxWorks-to-Linux migration)", 2007</li>
+      </ol>
+    </section>
+
+    <!-- Publications -->
+    <section id="pubs" class="section-card">
+      <div class="section-header">
+        <div class="section-title">Publications</div>
+        <span class="pill">Book</span>
+      </div>
+      <ol>
+        <li>“<a href="http://www.yes24.com/Product/Goods/78869304" target="_blank" rel="noopener">라즈베리파이로 시작하는 핸드메이드 IoT</a>”, BJ Public, 448 pages, 173x230mm, 851g, ISBN 9791190014489, Sep-27-2019, (in Korean) <code>BEST: IT Mobile Top 100 (9weeks)</code></li>
+      </ol>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section-card">
+      <div class="section-header">
+        <div class="section-title">Education</div>
+        <span class="pill">Degrees</span>
+      </div>
+      <ul>
+        <li><b>Ph.D. degree</b>, College of Information & Communication Engineering, Graduate school (<a href="https://dclab-skku.github.io/" target="_blank" rel="noopener">DC-Lab</a>) — Sungkyunkwan University (South Korea)<br>
+          1) Specialized in the page reclamation of the memory management.<br>
+          2) Published the book that describes how to develop the IoT systems on the Raspberry-PI3 board.
+        </li>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certs" class="section-card">
+      <div class="section-header">
+        <div class="section-title">Certifications</div>
+        <span class="pill">Professional</span>
+      </div>
+      <ol>
+        <li>ICAgile Certified Professional (ICP) Certificate</li>
+        <li>Oracle Certified Professional 9i (OCP 9i Administrator)</li>
+        <li>Cisco Certified Network Professional (CCNP)</li>
+        <li>Driver License 1st Class (Road Traffic Authority Driver's License Examination Office)</li>
+        <li>Linux Master 1st Class (Korea Association for ICT Promotion)</li>
+        <li>Engineer Information Processing (Human Resources Development Service of Korea)</li>
+      </ol>
+    </section>
+
+    <!-- Membership -->
+    <section id="memberships" class="section-card">
+      <div class="section-header">
+        <div class="section-title">Membership</div>
+        <span class="pill">Reviewer · TPC</span>
+      </div>
+      <ol>
+        <li><a href="https://sites.google.com/unimib.it/edl-ie2026" target="_blank" rel="noopener">Reviewer for Embedded Deep Learning for Real-Time Intelligent Environments</a>, Sep-2025 ~</li>
+        <li><a href="https://www.icce-berlin.org" target="_blank" rel="noopener">IEEE ICCE-Berlin 2025 TPC member</a>, Jul-2025 ~</li>
+        <li><a href="https://mc.manuscriptcentral.com/taco/" target="_blank" rel="noopener">ACM Transactions on Architecture and Code Optimization (TACO), TPC member</a>, Jun-2025 ~</li>
+        <li><a href="https://www.icce-tw.org/" target="_blank" rel="noopener">IEEE ICC-TW 2025 TPC member</a>, Jun-2025 ~</li>
+        <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=43" target="_blank" rel="noopener">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Reviewer</a>, Aug-2023 ~</li>
+        <li><a href="https://ctsoc.ieee.org/technical/technical-committees.html" target="_blank" rel="noopener">IEEE CTSoc MDA-TC member</a>, Oct-2022 ~</li>
+        <li><a href="https://www.ieee.org/membership/" target="_blank" rel="noopener">IEEE Membership</a>, Mar-2012 ~</li>
+        <li><a href="https://ctsoc.ieee.org/membership.html" target="_blank" rel="noopener">IEEE Consumer Technology Society Membership</a>, May-2012 ~</li>
+        <li><a href="https://www.comsoc.org/membership" target="_blank" rel="noopener">IEEE Communications Society Membership</a>, Sep-2013 ~</li>
+        <li><a href="https://www.bbbkorea.org/en/" target="_blank" rel="noopener">BBB Korea</a>, Volunteer Interpreter, Ocp-2010 ~</li>
+        <li>Samsung Electronics, Software Membership 2000 ~ 2002</li>
+      </ol>
+    </section>
+
+    <!-- Friends -->
+    <section id="friends" class="section-card">
+      <div class="section-header">
+        <div class="section-title">Friends</div>
+        <span class="pill">Colleagues</span>
+      </div>
+      <ol>
+        <li><a href="https://www.insun.pe.kr" target="_blank" rel="noopener">Insun Pyo</a>, Software Engineer, Samsung Electronics</li>
+        <li><a href="https://bonohubby.com/" target="_blank" rel="noopener">Seungmin Oh</a>, Software Engineer</li>
+        <li><a href="https://github.com/myungjoo" target="_blank" rel="noopener">Myungjoo Ham</a>, NNStreamer Founder, Tizen Architect (Machine Learning)</li>
+        <li><a href="https://jijoongmoon.github.io/" target="_blank" rel="noopener">Jijoong Moon</a>, Software Engineer</li>
+        <li><a href="https://www.linkedin.com/in/seikwon-kim-bb88283b/" target="_blank" rel="noopener">Seikwon Kim</a>, Principle Engineer at Samsung Electronics</li>
+        <li><a href="https://www.linkedin.com/in/dong-seob-park-20769734/" target="_blank" rel="noopener">Dong-seob Park</a>, Kakao Bank</li>
+        <li><a href="https://www.linkedin.com/in/heekuk-lee-77aa2b19/" target="_blank" rel="noopener">Heekuk Lee</a>, Principle Engineer at Samsung Electronics</li>
+        <li><a href="https://younlea.github.io/" target="_blank" rel="noopener">Younlea Kim</a>, Principle Engineer at Samsung Electronics</li>
+        <li>TBA</li>
+      </ol>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <font color="gray">&nbsp;&nbsp;This webpage was last modified on Oct-11-2025</font>
+  <div style="color:#99a1b3">This page is generated with a minimal, framework-free design. © Geunsik Lim.</div>
+</footer>
+
+<script>
+  // Smooth scroll for internal anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id = a.getAttribute('href');
+      const tgt = document.querySelector(id);
+      if(!tgt) return;
+      e.preventDefault();
+      tgt.scrollIntoView({behavior:'smooth', block:'start'});
+      history.pushState(null, '', id);
+    });
+  });
 </script>
-<br>
-<br>
-<div style="width: 100%; font-size: 40px; font-weight: bold; text-align: left;">
-/Geunsik Lim Homepage/
-</div>
-<br>
-<br> 
-<a href=https://github.com/leemgs/leemgs.github.io/blob/master/index.html><code><span style='color: gray;'>Edit on GitHub</span></code></a><br>
-  
-<a name='toc-top' id='toc-top'></a>
-<div class='toc'><p><a name='toc' id='toc'></a>
-  <b>
-  <span style='font-size:144%'><strong>Table of Contents</strong></span> 
-  </b> (<a id="tocidtog" href="javascript:toggle('tocid');">hide</a>)</p>
-  <ul class='toc' id='tocid'>
-    <li><a href='#toc-my-profile'><span  style='color: orange;'> <span style='font-size:120%'>My Profile:</span></a></span></li>
-    <li><a href='#toc-inter-journ'><span  style='color: orange;'> <span style='font-size:120%'>International Journals:</span></a></span></li>
-    <li><a href='#toc-inter-conf'><span  style='color: orange;'> <span style='font-size:120%'>International Conferences:</span></a></span></li>
-    <li><a href='#toc-domes-journ'><span  style='color: orange;'> <span style='font-size:120%'>Domestic Journals:</span></a></li>
-    <li><a href='#toc-domes-conf'><span  style='color: orange;'> <span style='font-size:120%'>Domestic Conferences:</span></a></li>
-    <li><a href='#toc-domes-android'><span  style='color: orange;'> <span style='font-size:120%'>Domestic Android Conferences:</span></a></li>
-    <li><a href='#toc-patent'><span  style='color: orange;'> <span style='font-size:120%'>Patents:</span></a></li>      
-    <li><a href='#toc-ack-paper'><span  style='color: orange;'> <span style='font-size:120%'>Acknowledgements Related Papers:</span></a></li>
-    <li><a href='#toc-awards'><span  style='color: orange;'> <span style='font-size:120%'>Awards:</span></a></li>
-    <li><a href='#toc-publication'><span  style='color: orange;'> <span style='font-size:120%'>Publications:</span></a></li>
-    <li><a href='#toc-certification'><span  style='color: orange;'> <span style='font-size:120%'>Certifications:</span></a></li>
-    <li><a href='#toc-membership'><span  style='color: orange;'> <span style='font-size:120%'>Membership:</span></a></li>
-    <li><a href='#toc-friend'><span  style='color: orange;'> <span style='font-size:120%'>Friends:</span></a></li>    
-    </span>
-  </ul>
-</div>
-  
-<script type="text/javascript">
-toggle('tocid');
-</script>
-  
-<hr>
-<table border=0 width=750>
-<tr><td width=50></td>
-<td>
-<br>
-
-<a name='toc-my-profile' id='toc-my-profile'></a>
-<b>[My profile]</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<table border=0>
-  <tr>
-    <td>
-       <img src="./images/1758065931669.jpg" width=120 height=120 border=0 alt"https://huggingface.co/spaces/fffiloni/img-to-music" ></img>
-       <audio controls>
-           <source src="./audio/my_photo01.wav" type="audio/wav">
-           Your browser does not support the audio element.
-       </audio>
-    </td>
-    <td>
-      <a href=https://leemgs.mooo.com/open/conference/><img src=./images/conf.png border=0 width=116 height=60></img></a>
-       
-    </td>
-  </tr>
-</table>
-
-<table border=0 width=750>
-<tr><td>
-<li> Full name: <b><b>Geunsik Lim</b> (임근식, 林根植)</b> <br>
-</td></tr>
-<tr><td>
-<li> Home (road address): Dongtanwoncheon-ro 915beon-gil, Youngtong-gu, Suwon-si, South Korea<br>
-<tr><td>
-<li> Nickname: chiphead (like geek), invain (to no purpose, aimlessly) <br>
-</td></tr>
-<tr><td>
-<li> <a href=https://leemgs.github.io/with-people/>A picture of memories</a> with friends and companions<br>
-</td></tr>
-<tr><td>
-<li> E-mail  : <b>leemgs.at.gmail.com</b> <br>
-</td></tr>
-<tr><td>
-<li> Gtalker (Hangout) : leemgs.agmail.com <br>
-</td></tr>
-<tr><td>
-<li> ICQ     : 46455794 <br>
-</td></tr>
-<tr><td>
-  <li> EDAS identifier    : 743415 <br>
-</td></tr>
-<tr><td>
-  <li> IEEE identifier    : 92541846 <br>
-</td></tr>
-<tr><td>
-  <li> EasyChair identifier : leemgs <br>
-</td></tr>
-<tr><td>
-  <li> Skype   : geunsik.lim <br>
-</td></tr>
-<tr><td>
-  <li> Blog    : <a href=http://blog.naver.com/invain/>http://blog.naver.com/invain</a><br>
-</td></tr>
-<tr><td>
-  <li> Jumpit    : <a href=https://www.jumpit.co.kr/myjumpit>https://www.jumpit.co.kr/myjumpit</a><br>
-</td></tr>  
-<tr><td>
-  <li> Twitter : <a href=http://www.twitter.com/leemgs>http://www.twitter.com/leemgs</a><br>
-</td></tr>
-<tr><td>
-  <li> Facebook: <a href=http://www.facebook.com/leemgs>http://www.facebook.com/leemgs</a><br>
-</td></tr>
-<tr><td>
-  <li> GitHub Account: <a href=https://www.github.com/leemgs/>https://www.github.com/leemgs/</a><br>
-</td></tr> 
-<tr><td>
-  <li> MBTI Test: <a href=https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-enfj?utm_source=results-assertive-protagonist&utm_medium=email&utm_campaign=ko&utm_content=type-personality-0
->ENFJ</a> <a href=enfj-geunsiklim.pdf>(Download the MBTI file)</a><br>
-</td></tr> 
-<tr><td>
-  <li> Tanagement Test: <a href=https://tanagement.co.kr/evwfvumuea alt"당신은 다양한 시나리오를 그리며 본질적인 대안을 탐구하는 사람입니다.">탐구(Explore)</a><br>
-</td></tr> 
-  
-
-<tr><td>
-  <li> Atlassian Account: <a href=https://leemgs.atlassian.net>https://leemgs.atlassian.net</a><br>
-</td></tr>  
-<tr><td>
-  <li> GitHub Memory: <a href=https://www.gitmemory.com/leemgs/>https://www.gitmemory.com/leemgs/</a><br>
-</td></tr>
-<tr><td>
-  <li> Google Scholar Citations: <a href=http://scholar.google.com/citations?hl=en&user=Oy8m5Z8AAAAJ>http://scholar.google.com/citations?hl=en&user=Oy8m5Z8AAAAJ</a><br>
-</td></tr>
-<tr><td>
-  <li> ORCID (Open Researcher and Contributor ID): <a href=https://orcid.org/0000-0003-1845-7132>https://orcid.org/0000-0003-1845-7132</a><br>
-</td></tr>
-<tr><td>
-  <li> My articles on arXiv: <a href=http://arxiv.org/a/lim_g_1>http://arxiv.org/a/lim_g_1</a><br>
-</td></tr>
-<tr><td>
-  <li> My Communications ACM account: <a href=https://cacm.acm.org/>https://cacm.acm.org/ (id: geunsikl)</a><br>
-</td></tr>
-<tr><td>
-  <li> My IEEE account: <a href=https://www.ieee.org/>https://www.ieee.org/ (id: leemgs@gmail.com)</a><br>
-</td></tr>
-<tr><td>
-  <li> My ScienseWISE: <a href=http://sciencewise.info/users/Geunsik_Lim>http://sciencewise.info/users/Geunsik_Lim</a><br>
-</td></tr>
-<tr><td>
-  <li> OpenReview Account: <a href=https://openreview.net/profile?id=~Geunsik_Lim1>https://openreview.net/profile?id=~Geunsik_Lim1</a><br>
-</td></tr>
-<tr><td>  
-  <li> Researcher ID: <a href=https://publons.com/researcher/AAJ-5623-2020>https://publons.com/researcher/AAJ-5623-2020</a><br>
-</td></tr>
-<tr><td>  
-  <li> Publons ID: <a href=https://publons.com/researcher/1390521/geunsik-lim/>https://publons.com/researcher/1390521/geunsik-lim/</a><br>
-</td></tr>
-<tr><td>     
-  <li> DBLP ID:  <a href=https://dblp.org/pid/20/9588>https://dblp.org/pid/20/9588</a><br>
-</td></tr>
-<tr><td>      
-  <li> Semantic Scholar: <a href=https://www.semanticscholar.org/author/Geunsik-Lim/8537854>https://www.semanticscholar.org/author/Geunsik-Lim/8537854</a><br>
-</td></tr>
-<tr><td>
-  <li> Community(Fedora)  : <a href=http://leemgs.fedorapeople.org/>http://leemgs.fedorapeople.org/</a><br>
-</td></tr>
-<tr><td>
-  <li> Community(Kandroid): <a href=http://www.kandroid.org/>http://www.kandroid.org/</a><br>
-</td></tr>
-<tr><td>
-  <li> HomePage(restricted area): <b> <a href=http://leemgs.mooo.com>http://leemgs.mooo.com</a></b>&nbsp;<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;: Power outage period: <font color=red> 23:30 ~ 07:30 (Seoul time, KST)</font>
-</td></tr>
-<tr><td>
-  <li> HomePage(open area): <b><a href=https://leemgs.github.io>https://leemgs.github.io</a></b>&nbsp;<br>
-</td></tr>
-<tr><td>
-  <li> Affiliation: Samsung Electronics</a> (Suwon city, South Korea)<br>
-</td></tr>
-<tr><td>
-  <li> Work Experience: Refer to <a href=http://kr.linkedin.com/in/leemgs>Linkedin</a><br>
-</td></tr>
-<tr><td>
-  <li> Military Service: Army 7273 Troop Infantry Branch (26 months)<br>
-</td></tr>
-<tr><td>
-  <li> Bio: 
-I am a software engineer and researcher specializing in embedded platforms, operating systems, and AI-driven system software at Samsung Electronics. My work focuses on optimizing low-level system components for consumer electronics and IoT devices, including smartphones, TVs, and edge systems. I have strong expertise in Linux kernel internals, memory management, runtime scheduling, and on-device AI. I have contributed to major open-source projects such as Linux, GCC, Glibc, Android, and Tizen, and have shared my work as a speaker and reviewer at conferences like OLS, LCA, ACM/IEEE ICSE, and ACM MobiCom. My research has appeared in top-tier venues such as IEEE T-CE, ACM EuroSys, and ACM/IEEE ICSE, and I have received awards including the IEEE Chester Sall Award and multiple Samsung Best Paper Awards. I also hold several patents related to system optimization and embedded AI deployment. I am passionate about advancing intelligent edge computing and embedded AI, building practical solutions that combine system software and AI to power the next generation of devices
-  </li>
-</td></tr>
-</table>
-<br>
-</td></tr>
-<tr><td width=50></td>
-<td>
-<br>
-<br>
-<a name='toc-inter-journ' id='toc-inter-journ'></a>
-<b>[International Journals] (1st author or corresponding author)</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol>
-  <br>
-  <li><b>Geunsik Lim</b>, Donghyun Kang, and Young Ik Eom, "<a href=https://ieeexplore.ieee.org/document/9237948>Thread Evolution Kit for Optimizing Thread Operations on CE/IoT Devices</a>," IEEE Transactions on Consumer Electronics <b><code><span style='color: red;'>SCI</span></code></b>, vol. 66, issue 4, pp. 289-298, Nov. 2020 <font color=red></font></li> 
-  <br>
-  <li><b>Geunsik Lim</b>, Donghwa Lee, and Sang-bum Suh, "<a href=https://ieeexplore.ieee.org/document/7062593/>Cloud-Based Content Synchronization Method for Collaborative Learning Environment</a>," International Journal of Advanced Corporate Learning (iJAC), <code>Invited Paper</code>, vol. 8, no. 1, pp. 24-30, Mar. 2015 <font color=red></font></li>
-  <br>
-  <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, "<a href=https://ieeexplore.ieee.org/document/6689690>Virtual memory partitioning for enhancing application performance in mobile devices</a>," IEEE Transactions on Consumer Electronics <b><code><span style='color: red;'>SCI</span></code></b>, vol. 59, issue 4, pp. 786-794, Nov. 2013 <font color=red></font></li>
-</ol>
-<br>
-<br>
-<br>
-<br>
-<a name='toc-inter-conf' id='toc-inter-conf'></a>
-<b>[International Conferences] (1st author or corressponding author)</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol> 
-  <li><b>Geunsik Lim</b>, Donghyun Kang, MyungJoo Ham, and Young Ik Eom, "<a href=https://dl.acm.org/doi/abs/10.1145/3570361.3592518>SWAM: Revisiting Swap and OOMK for Improving Application Responsiveness on Mobile Devices</a>," MobiCom 2023 (29th Annual International Conference On Mobile Computing And Networking), Oct-2023, <b><code><span style='color: red;'>TOP-TIER</code></b> </li>
-<br>
-  <li><b>Geunsik Lim</b>, MyungJoo Ham, Jijoong Moon, and Wook Song, "<a href=https://arxiv.org/abs/2101.07961>LightSys: Lightweight and Efficient CI System for Improving Integration Speed of Software,</a>" 43rd ACM/IEEE International Conference on Software Engineering (ICSE)-SEIP, Madrid, Spain, May. 2021. <b><code><span style='color: red;'>TOP-TIER</code></b></li>
-<br>
-  <li><b>Geunsik Lim</b>, MyungJoo Ham, Jijoong Moon, Wook Song, Sangjung Woo, and Sewon Oh, "<a href=https://ieeexplore.ieee.org/document/8662017>TAOS-CI: Lightweight & Modular Continuous Integration System for Edge Computing,</a>" 37th IEEE International Conference on Consumer Electronics (ICCE), Las Vegas, USA, Jan. 2019.</li>
-<br>     
-  <li><b>Geunsik Lim</b> and MyungJoo Ham, "<a href=https://dl.acm.org/doi/10.1145/2901318.2901320>BB: Booting Booster for Consumer Electronics with Modern OS,</a>" The European Conference on Computer Systems (EuroSys), London, UK, Apr. 2016. <b><code><span style='color: red;'>TOP-TIER</code></b> </li>
-<br>
-  <li><b>Geunsik Lim</b> and  MyungJoo Ham, "<a href=https://www.usenix.org/conference/atc15/call-for-talks>Faster Booting in Consumer Electronics,</a>" USENIX Annual Technical Conference (ATC), <b>Practitioner Talk</b>, Santa Clara city, CA, USA, Jul. 2015.<font color=black> </font> <b><code><span style='color: red;'>TOP-TIER</code></b></li>
-<br>
-  <li><b>Geunsik Lim</b> and  MyungJoo Ham, "<a href=https://www.usenix.org/conference/atc15/technical-session/presentation/lim>Faster Booting in Consumer Electronics,</a>" USENIX Annual Technical Conference (ATC), <b>Poster</b>, Santa Clara city, CA, USA, Jul. 2015.<font color=black> </font> <b><code><span style='color: red;'>TOP-TIER</code></b></li>
-<br>    
-  <li><b>Geunsik Lim</b>, Jae-young Hwang, Kyungmin Park, and Sang-Bum Suh, "Enhancing Init Scheme for Improving Bootup Time in Mobile Devices," IEEE International Conference on Mobile Computing and Ubiquitous Networking (ICMU),<b>Invited Session Chair</b>, Hakodate City, Hokkaido, Japan, Jan. 2015.<font color=black> Accepted (Acceptance Rate:28%)</font> </li>
-<br>
-  <li><b>Geunsik Lim</b>, Downghwa Lee, and Sang-Bum Suh, "Cloud-Based Content Cooperation System to Assist Collaborative Learning Environment," IEEE International Conference on Teaching, Assessment, and Learning for Engineering (TALE), <b>Invited Session Chair</b>, Wellington, New Zealand, Dec. 2014.<font color=black> Accepted (Acceptance Rate:34%)</font> </li>
-<br>
-  <li><b>Geunsik Lim</b> and Sang-Bum Suh, "User-Level memory scheduler for optimizing application performance in NUMA-based multicore systems," IEEE International Conference on Software Engineering and Service Science (IEEE ICSESS), Beijing, China, Jun. 2014. (Acceptance Rate: 27%)<font color=red></font> </li>
-<br>
-  <li><b>Geunsik Lim</b>, Minho Lee, R.J.W.E. Lahaye, and Young Ik Eom, "<a href=https://arxiv.org/abs/2101.08887>Distributed compilation system for high-speed software build processes</a>," IEEE International Conference on Big Data and Smart Computing (BigComp), Bangkok, Thailand, Jan. 2014. <font color=red></font> </li>
-<br>
-  <li><b>Geunsik Lim</b>, Young Ik Eom, "Accelerating software compilation using HTCondor and Distcc," Linux Conference on Australia (LCA), "Developer, Testing, Release and CI Automation" Miniconference, Perth, Australia, Jan. 2014.<font color=red></font> </li>
-<br>
-  <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, "<a href=https://arxiv.org/abs/2101.08885>User-aware power management for mobile devices</a>," IEEE Global Conference on Consumer Electronics (GCCE), Tokyo, Japan, Oct. 2013.</li>
-<br>
-  <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, "<a href=https://arxiv.org/abs/2101.10707>Enhancing application performance by memory partitioning in Android platforms</a>," 31st IEEE International Conference on Consumer Electronics (ICCE), Las Vegas, USA, Jan. 2013.</li>
-<br>
-  <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, "Optimized lightweight thread framework for mobile devices," 3rd International Conference of Institution of Engineering and Technology [IET] Brunei Darussalam, Brunei, Sep. 2012.</li>
-<br>
-  <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, "<a href=https://arxiv.org/abs/2101.09359>Load-balancing for improving user responsiveness on multicore-based embedded systems</a>," 14th Linux Symposium (OLS), Ottawa, Canada, Jul. 2012.</li>
-<br>
-  <li><b>Geunsik Lim</b>, Hyun-Jin Choi, Sang-Bum Suh, "NPTL Optimization for Lightweight Embedded Devices", 13th Linux Symposium (OLS), Ottawa, Canada, Jun-13-2011</li>
-<br>
-  <li><b>Geunsik Lim</b>, Jupyung Lee, Sangbum Suh, "Deploying Preemptible Linux in the Latest Samsung Camcorder", 12th Linux Symposium (OLS), Ottawa, Canada, Jul-13-2010</li>
-<br>
-  <li><b>Geunsik Lim</b>, "Android Platform on S3C6410 board", 3G Mobile Phone Design Conference, Simcheon/Hongkong, China, 2009</li>
-<br>
-  <li><b>Geunsik Lim</b>, "Android Platform on X86 Netbook", Beijing Asia Pacific Android Conference (APAC), Beijing, China, 2009</li>
-<br>
-  <li><b>Geunsik Lim</b>, "Android Platform on X86 Netbook", Shanghai Asia Pacific Android Conference (APAC), 2009, Shanghai, China</li>
-<br>
-  <li><b>Geunsik Lim</b>, "Mobile Experience with Linux (Android Internals and Prototype on S3c6410)", Linux Conference on Australia (LCA), Mobile Miniconference, Tasmania, Australia, Jan. 2009</li>
-<br>
-  <li><b>Geunsik Lim</b>, "Linux-Based Open Mobile Platform: Android features and Enhancement", International Symposium on Embedded Technology (ISET), Daegu, Korea, 2008</li>
-<br>
-</ol>
-<br>
-
-<b>[International Conferences] (2nd or co-work author)</b><br>
-<ol>
-  <li>MyungJoo Ham, Jijoong Moon , <b>Geunsik Lim</b>, Jaeyun Jung, Hyoungjoo Ahn, Wook song, Sangjung Woo, Parichay Kapoor, Dongju Chae, Gichan Jang, Yongjoo Ahn, and Jihoon Lee, "<a href=https://arxiv.org/abs/2101.06371>Nnstreamer: Efficient and Agile Development of On-Device AI System,</a>" 43rd ACM/IEEE International Conference on Software Engineering (ICSE)-SEIP, Madrid, Spain, May. 2021. <b><code><span style='color: red;'>TOP-TIER</span></code></b></li>
-<br>  
-  <li>MyungJoo Ham and <b>Geunsik Lim</b>, "<a href=https://dl.acm.org/doi/10.1109/ICSE-SEIP.2019.00023>Making Configurable and Unified Platform, Ready for Broader Future Devices,</a>" 41st ACM/IEEE International Conference on Software Engineering (ICSE)-SEIP, Montreal, QC, Canada, May. 2019. <b><code><span style='color: red;'>TOP-TIER</span></code></b></li>
-<br>
-</ol>
-    <br>
-<br>
-<br>
-<a name='toc-domes-journ' id='toc-domes-journ'></a>
-<b>[Domestic Journals] (1st author or corresponding author)</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol>
-  <li><b>Geunsik Lim</b>, MyungJoo Ham, and Jaeyun Jung, "<a href=https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09289753>VTS: Virtual Testbed System for Cloud-based On-Device AI Application</a>," KIISE Transactions on Computing Practices : Computing Practices and Letter (CPL), vol. 26, No. 1, Jan. 2020.  https://doi.org/10.5626/KTCP.2020.26.1.12. <code>Invited Paper</code></li>  
-  <br>
-  <li><b>Geunsik Lim</b>, Dong Hyun Kang, and Young Ik Eom, "<a href=https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09277389>CPU Mediator for Optimizing Thread Operations on IoT Devices</a>," KIISE Transactions on Computing Practices : Computing Practices and Letter (CPL), vol. 25, No. 12, Dec. 2019. https://doi.org/10.5626/KTCP.2019.25.12.616. <code>Invited Paper</code></li>
-  <br>
-  <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, "<a href=https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE02257901>Resource management framework for improving thread performance on mobile platform</a>,"Journal of the Korean Institute of Information Scientists and Engineers (Journal of KIISE) : Computer Systems and Theory, vol. 40, issue 5, Oct. 2013.</li>
-  <br>
-  <li><b>Geunsik Lim</b>, Seho Lee, and Young Ik Eom, "<a href=https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE02194664>Task parallelism system of application for multicore-based mobile platform</a>," Journal of Korea Information and Communications Society (Journal of KICS), vol.38, issue 6, May 2013. <code>Invited Paper</code></li>
-  <br>
-</ol>
-<br>
-<br>
-<br>
-<a name='toc-domes-conf' id='toc-domes-conf'></a>
-<b>[Domestic Conferences] (1st author or corresponding author)</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol>
-  <li><b>Geunsik Lim</b> and Young Ik Eom, "<a href=https://www.cseric.or.kr/literature/ser_view.php?SnxGubun=INME&mode=total&searchCate=literature&literature=Y&more=Y&research=Y&pg=1&gu=INME000G0&cmd=qryview&SnxIndxNum=217617&rownum=1&totalCnt=7&q1_t=R2V1bnNpayBMaW0=&listUrl=L2xpdGVyYXR1cmUvcmVzdWx0LnBocD9TbnhHdWJ1bj1JTk1FJm1vZGU9dG90YWwmc2VhcmNoQ2F0ZT1saXRlcmF0dXJlJmxpdGVyYXR1cmU9WSZxMT1HZXVuc2lrJTIwTGltJm1vcmU9WSZmMT1NTiZyZXNlYXJjaD1ZJnBnPTE=&f1=MN&q1=Geunsik%20Lim>Analysis of the Impact of OS Memory Management Policy on the Buildup of Large-scale Software</a>," Proc. of KIISE Korea Computer Congress (KCC), Jul. 2020. </li>
-  <br>
-  <li><b>Geunsik Lim</b>, Dong Hyun Kang, and Young Ik Eom, "Optimizing Thread Operation for IoT Application," Proc. of KIISE Korea Computer Congress (KCC), <code>Excellent Presentation Paper Award</code>, Jun. 2019. </li>
-  <br>
-  <li><b>Geunsik Lim</b>, MyungJoo Ham, and Jaeyun Jung, "Cloud-based Testbed for On-Device AI Application," Proc. of KIISE Korea Computer Congress (KCC), <code>Excellent Presentation Paper Award</code>, Jun. 2019. </li>
-  <br>  
-  <li><b>Geunsik Lim</b> and Young Ik Eom, "UNAS: User-space NUMA-aware scheduler for optimizing memory utilization and performance," Proc. of KICS Winter Conference, Jan. 2014. <font color=red></font> </li>
-  <br>
-  <li><b>Geunsik Lim</b>, Taehun Kim, R.J.W.E. Lahaye, and Young Ik Eom, "HTCondor-based distributed compiler network," Proc. of KIISE Fall Conference, <code>Excellent Paper Award</code>, Nov. 2013. </li>
-  <br>
-  <li><b>Geunsik Lim</b>, Keonwoo Kim, and Young Ik Eom, "Notrace32-based real-time remote debugging method for optimization of mobile OS," Proc. of KICS Summer Conference, Jun. 2013. </li>
-  <br>
-  <li><b>Geunsik Lim</b>, Changwoo Min, and Young Ik Eom, "Dynamic thread scheduling framework for improving user responsiveness," Proc. of KIISE Korea Computer Congress, Jun. 2013. </li>
-  <br>
-  <li><b>Geunsik Lim</b>, Younghyun Joo, and Young Ik Eom, "CoCloud: Revision control based collaborative cloud system for contents cooperation," Proc. of KICS Joint Conference on Communications and Information, May 2013. </li>
-  <br>
-  <li><b>Geunsik Lim</b>, Seho Lee, and Young Ik Eom, "BioMP: Migrating OpenMP into Bionic library for Android platform based on ARM multicore," Proc. of KICS Winter Conference, <code>Excellent Paper Award</code>, Jan. 2013.</b> </li>
-  <br>
-  <li><b>Geunsik Lim</b>, Keonwoo Kim, and Young Ik Eom, "Notrace32: Tracing technology to analyze kernel of Android platform in real-time," Proc. of KIISE Summer Workshop on Computer Communications, Information Network Society, Aug. 2012. </li>
-  <br>
-  <li><b>Geunsik Lim</b> "Android Platform Internals", 3rd CELF Korea Technical Jamboree, 2008, Seoul, Korea </li>
-  <br>
-  <li><b>Geunsik Lim</b> "Opensource Business Model and Android Platform", KIPA (Korea IT Industry Promotion Agency), 2008, Seoul, Korea </li>
-  <br>
-</ol>
-<br>
-<br>
-<br>
-<a name='toc-domes-android' id='toc-domes-android'></a>
-<b>[Domestic Android Conferences] (Presenter)</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol>
-  <li><b>Geunsik Lim</b> "Task parallelism with KTC & Bionic/OpenMP for Multicore-Based Android", 11th Korea Android Conference, 2013, www.kandroid.org</font></li>
-  <br>
-  <li><b>Geunsik Lim</b> "Multicore-Based Memory Issues and Development Tips on ICS", Samsung Developer Day 2012 (Galaxy S III), Samsung Electronics, Seoul, Korea</li>
-  <br>
-  <li><b>Geunsik Lim</b> "Solving memory leak to avoid LMK operation of Android applications: Valgrind on ARM", 9th Korea Android Conference, 2012, www.kandroid.org</li>
-  <br>
-  <li><b>Geunsik Lim</b> "Issues that smart device platform developers must know", Smart Device Developer Conf, KOSTA(Korea Software Technology Association)/MDS Technology, Seoul, Korea, 2011</li>
-  <br>
-  <li><b>Geunsik Lim</b> "Android Kernel Debugging : Ftrace", 8th Korea Android Conference, 2011, www.kandroid.org</li>
-  <br>
-  <li><b>Geunsik Lim</b> "Android Network and Enhancement", 7th Korea Android Conference, 2011, www.kandroid.org </li>
-  <br>
-  <li><b>Geunsik Lim</b> "Chrome WebOS Based on Cloud Computing", 6th Korea Android Conference, 2010, www.kandroid.org </li>
-  <br>
-  <li><b>Geunsik Lim</b> "Optimization Android Performance with GCC Compiler", 5th Korea Android Conference, 2010, www.kandroid.org </li>
-  <br>
-  <li><b>Geunsik Lim</b> "Prelink and Preload Based Zygote Analysis", 4th Korea Android Conference, 2009, www.kandroid.org </li>
-  <br>
-  <li><b>Geunsik Lim</b> "Understanding repo to manage android full sources", 3rd Korea Android Conference, 2009, www.kandroid.org </li>
-  <br>
-  <li><b>Geunsik Lim</b> "Android Porting and Understanding Development Process", 2nd Korea Android Conference, 2008, www.kandroid.org </li>
-  <br>
-  <li><b>Geunsik Lim</b> "Linux Based Android Kernel Issues", 1st Korea Android Conference, 2008, www.kandroid.org </li>
-  <br>
-</ol>
-<br>
-<br>
-<br>
-<a name='toc-patent' id='toc-patent'></a>
-<b>[Patents (Applied): Since 2010] (Main inventor)</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol>
-  <li><b>Geunsik Lim</b>, "A method and a lightweight and efficient code inspection system for continuous software integration", 2020 </li>
-  <br>
-  <li><b>Geunsik Lim</b>, "Virtual Testbed System for Cloud-based On-Device AI Application", 2019 </li>
-  <br>
-  <li><b>Geunsik Lim</b>, "A method and configurable system for generating User-defined software platform image, 2017 </li>
-  <br>  
-  <li><b>Geunsik Lim</b>, "Enhancing application performance with virtual memory partitioning technique", 2013 </li>
-  <br>
-  <li><b>Geunsik Lim</b>, "Operation Zone Based SMP Scheduler for Effective Task Migration on Multicore Systems", 2012</li>
-  <br>
-  <li><b>Geunsik Lim</b>, Myung-June Jung, Sang-Bum Suh, Sung-Min Lee, "Apparatus and method for snapshot image segmentation", Application number 13/105,007, US 2012/0101996</li>
-  <br>
-  <li><b>Geunsik Lim</b>, "Apparatus and method for managing memory in consideration of user response time", European Patent Application EP2386957, EP20110165602, Publication Date 11/16/2011</li>
-  <br>
-  <li><b>Geunsik Lim</b>, Sang-bum Suh, Ju-pyung Lee, "Apparatus and method for managing memory", United States Patent Application 20110283080, Publication Date 11/17/2011</li>
-  <br>
-</ol>
-<br>
-<br>
-<br>
-<a name='toc-ack-paper' id='toc-ack-paper'></a>
-<b>[Acknowledgements Related Papers]</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol>
-  <li>Paul E. McKenney, "<a href=https://www.semanticscholar.org/paper/When-Do-Real-Time-Systems-Need-Multiple-CPUs-McKenney/a09afb2a5ea136b7ad248bd8e42d70df327cd6b4>When Do Real Time Systems Need Multiple CPUs?</a>", IBM Linux Technology Center, Real Time Linux Workshops 2010, Oct-24-2010,
-  <a href=https://www.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html> perf-book (PDF)</a>, 
-  <a href=https://github.com/paulmckrcu/perfbook>perf-book (GitHub)</a></li>
-  <br>
-</ol>
-<br>
-<br>
-<br>
-<a name='toc-awards' id='toc-awards'></a>
-<b>[Awards]</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol>
-
-  <li><b>Popularity Award</b>, <a href=https://aem-auth-prod.mathworks.com/content/mathworks/blueprint/default/campaigns/products/matlab-ai-model-challenge/awards.html?wcmmode=disabled>MathWorks Korea</a>, <a href= https://www.ikld.kr/news/articleView.html?idxno=308958>'2025 MatLab AI Model Challenge’</a>, Feb-27-2025</li>
-  <br>
-  <li><b>Samsung Best Paper Award 2023</b>, <a href=https://www.sait.samsung.co.kr/>SAIT</a> Samsung Electronics, "SWAM: Revisiting Swap and OOMK for Improving Application Responsiveness on Mobile Devices", Seoul, KR, Sep-02-2023, <code>Silver Award</code>, <font color=red> 1st Author</font></li>
-  <br> 
-  <li><b><font color=red>Long Service Award</font></b> from Samsung Electronics, <a href=https://www.samsung.com/>Samsung Electronics</a>, Jan-03-2023, <code>20 Years Long Service Award</code> </li>
-  <br> 
-  <li><b>Gold Winner</b> from ST Micro Electronics Korea, "STM32 Quest Challenge: STM32Cube.AI Recognition 2022", <a href=https://www.e4ds.com/>E4ds</a>, Nove-06-2022 </li>
-  <br>
-  <li><b>1st Opensource Award</b> from Opensource Source Group, Samsung Research, "Inner-source with Opensource culture for the 2021 year", <a href=https://www.samsung.com/>Samsung Electronics</a>, Nov-20-2021, <code>Open Source Award (Personal sector)</code> </li>
-  <br>    
-  <li><b>1st Opensource Award</b> from Opensource Source Group, Samsung Research, "Best practice with opensource for the 2021 year", <a href=https://www.samsung.com/>Samsung Electronics</a>, Nov-20-2021, <code>Open Source Award (Team sector)</code> </li>
-  <br>  
-  <li><b>Samsung Best Paper Award 2021</b>, <a href=https://www.sait.samsung.co.kr/>SAIT</a> Samsung Electronics, "Nnstreamer: Efficient and Agile Development of On-Device AI System", Seoul, KR, Nov-08-2021, <code>Gold Award</code></li>
-  <br>  
-  <li><b><font color=red>Embedded Software Industry 有功 褒賞</font> (Meritorious Service Praise)</b> from The Federation of Korean Information Industries (<a href=https://www.kessia.kr/bbs/board.php?tbl=notice&mode=VIEW&num=258&chr=&category=&findType=&findWord=&sort1=&sort2=&page=1/>FKII & KEESIA</a>), Korea Embedded Software and System Industry Association (KESSIA), Dec-22-2020, <code>Embedded Software Industry Association President Award</code>, FKII20210125-4-1 </li>
-  <br>
-  <li><b>Excellent Award</b> from ST Micro Electronics, "STM32MP1 Complete Conquest Quest Challenge", <a href=https://www.e4ds.com/>E4ds</a>, Aug-03-2020 </li>
-  <br>
-  <li><b>Best Code Review Award 2019</b> from DevXday, "Code Review Contest for the 2019 year", <a href=https://www.samsung.com/>Samsung Electronics</a>, Sep-25-2019, <code>2nd Place Award</code> </li>
-  <br>
-  <li><b>Best Opinion Award</b> from 2019 Post Conference, <a href=https://www.eiric.or.kr/>EIRIC</a> (Electronic & Information Research Information Center), "Best Opinion Event for 2019 year", Jul-30-2019 </li>
-  <br>
-  <li><b>Samsung Best Paper Award 2019</b>, <a href=https://www.sait.samsung.co.kr/>SAIT</a> Samsung Electronics, "Making Configurable and Unified Platform, Ready for Broader Future Devices", Seoul, KR, Nov-15-2019, <code>Silver Award</code> </li>
-  <br>  
-  <li><b>Samsung Best Paper Award 2016</b>, <a href=https://www.sait.samsung.co.kr/>SAIT</a> Samsung Electronics, "BB: Booting Booster for Consumer Electronics with Modern OS", Seoul, KR, Nov-28-2016, <code>Gold Award</code>, <font color=red> 1st Author</font></li>
-  <br>
-<li><b><font color=red>IEEE CE Chester Sall Award</font></b>, <a href=https://ctsoc.ieee.org/awards/sall.html>IEEE Consumer Electronics(CE) Society</a>, "Virtual memory partitioning for enhancing application performance in mobile devices," Lasvegas, US, Jan-11-2016, <code>1st Place Best Paper</code> </li>
-  <br>
-  <li><b>Excellent Research Award</b>, <a href=https://ice.skku.edu/>College of Information & Communication Engineering</a>, Sungkyunkwan University, "Excellent Research Paper for 2013 year", No. 662, 2014 </li>
-  <br>
-  <li><b>Product Innovation Award</b> from <a href=https://www.sait.samsung.co.kr/>SAIT</a>, Samsung Electronics, "Deploying the Full-HD Camcorder with Realtime Linux", 2010 </li>
-  <br>
-  <li><b>Bravo Award</b>,<a href=https://www.samsung.com/>Samsung Electronics</a>, "Linux-Based DTV Enhancement and Deployment (VxWorks-to-Linux migration)", 2007 </li>
-  <br>
-</ol>
-<br>
-<br>
-<br>
-<a name='toc-publication' id='toc-publication'></a>
-<b>[Publications]</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol>
-  <li>"<a href="http://www.yes24.com/Product/Goods/78869304">라즈베리파이로 시작하는 핸드메이드 IoT</a>", BJ Public, 448 pages, 173x230mm, 851g, ISBN 9791190014489, Sep-27-2019, (in Korean) <code>BEST: IT Mobile Top 100 (9weeks)</code> </li>
-  <br>
-</ol>
-<br>
-
-<br>
-<b>[Education]</b><br>
-<i>Ph.D. degree, in College of Information & Communication Engineering, Graduate school (<a href=https://dclab-skku.github.io/>DC-Lab</a>)</i><br>
-Sungkyunkwan University (South Korea)<br>
-1) Specialized in the page reclamation of the memory management.<br>
-2) Published the book that describes how to develop the IoT systems on the Raspberry-PI3 board.<br>
-<br>
-<!---------------------------
-please write your messages here.
-<i><a href=https://dcollection.skku.edu/srch/srchDetail/000000048717?navigationSize=10&query=%2B%28%28all%3A%EC%9E%84%EA%B7%BC%EC%8B%9D%29%29&pageSize=10&insCode=211040&searchWhere1=all&sortDir=desc&searchTotalCount=0&pageNum=1&rows=10&searthTotalPage=0&treePageNum=1&sortField=score&start=0&ajax=false&searchText=%5B%EC%A0%84%EC%B2%B4%3A%EC%9E%84%EA%B7%BC%EC%8B%9D%5D&searchKeyWord1=%EC%9E%84%EA%B7%BC%EC%8B%9D>Master's degree</a>,in Department of IT Convergence, Graduate school</i><br>
-Sungkyunkwan University (Suwon, Korea)<br>
-1) Specialized in the embedded operating system.<br>
-2) Received Excellent Research Award from Sungkyunkwan University College of Information & Communication Engineering, "Excellent research paper".<br>
-<br>
-<i>Bachelor's degree, in Computer Engineering</i><br>
-Ajou University (Suwon, Korea)<br>
-1) Specialized in System Software and Computer Engineering.<br>
-2) Received an honors scholarship three times.<br>
-<br>
-//-------->
-<br>
-<br>
-<a name='toc-certification' id='toc-certification'></a>
-<b>[Certifications]</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol>
-  <li>ICAgile Certified Professional (ICP) Certificate</li>
-  <li>Oracle Certified Professional 9i (OCP 9i Administrator)</li>
-  <li>Cisco Certified Network Professional (CCNP)</li>
-  <li>Driver License 1st Class (Road Traffic Authority Driver's License Examination Office)</li>
-  <li>Linux Master 1st Class (Korea Association for ICT Promotion)</li>
-  <li>Engineer Information Processing (Human Resources Development Service of Korea)</li>
-</ol>
-<br>
-<br>
-<br>
-<br>
-<a name='toc-membership' id='toc-membership'></a>
-<b>[Membership]</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol>
-  <li><a href=https://sites.google.com/unimib.it/edl-ie2026>Reviewer for Embedded Deep Learning for Real-Time Intelligent Environments</a>, Sep-2025 ~  </li>  
-  <li><a href=https://www.icce-berlin.org>IEEE ICCE-Berlin 2025 TPC member</a>, Jul-2025 ~  </li>
-  <li><a href=https://mc.manuscriptcentral.com/taco/>ACM Transactions on Architecture and Code Optimization (TACO), TPC member</a>, Jun-2025 ~  </li>
-  <li><a href=https://www.icce-tw.org/>IEEE ICC-TW 2025 TPC member</a>, Jun-2025 ~  </li>
-  <li><a href=https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=43>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Reviewer</a>, Aug-2023 ~ </li>
-  <li><a href=https://ctsoc.ieee.org/technical/technical-committees.html alt="IEEE Consumer Technology ML/DL/AI Technical Committee">IEEE CTSoc MDA-TC member</a>, Oct-2022 ~ </li>
-  <li><a href=https://www.ieee.org/membership/>IEEE Membership</a>, Mar-2012 ~  </li>
-  <li><a href=https://ctsoc.ieee.org/membership.html>IEEE Consumer Technology Society Membership</a>, May-2012 ~ </li>
-  <li><a href=https://www.comsoc.org/membership>IEEE Communications Society Membership</a>, Sep-2013 ~ </li>
-  <li><a href=https://www.bbbkorea.org/en/>BBB Korea</a>, Volunteer Interpreter, Ocp-2010 ~ </li>
-  <li>Samsung Electronics, Software Membership 2000 ~ 2002 </li>
-</ol>
-<br>
-<br>
-<br>
-<a name='toc-friend' id='toc-friend'></a>
-<b>[Friends]</b> <a href='#toc-top'><code><span style='color: orange;'>TOC</span></code></a><br>
-<ol>
- <li><a href=https://www.insun.pe.kr>Insun Pyo</a>, Software Engineer, Samsung Electronics</li>
-  <li><a href=https://bonohubby.com/>Seungmin Oh</a>, Software Engineer</li>
-  <li><a href=https://github.com/myungjoo>Myungjoo Ham</a>,NNStreamer Founder, Tizen Architect (Machine Learning)</li>
-  <li><a href=https://jijoongmoon.github.io/>Jijoong Moon</a>, Software Engineer</li>
-  <li><a href=https://www.linkedin.com/in/seikwon-kim-bb88283b/>Seikwon Kim</a>, Principle Engineer at Samsung Electronics </li>
-  <li><a href=https://www.linkedin.com/in/dong-seob-park-20769734/>Dong-seob Park</a>, Kakao Bank</li>
-  <li><a href=https://www.linkedin.com/in/heekuk-lee-77aa2b19/>Heekuk Lee</a>a>, Principle Engineer at Samsung Electronics </li>
-  <li><a href=https://younlea.github.io/>Younlea Kim</a>, Principle Engineer at Samsung Electronics </li>
-  <li>TBA </li>
-</ol>
-<br>
-<br>
-</td></tr>
-</table>
-</font>
-<hr>
-<font color=gray>
-&nbsp;&nbsp;This webpage was last modified on Oct-11-2025  
-</font>
-<br>
-<br>
 </body>
 </html>
