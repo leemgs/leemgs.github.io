@@ -2,23 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Geunsik Lim — Profile & Resume</title>
   <meta name="description" content="Homepage of Geunsik Lim (임근식), software engineer & researcher focusing on embedded systems, OS, and on-device AI." />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <style>
+    /* ===== Base & Theming ===== */
     :root{
       --bg:#0b0c10; --bg-soft:#11131a; --card:#151824;
       --text:#e6e8ef; --muted:#99a1b3; --brand:#ff8a00; --link:#5ab1ff;
       --shadow:0 10px 30px rgba(0,0,0,.35); --radius:16px; --maxw:1100px;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
     }
     @media (prefers-color-scheme: light){
       :root{--bg:#f6f7fb; --bg-soft:#fff; --card:#fff; --text:#1c2230; --muted:#5d6a85; --shadow:0 10px 30px rgba(21,34,66,.08)}
     }
-    html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic","Nanum Gothic",Arial,sans-serif}
-    a{color:var(--link); text-decoration:none}
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic","Nanum Gothic",Arial,sans-serif; -webkit-text-size-adjust:100%}
+    img,video{max-width:100%; height:auto}
+    audio{width:100%}
+    a{color:var(--link); text-decoration:none; word-break:break-word}
     a:hover{text-decoration:underline}
     .wrap{max-width:var(--maxw); margin:0 auto; padding:24px}
+    .content{min-width:0}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    :focus-visible{outline:2px solid var(--link); outline-offset:2px; border-radius:8px}
+
+    /* ===== Hero ===== */
     .hero{
       background:
         radial-gradient(1200px 600px at 10% -20%, rgba(255,138,0,.2), transparent 60%),
@@ -26,38 +36,74 @@
       padding:56px 24px 24px; border-bottom:1px solid rgba(255,255,255,.06)
     }
     .hero-inner{max-width:var(--maxw); margin:0 auto; display:grid; grid-template-columns:120px 1fr; gap:24px; align-items:center}
-    .avatar{width:120px; height:120px; border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,.12); box-shadow:var(--shadow)}
-    .title{font-size:28px; font-weight:800; letter-spacing:.2px}
-    .subtitle{color:var(--muted); margin-top:6px; line-height:1.5}
+    .avatar{width:clamp(80px, 22vw, 120px); height:clamp(80px, 22vw, 120px); border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,.12); box-shadow:var(--shadow)}
+    .title{font-size:clamp(22px, 4.5vw, 32px); font-weight:800; letter-spacing:.2px}
+    .subtitle{color:var(--muted); margin-top:6px; line-height:1.5; font-size:clamp(14px, 2.8vw, 16px)}
     .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
     .badge{background:linear-gradient(135deg, rgba(255,138,0,.14), rgba(255,138,0,.06)); color:#ffd9b0; border:1px solid rgba(255,138,0,.35); padding:6px 10px; border-radius:999px; font-size:12px}
     @media (prefers-color-scheme: light){ .badge{color:#5a3200; border-color:#ffcf8d} }
+
+    /* ===== Layout ===== */
     .grid{display:grid; grid-template-columns:270px 1fr; gap:24px}
     @media (max-width:1000px){ .grid{grid-template-columns:1fr} }
     .tocbar{position:sticky; top:12px; align-self:start; background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
     .tocbar h3{margin:0 0 8px; font-size:14px; letter-spacing:.6px; color:var(--muted); text-transform:uppercase}
-    .tocbar a{display:block; padding:8px 10px; border-radius:10px; color:var(--text)}
+    .tocbar a{display:block; padding:10px 12px; border-radius:10px; color:var(--text)}
     .tocbar a:hover{background:rgba(255,255,255,.06)}
     section{scroll-margin-top:90px}
     .section-card{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:20px; box-shadow:var(--shadow)}
-    .section-header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:10px}
-    .section-title{font-size:20px; font-weight:800}
+    .section-header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:10px; flex-wrap:wrap}
+    .section-title{font-size:18px; font-weight:800}
     .pill{font-size:12px; color:var(--muted); border:1px solid rgba(255,255,255,.12); border-radius:999px; padding:5px 10px}
     ol,ul{margin:10px 0 0 20px}
     li{margin:8px 0}
     .kv{display:grid; grid-template-columns:180px 1fr; gap:8px 18px; margin-top:8px}
     @media (max-width:700px){ .kv{grid-template-columns:1fr} }
+    .kv > div{min-width:0; overflow-wrap:anywhere}
     .btns{display:flex; gap:10px; flex-wrap:wrap}
-    .btn{display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg, rgba(90,177,255,.14), rgba(90,177,255,.06)); color:#d8ecff; border:1px solid rgba(90,177,255,.35); padding:8px 12px; border-radius:12px}
+    .btn{display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg, rgba(90,177,255,.14), rgba(90,177,255,.06)); color:#d8ecff; border:1px solid rgba(90,177,255,.35); padding:10px 14px; border-radius:12px}
     @media (prefers-color-scheme: light){ .btn{color:#123a5a; border-color:#aaddff} }
     .btn:hover{filter:brightness(1.08); text-decoration:none}
-    footer{color:var(--muted); text-align:center; padding:40px 10px}
+    footer{color:var(--muted); text-align:center; padding:56px 10px 72px}
     .hr{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent); margin:26px 0}
     .chip{display:inline-block; padding:2px 8px; border:1px solid rgba(255,255,255,.14); border-radius:999px; font-size:11px; color:#b6bed1}
     .link-row{display:flex; gap:10px; flex-wrap:wrap}
+
+    /* ===== Mobile Enhancements ===== */
+    /* Collapsible TOC for narrow screens */
+    .toc-collapsible{display:none}
+    @media (max-width:1000px){
+      .tocbar{display:none}
+      .toc-collapsible{display:block; margin-bottom:12px}
+      .toc-collapsible summary{list-style:none; cursor:pointer; background:var(--card); border:1px solid rgba(255,255,255,.12); padding:12px 16px; border-radius:12px; font-weight:700}
+      .toc-collapsible[open] summary{border-bottom-left-radius:0;border-bottom-right-radius:0}
+      .toc-collapsible .toc-body{border:1px solid rgba(255,255,255,.12); border-top:0; border-bottom-left-radius:12px;border-bottom-right-radius:12px; padding:8px}
+      .toc-collapsible a{padding:10px 12px; display:block; border-radius:8px}
+      .toc-collapsible a:hover{background:rgba(255,255,255,.06)}
+    }
+
+    /* Bottom quick-nav on very small screens */
+    .mobile-nav{display:none}
+    @media (max-width:700px){
+      .wrap{padding:16px}
+      .hero{padding:36px 16px 16px}
+      .mobile-nav{
+        display:flex; position:fixed; left:0; right:0; bottom:0; z-index:20;
+        background:var(--bg-soft); border-top:1px solid rgba(255,255,255,.12);
+        padding:8px max(8px, env(safe-area-inset-left, 8px)) calc(8px + var(--safe-bottom)) max(8px, env(safe-area-inset-right, 8px));
+        overflow-x:auto; gap:8px;
+      }
+      .mobile-nav a{
+        white-space:nowrap; font-size:12px; padding:8px 10px; border-radius:999px;
+        border:1px solid rgba(255,255,255,.14); color:var(--text); background:rgba(255,255,255,.04);
+        flex:0 0 auto;
+      }
+    }
   </style>
 </head>
 <body>
+
+<a class="sr-only" href="#profile">Skip to content</a>
 
 <header class="hero">
   <div class="hero-inner">
@@ -78,13 +124,24 @@
       </div>
       <div class="btns" style="margin-top:12px">
         <a class="btn" href="https://github.com/leemgs/leemgs.github.io/blob/master/index.html" target="_blank" rel="noopener">Edit on GitHub</a>
-        <a class="btn" href="#toc">Jump to TOC</a>
+        <a class="btn" href="#toc-collapsible">Jump to TOC</a>
       </div>
     </div>
   </div>
 </header>
 
+<nav class="mobile-nav" aria-label="Quick sections">
+  <a href="#profile">Profile</a>
+  <a href="#intl-journals">Journals</a>
+  <a href="#intl-confs-1st">Confs (1st)</a>
+  <a href="#intl-confs-co">Confs (Co)</a>
+  <a href="#patents">Patents</a>
+  <a href="#awards">Awards</a>
+  <a href="#education">Education</a>
+</nav>
+
 <main class="wrap grid">
+  <!-- Desktop TOC -->
   <aside class="tocbar" id="toc">
     <h3>Contents</h3>
     <a href="#profile">My Profile</a>
@@ -105,6 +162,28 @@
     <div class="hr"></div>
     <div class="chip">Last updated: Oct-11-2025</div>
   </aside>
+
+  <!-- Mobile TOC (collapsible) -->
+  <details class="toc-collapsible" id="toc-collapsible">
+    <summary>Contents</summary>
+    <div class="toc-body">
+      <a href="#profile">My Profile</a>
+      <a href="#intl-journals">International Journals</a>
+      <a href="#intl-confs-1st">International Conferences (1st/Corresponding)</a>
+      <a href="#intl-confs-co">International Conferences (Co-author)</a>
+      <a href="#dom-journals">Domestic Journals</a>
+      <a href="#dom-confs">Domestic Conferences</a>
+      <a href="#android-cons">Domestic Android Conferences</a>
+      <a href="#patents">Patents</a>
+      <a href="#ack">Acknowledgements</a>
+      <a href="#awards">Awards</a>
+      <a href="#pubs">Publications</a>
+      <a href="#education">Education</a>
+      <a href="#certs">Certifications</a>
+      <a href="#memberships">Membership</a>
+      <a href="#friends">Friends</a>
+    </div>
+  </details>
 
   <div class="content">
 
@@ -183,7 +262,7 @@
     <!-- International Conferences (1st/Corresponding) -->
     <section id="intl-confs-1st" class="section-card">
       <div class="section-header">
-        <div class="section-title">International Conferences (1st author or corressponding author)</div>
+        <div class="section-title">International Conferences (1st author or corresponding author)</div>
         <span class="pill">All items visible</span>
       </div>
       <ol>
@@ -360,6 +439,7 @@
           1) Specialized in the page reclamation of the memory management.<br>
           2) Published the book that describes how to develop the IoT systems on the Raspberry-PI3 board.
         </li>
+      </ul>
     </section>
 
     <!-- Certifications -->
@@ -422,7 +502,6 @@
 </main>
 
 <footer>
-  <font color="gray">&nbsp;&nbsp;This webpage was last modified on Oct-11-2025</font>
   <div style="color:#99a1b3">This page is generated with a minimal, framework-free design. © Geunsik Lim.</div>
 </footer>
 
