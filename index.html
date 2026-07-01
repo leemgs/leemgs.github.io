@@ -5,20 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Geunsik Lim — Profile & Resume</title>
   <meta name="description" content="Homepage of Geunsik Lim, software engineer & researcher focusing on embedded systems, OS, and on-device AI." />
+  <meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <script>
+    // Apply saved theme before first paint to avoid a flash of the wrong theme.
+    (function(){
+      try{
+        var t = localStorage.getItem('theme');
+        if(t) document.documentElement.setAttribute('data-theme', t);
+      }catch(e){}
+    })();
+  </script>
   <style>
     /* ===== Base & Theming ===== */
     :root{
       --bg:#0b0c10; --bg-soft:#11131a; --card:#151824;
       --text:#e6e8ef; --muted:#99a1b3; --brand:#ff8a00; --link:#5ab1ff;
+      --border:rgba(255,255,255,.08); --border-strong:rgba(255,255,255,.14);
+      --hover:rgba(255,255,255,.06); --stripe:rgba(255,255,255,.03);
       --shadow:0 10px 30px rgba(0,0,0,.35); --radius:16px; --maxw:1100px;
       --safe-bottom: env(safe-area-inset-bottom, 0px);
+      color-scheme: dark;
     }
     @media (prefers-color-scheme: light){
-      :root{--bg:#f6f7fb; --bg-soft:#fff; --card:#fff; --text:#1c2230; --muted:#5d6a85; --shadow:0 10px 30px rgba(21,34,66,.08)}
+      :root{--bg:#f6f7fb; --bg-soft:#fff; --card:#fff; --text:#1c2230; --muted:#5d6a85; --border:rgba(21,34,66,.1); --border-strong:rgba(21,34,66,.18); --hover:rgba(21,34,66,.05); --stripe:rgba(21,34,66,.025); --shadow:0 10px 30px rgba(21,34,66,.08); color-scheme: light}
+    }
+    html[data-theme="dark"]{
+      --bg:#0b0c10; --bg-soft:#11131a; --card:#151824; --text:#e6e8ef; --muted:#99a1b3;
+      --border:rgba(255,255,255,.08); --border-strong:rgba(255,255,255,.14); --hover:rgba(255,255,255,.06); --stripe:rgba(255,255,255,.03);
+      --shadow:0 10px 30px rgba(0,0,0,.35); color-scheme: dark;
+    }
+    html[data-theme="light"]{
+      --bg:#f6f7fb; --bg-soft:#fff; --card:#fff; --text:#1c2230; --muted:#5d6a85;
+      --border:rgba(21,34,66,.1); --border-strong:rgba(21,34,66,.18); --hover:rgba(21,34,66,.05); --stripe:rgba(21,34,66,.025);
+      --shadow:0 10px 30px rgba(21,34,66,.08); color-scheme: light;
     }
     *{box-sizing:border-box}
     html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic","Nanum Gothic",Arial,sans-serif; -webkit-text-size-adjust:100%}
+    body{transition:background-color .25s ease, color .25s ease}
     img,video{max-width:100%; height:auto}
     audio{width:100%}
     a{color:var(--link); text-decoration:none; word-break:break-word}
@@ -28,46 +54,87 @@
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     :focus-visible{outline:2px solid var(--link); outline-offset:2px; border-radius:8px}
 
+    /* ===== Scroll progress ===== */
+    #scroll-progress{position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg, var(--brand), var(--link)); z-index:100; transition:width .1s linear}
+
+    /* ===== Theme toggle ===== */
+    .theme-toggle{
+      display:inline-flex; align-items:center; gap:8px; background:var(--card); color:var(--text);
+      border:1px solid var(--border-strong); padding:10px 14px; border-radius:12px; cursor:pointer;
+      font-size:14px; font-weight:600; box-shadow:var(--shadow);
+    }
+    .theme-toggle:hover{filter:brightness(1.08)}
+
     /* ===== Hero ===== */
     .hero{
+      position:relative;
       background:
         radial-gradient(1200px 600px at 10% -20%, rgba(255,138,0,.2), transparent 60%),
         radial-gradient(900px 500px at 100% -10%, rgba(90,177,255,.2), transparent 60%);
-      padding:56px 24px 24px; border-bottom:1px solid rgba(255,255,255,.06)
+      padding:56px 24px 24px; border-bottom:1px solid var(--border)
     }
+    .hero-top{max-width:var(--maxw); margin:0 auto 20px; display:flex; justify-content:flex-end}
     .hero-inner{max-width:var(--maxw); margin:0 auto; display:grid; grid-template-columns:120px 1fr; gap:24px; align-items:center}
-    .avatar{width:clamp(80px, 22vw, 120px); height:clamp(80px, 22vw, 120px); border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,.12); box-shadow:var(--shadow)}
-    .title{font-size:clamp(22px, 4.5vw, 32px); font-weight:800; letter-spacing:.2px}
+    .avatar{width:clamp(80px, 22vw, 120px); height:clamp(80px, 22vw, 120px); border-radius:50%; object-fit:cover; border:3px solid var(--border-strong); box-shadow:var(--shadow)}
+    .title{font-size:clamp(22px, 4.5vw, 32px); font-weight:800; letter-spacing:.2px; display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .title .wave{display:inline-block; animation:wave 2.4s ease-in-out infinite; transform-origin:70% 70%}
+    @keyframes wave{0%,60%,100%{transform:rotate(0deg)}10%{transform:rotate(14deg)}20%{transform:rotate(-8deg)}30%{transform:rotate(14deg)}40%{transform:rotate(-4deg)}50%{transform:rotate(10deg)}}
     .subtitle{color:var(--muted); margin-top:6px; line-height:1.5; font-size:clamp(14px, 2.8vw, 16px)}
     .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
-    .badge{background:linear-gradient(135deg, rgba(255,138,0,.14), rgba(255,138,0,.06)); color:#ffd9b0; border:1px solid rgba(255,138,0,.35); padding:6px 10px; border-radius:999px; font-size:12px}
+    .badge{background:linear-gradient(135deg, rgba(255,138,0,.14), rgba(255,138,0,.06)); color:#ffd9b0; border:1px solid rgba(255,138,0,.35); padding:6px 10px; border-radius:999px; font-size:12px; font-weight:600}
     @media (prefers-color-scheme: light){ .badge{color:#5a3200; border-color:#ffcf8d} }
+    html[data-theme="light"] .badge{color:#5a3200; border-color:#ffcf8d}
 
     /* ===== Layout ===== */
     .grid{display:grid; grid-template-columns:270px 1fr; gap:24px}
     @media (max-width:1000px){ .grid{grid-template-columns:1fr} }
-    .tocbar{position:sticky; top:12px; align-self:start; background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+    .tocbar{position:sticky; top:12px; align-self:start; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); max-height:calc(100vh - 24px); overflow-y:auto}
     .tocbar h3{margin:0 0 8px; font-size:14px; letter-spacing:.6px; color:var(--muted); text-transform:uppercase}
-    .tocbar a{display:block; padding:10px 12px; border-radius:10px; color:var(--text)}
-    .tocbar a:hover{background:rgba(255,255,255,.06)}
+    .tocbar a{display:block; padding:10px 12px; border-radius:10px; color:var(--text); font-size:14.5px; border-left:3px solid transparent; transition:background .15s ease, border-color .15s ease}
+    .tocbar a:hover{background:var(--hover)}
+    .tocbar a.active{background:var(--hover); border-left-color:var(--brand); color:var(--brand); font-weight:700}
     section{scroll-margin-top:90px}
-    .section-card{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:20px; box-shadow:var(--shadow)}
-    .section-header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:10px; flex-wrap:wrap}
-    .section-title{font-size:18px; font-weight:800}
-    .pill{font-size:12px; color:var(--muted); border:1px solid rgba(255,255,255,.12); border-radius:999px; padding:5px 10px}
-    ol,ul{margin:10px 0 0 20px}
-    li{margin:8px 0}
-    .kv{display:grid; grid-template-columns:180px 1fr; gap:8px 18px; margin-top:8px}
-    @media (max-width:700px){ .kv{grid-template-columns:1fr} }
-    .kv > div{min-width:0; overflow-wrap:anywhere}
+    .section-card{background:var(--card); border:1px solid var(--border); border-left:3px solid transparent; border-radius:16px; padding:22px; box-shadow:var(--shadow); margin-bottom:24px; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+    .section-card:hover{transform:translateY(-3px); border-left-color:var(--brand); box-shadow:0 16px 36px rgba(0,0,0,.25)}
+    html[data-theme="light"] .section-card:hover{box-shadow:0 16px 36px rgba(21,34,66,.14)}
+    .section-header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:14px; flex-wrap:wrap; padding-bottom:12px; border-bottom:1px solid var(--border)}
+    .section-title{font-size:19px; font-weight:800; display:flex; align-items:center; gap:10px}
+    .section-title .icon{font-size:20px; line-height:1}
+    .pill{font-size:12px; color:var(--muted); border:1px solid var(--border-strong); border-radius:999px; padding:5px 10px; white-space:nowrap}
+    ol,ul{margin:10px 0 0 22px}
+    li{margin:12px 0; line-height:1.6; font-size:15.5px}
+    li::marker{color:var(--brand); font-weight:700}
+    li:hover{color:var(--text)}
+    .kv{display:grid; grid-template-columns:210px 1fr; gap:0; margin-top:8px; border-radius:10px; overflow:hidden}
+    .kv > div{min-width:0; overflow-wrap:anywhere; padding:9px 12px; line-height:1.5}
+    .kv > div:nth-child(4n+1), .kv > div:nth-child(4n+2){background:var(--stripe)}
+    .kv > div:nth-of-type(odd){font-weight:700; color:var(--muted); font-size:13.5px; letter-spacing:.2px; text-transform:uppercase}
+    @media (max-width:700px){
+      .kv{grid-template-columns:1fr}
+      .kv > div:nth-of-type(odd){padding-bottom:2px; background:transparent !important}
+      .kv > div:nth-of-type(even){padding-top:2px; margin-bottom:6px}
+    }
     .btns{display:flex; gap:10px; flex-wrap:wrap}
-    .btn{display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg, rgba(90,177,255,.14), rgba(90,177,255,.06)); color:#d8ecff; border:1px solid rgba(90,177,255,.35); padding:10px 14px; border-radius:12px}
+    .btn{display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg, rgba(90,177,255,.14), rgba(90,177,255,.06)); color:#d8ecff; border:1px solid rgba(90,177,255,.35); padding:10px 14px; border-radius:12px; font-weight:600; transition:transform .15s ease, filter .15s ease}
+    html[data-theme="light"] .btn{color:#123a5a; border-color:#aaddff}
     @media (prefers-color-scheme: light){ .btn{color:#123a5a; border-color:#aaddff} }
-    .btn:hover{filter:brightness(1.08); text-decoration:none}
+    .btn:hover{filter:brightness(1.08); text-decoration:none; transform:translateY(-2px)}
     footer{color:var(--muted); text-align:center; padding:56px 10px 72px}
-    .hr{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent); margin:26px 0}
-    .chip{display:inline-block; padding:2px 8px; border:1px solid rgba(255,255,255,.14); border-radius:999px; font-size:11px; color:#b6bed1}
+    .hr{height:1px; background:linear-gradient(90deg, transparent, var(--border-strong), transparent); margin:26px 0}
+    .chip{display:inline-block; padding:2px 8px; border:1px solid var(--border-strong); border-radius:999px; font-size:11px; color:#b6bed1}
+    html[data-theme="light"] .chip{color:#5d6a85}
     .link-row{display:flex; gap:10px; flex-wrap:wrap}
+
+    /* ===== Back to top ===== */
+    #back-to-top{
+      position:fixed; right:20px; bottom:24px; z-index:30; width:44px; height:44px; border-radius:50%;
+      background:var(--card); border:1px solid var(--border-strong); color:var(--text); box-shadow:var(--shadow);
+      display:flex; align-items:center; justify-content:center; font-size:18px; cursor:pointer;
+      opacity:0; pointer-events:none; transition:opacity .2s ease, transform .2s ease;
+    }
+    #back-to-top.show{opacity:1; pointer-events:auto}
+    #back-to-top:hover{transform:translateY(-3px)}
+    @media (max-width:700px){ #back-to-top{bottom:calc(70px + var(--safe-bottom))} }
 
     /* ===== Mobile Enhancements ===== */
     /* Collapsible TOC for narrow screens */
@@ -75,11 +142,11 @@
     @media (max-width:1000px){
       .tocbar{display:none}
       .toc-collapsible{display:block; margin-bottom:12px}
-      .toc-collapsible summary{list-style:none; cursor:pointer; background:var(--card); border:1px solid rgba(255,255,255,.12); padding:12px 16px; border-radius:12px; font-weight:700}
+      .toc-collapsible summary{list-style:none; cursor:pointer; background:var(--card); border:1px solid var(--border-strong); padding:12px 16px; border-radius:12px; font-weight:700}
       .toc-collapsible[open] summary{border-bottom-left-radius:0;border-bottom-right-radius:0}
-      .toc-collapsible .toc-body{border:1px solid rgba(255,255,255,.12); border-top:0; border-bottom-left-radius:12px;border-bottom-right-radius:12px; padding:8px}
+      .toc-collapsible .toc-body{border:1px solid var(--border-strong); border-top:0; border-bottom-left-radius:12px;border-bottom-right-radius:12px; padding:8px}
       .toc-collapsible a{padding:10px 12px; display:block; border-radius:8px}
-      .toc-collapsible a:hover{background:rgba(255,255,255,.06)}
+      .toc-collapsible a:hover{background:var(--hover)}
     }
 
     /* Bottom quick-nav on very small screens */
@@ -87,15 +154,20 @@
     @media (max-width:700px){
       .wrap{padding:16px}
       .hero{padding:36px 16px 16px}
+      .hero-top{justify-content:center; margin-bottom:16px}
+      .hero-inner{grid-template-columns:1fr; text-align:center; justify-items:center}
+      .title{justify-content:center}
+      .badges{justify-content:center}
+      .btns{justify-content:center}
       .mobile-nav{
         display:flex; position:fixed; left:0; right:0; bottom:0; z-index:20;
-        background:var(--bg-soft); border-top:1px solid rgba(255,255,255,.12);
+        background:var(--bg-soft); border-top:1px solid var(--border-strong);
         padding:8px max(8px, env(safe-area-inset-left, 8px)) calc(8px + var(--safe-bottom)) max(8px, env(safe-area-inset-right, 8px));
         overflow-x:auto; gap:8px;
       }
       .mobile-nav a{
         white-space:nowrap; font-size:12px; padding:8px 10px; border-radius:999px;
-        border:1px solid rgba(255,255,255,.14); color:var(--text); background:rgba(255,255,255,.04);
+        border:1px solid var(--border-strong); color:var(--text); background:var(--hover);
         flex:0 0 auto;
       }
     }
@@ -105,11 +177,18 @@
 
 <a class="sr-only" href="#profile">Skip to content</a>
 
+<div id="scroll-progress"></div>
+
 <header class="hero">
+  <div class="hero-top">
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+      <span id="theme-icon" aria-hidden="true">🌙</span> <span id="theme-label">Dark</span>
+    </button>
+  </div>
   <div class="hero-inner">
     <img class="avatar" src="./images/geunsik-pic07-01.jpg" alt="Geunsik Lim photo" />
     <div>
-      <div class="title">Geunsik Lim</div>
+      <div class="title"><span class="wave" aria-hidden="true">👋</span> Geunsik Lim</div>
       <div class="subtitle">Software Engineer & Researcher @ Samsung Electronics — Embedded Platforms · OS · On-Device AI</div>
       <div class="badges">
         <span class="badge">Linux kernel · GCC · Glibc · Android · Tizen</span>
@@ -190,7 +269,7 @@
     <!-- Profile -->
     <section id="profile" class="section-card">
       <div class="section-header">
-        <div class="section-title">My Profile</div>
+        <div class="section-title"><span class="icon">🧑‍💻</span> My Profile</div>
         <span class="pill">Overview</span>
       </div>
       <div class="kv">
@@ -250,7 +329,7 @@
     <!-- International Journals -->
     <section id="intl-journals" class="section-card">
       <div class="section-header">
-        <div class="section-title">International Journals (1st author or corresponding author)</div>
+        <div class="section-title"><span class="icon">📚</span> International Journals (1st author or corresponding author)</div>
         <span class="pill">Peer-reviewed</span>
       </div>
       <ol>
@@ -264,7 +343,7 @@
     <!-- International Conferences (1st/Corresponding) -->
     <section id="intl-confs-1st" class="section-card">
       <div class="section-header">
-        <div class="section-title">International Conferences (1st author or corresponding author)</div>
+        <div class="section-title"><span class="icon">🎤</span> International Conferences (1st author or corresponding author)</div>
         <span class="pill">All items visible</span>
       </div>
       <ol>
@@ -298,7 +377,7 @@
     <!-- International Conferences (Co-author) -->
     <section id="intl-confs-co" class="section-card">
       <div class="section-header">
-        <div class="section-title">International Conferences (2nd or co-work author)</div>
+        <div class="section-title"><span class="icon">🎙️</span> International Conferences (2nd or co-work author)</div>
         <span class="pill">All items visible</span>
       </div>
       <ol>
@@ -310,7 +389,7 @@
     <!-- Domestic Journals -->
     <section id="dom-journals" class="section-card">
       <div class="section-header">
-        <div class="section-title">Domestic Journals (1st author or corresponding author)</div>
+        <div class="section-title"><span class="icon">📗</span> Domestic Journals (1st author or corresponding author)</div>
         <span class="pill">All items visible</span>
       </div>
       <ol>
@@ -324,7 +403,7 @@
     <!-- Domestic Conferences -->
     <section id="dom-confs" class="section-card">
       <div class="section-header">
-        <div class="section-title">Domestic Conferences (1st author or corresponding author)</div>
+        <div class="section-title"><span class="icon">🗣️</span> Domestic Conferences (1st author or corresponding author)</div>
         <span class="pill">All items visible</span>
       </div>
       <ol>
@@ -346,7 +425,7 @@
     <!-- Domestic Android Conferences -->
     <section id="android-cons" class="section-card">
       <div class="section-header">
-        <div class="section-title">Domestic Android Conferences (Presenter)</div>
+        <div class="section-title"><span class="icon">🤖</span> Domestic Android Conferences (Presenter)</div>
         <span class="pill">All items visible</span>
       </div>
       <ol>
@@ -368,7 +447,7 @@
     <!-- Patents -->
     <section id="patents" class="section-card">
       <div class="section-header">
-        <div class="section-title">Patents (Applied): Since 2010 (Main inventor)</div>
+        <div class="section-title"><span class="icon">📝</span> Patents (Applied): Since 2010 (Main inventor)</div>
         <span class="pill">All items visible</span>
       </div>
       <ol>
@@ -386,7 +465,7 @@
     <!-- Acknowledgements -->
     <section id="ack" class="section-card">
       <div class="section-header">
-        <div class="section-title">Acknowledgements Related Papers</div>
+        <div class="section-title"><span class="icon">🙏</span> Acknowledgements Related Papers</div>
         <span class="pill">All items visible</span>
       </div>
       <ol>
@@ -397,14 +476,14 @@
     <!-- Awards -->
     <section id="awards" class="section-card">
       <div class="section-header">
-        <div class="section-title">Awards</div>
+        <div class="section-title"><span class="icon">🏆</span> Awards</div>
         <span class="pill">All items visible</span>
       </div>
       <ol>
         <li><b><a href="https://www.ikld.kr/news/articleView.html?idxno=308958" target="_blank" rel="noopener">Popularity Award</a></b>, <a href="https://aem-auth-prod.mathworks.com/content/mathworks/blueprint/default/campaigns/products/matlab-ai-model-challenge/awards.html?wcmmode=disabled" target="_blank" rel="noopener">MathWorks Korea</a>, <a href="https://www.ikld.kr/news/articleView.html?idxno=308958" target="_blank" rel="noopener">'2025 MatLab AI Model Challenge’</a>, Feb-27-2025</li>
         <li><b>Samsung Best Paper Award 2023</b>, <a href="https://www.sait.samsung.co.kr/" target="_blank" rel="noopener">SAIT</a> Samsung Electronics, "SWAM: Revisiting Swap and OOMK for Improving Application Responsiveness on Mobile Devices", Seoul, KR, Sep-02-2023, <code>Silver Award</code></li>
         <li><b>Long Service Award</b> from Samsung Electronics, <a href="https://www.samsung.com/" target="_blank" rel="noopener">Samsung Electronics</a>, Jan-03-2023, <code>20 Years Long Service Award</code></li>
-        <li><b><a href="https://www.e4ds.com/make/contest/contest_winner.asp?ctidx=7" target="_blank">Gold Winner</a>a></b> from ST Micro Electronics Korea, "STM32 Quest Challenge: STM32Cube.AI Recognition 2022", <a href="https://www.e4ds.com/" target="_blank" rel="noopener">E4ds</a>, Nove-06-2022</li>
+        <li><b><a href="https://www.e4ds.com/make/contest/contest_winner.asp?ctidx=7" target="_blank" rel="noopener">Gold Winner</a></b> from ST Micro Electronics Korea, "STM32 Quest Challenge: STM32Cube.AI Recognition 2022", <a href="https://www.e4ds.com/" target="_blank" rel="noopener">E4ds</a>, Nove-06-2022</li>
         <li><b>1st Opensource Award</b> from Opensource Source Group, Samsung Research, "Inner-source with Opensource culture for the 2021 year", <a href="https://www.samsung.com/" target="_blank" rel="noopener">Samsung Electronics</a>, Nov-20-2021, <code>Open Source Award (Personal sector)</code></li>
         <li><b>1st Opensource Award</b> from Opensource Source Group, Samsung Research, "Best practice with opensource for the 2021 year", <a href="https://www.samsung.com/" target="_blank" rel="noopener">Samsung Electronics</a>, Nov-20-2021, <code>Open Source Award (Team sector)</code></li>
         <li><b>Samsung Best Paper Award 2021</b>, <a href="https://www.sait.samsung.co.kr/" target="_blank" rel="noopener">SAIT</a> Samsung Electronics, "Nnstreamer: Efficient and Agile Development of On-Device AI System", Seoul, KR, Nov-08-2021, <code>Gold Award</code></li>
@@ -424,7 +503,7 @@
     <!-- Publications -->
     <section id="pubs" class="section-card">
       <div class="section-header">
-        <div class="section-title">Publications</div>
+        <div class="section-title"><span class="icon">📘</span> Publications</div>
         <span class="pill">Book</span>
       </div>
       <ol>
@@ -435,7 +514,7 @@
     <!-- Education -->
     <section id="education" class="section-card">
       <div class="section-header">
-        <div class="section-title">Education</div>
+        <div class="section-title"><span class="icon">🎓</span> Education</div>
         <span class="pill">Degrees</span>
       </div>
       <ul>
@@ -449,7 +528,7 @@
     <!-- Certifications -->
     <section id="certs" class="section-card">
       <div class="section-header">
-        <div class="section-title">Certifications</div>
+        <div class="section-title"><span class="icon">📜</span> Certifications</div>
         <span class="pill">Professional</span>
       </div>
       <ol>
@@ -465,7 +544,7 @@
     <!-- Membership -->
     <section id="memberships" class="section-card">
       <div class="section-header">
-        <div class="section-title">Membership</div>
+        <div class="section-title"><span class="icon">🤝</span> Membership</div>
         <span class="pill">Reviewer · TPC (Technical Program Committee)</span>
       </div>
       <ol>
@@ -489,12 +568,12 @@
     <!-- colleagues -->
     <section id="colleagues" class="section-card">
       <div class="section-header">
-        <div class="section-title">Professional Network</div>
+        <div class="section-title"><span class="icon">🌐</span> Professional Network</div>
         <span class="pill">Colleagues</span>
       </div>
       <ol>
             
-        <li><a href="https://dblp.org/pid/176/0569.html" target=_blank rel="noopener">Heesik Jeon</a>, Software Engineer, Samsung Electronics</li>
+        <li><a href="https://dblp.org/pid/176/0569.html" target="_blank" rel="noopener">Heesik Jeon</a>, Software Engineer, Samsung Electronics</li>
         <li><a href="http://www.insun.pe.kr" target="_blank" rel="noopener">Insun Pyo</a>, Software Engineer, Samsung Electronics</li>
         <li><a href="https://bonohubby.com/" target="_blank" rel="noopener">Seungmin Oh</a>, Software Engineer</li>
         <li><a href="https://github.com/myungjoo" target="_blank" rel="noopener">Myungjoo Ham</a>, NNStreamer Founder, Tizen Architect (Machine Learning)</li>
@@ -502,7 +581,7 @@
         <li><a href="https://www.linkedin.com/in/seikwon-kim-bb88283b/" target="_blank" rel="noopener">Seikwon Kim</a>, Principle Engineer at Samsung Electronics</li>
         <li><a href="https://www.linkedin.com/in/dong-seob-park-20769734/" target="_blank" rel="noopener">Dong-seob Park</a>, Kakao Bank, Software Engineer</li>
         <li><a href="https://www.linkedin.com/in/heekuk-lee-77aa2b19/" target="_blank" rel="noopener">Heekuk Lee</a>, Principle Engineer at Samsung Electronics</li>
-        <li><a href="https://noslab.github.io/" target=_blank rel="noopener">Donghyun Kang</a>, Associate Professor, Dongguk University</li>      
+        <li><a href="https://noslab.github.io/" target="_blank" rel="noopener">Donghyun Kang</a>, Associate Professor, Dongguk University</li>
         <li><a href="https://younlea.github.io/" target="_blank" rel="noopener">Younlea Kim</a>, Principle Engineer at Samsung Electronics</li>
         <li>TBA</li>
       </ol>
@@ -512,8 +591,10 @@
 </main>
 
 <footer>
-  <div style="color:#99a1b3">This page is generated with a minimal, framework-free design. © Geunsik Lim.</div>
+  <div style="color:var(--muted)">This page is generated with a minimal, framework-free design. © Geunsik Lim.</div>
 </footer>
+
+<button id="back-to-top" type="button" aria-label="Back to top">↑</button>
 
 <script>
   // Smooth scroll for internal anchors
@@ -527,6 +608,60 @@
       history.pushState(null, '', id);
     });
   });
+
+  // ===== Theme toggle (persisted) =====
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  const themeLabel = document.getElementById('theme-label');
+  function applyTheme(mode){
+    root.setAttribute('data-theme', mode);
+    themeIcon.textContent = mode === 'light' ? '☀️' : '🌙';
+    themeLabel.textContent = mode === 'light' ? 'Light' : 'Dark';
+  }
+  const savedTheme = localStorage.getItem('theme') ||
+    (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  applyTheme(savedTheme);
+  themeBtn.addEventListener('click', ()=>{
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', next);
+    applyTheme(next);
+  });
+
+  // ===== Scroll progress bar =====
+  const progressBar = document.getElementById('scroll-progress');
+  function updateProgress(){
+    const h = document.documentElement;
+    const scrolled = h.scrollTop;
+    const max = h.scrollHeight - h.clientHeight;
+    progressBar.style.width = (max > 0 ? (scrolled / max) * 100 : 0) + '%';
+  }
+  document.addEventListener('scroll', updateProgress, {passive:true});
+  updateProgress();
+
+  // ===== Back to top =====
+  const backToTop = document.getElementById('back-to-top');
+  function updateBackToTop(){
+    backToTop.classList.toggle('show', window.scrollY > 400);
+  }
+  document.addEventListener('scroll', updateBackToTop, {passive:true});
+  updateBackToTop();
+  backToTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+  // ===== Active TOC link highlighting =====
+  const sections = Array.from(document.querySelectorAll('main section[id]'));
+  const tocLinks = Array.from(document.querySelectorAll('.tocbar a, .toc-collapsible a'));
+  function setActive(id){
+    tocLinks.forEach(a=> a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+  }
+  if('IntersectionObserver' in window && sections.length){
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting) setActive(entry.target.id);
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    sections.forEach(s=> observer.observe(s));
+  }
 </script>
 </body>
 </html>

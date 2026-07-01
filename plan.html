@@ -1,101 +1,212 @@
-<html> 
+<!doctype html>
+<html lang="en">
 <head>
-<title> Geunsik Lim</title> 
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Geunsik Lim — Yearly Goals</title>
+  <meta name="description" content="Yearly goals and roadmap of Geunsik Lim." />
+  <meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <script>
+    (function(){
+      try{
+        var t = localStorage.getItem('theme');
+        if(t) document.documentElement.setAttribute('data-theme', t);
+      }catch(e){}
+    })();
+  </script>
+  <style>
+    :root{
+      --bg:#0b0c10; --bg-soft:#11131a; --card:#151824;
+      --text:#e6e8ef; --muted:#99a1b3; --brand:#ff8a00; --link:#5ab1ff;
+      --border:rgba(255,255,255,.08); --border-strong:rgba(255,255,255,.14);
+      --hover:rgba(255,255,255,.06); --shadow:0 10px 30px rgba(0,0,0,.35);
+      --maxw:800px; color-scheme:dark;
+    }
+    @media (prefers-color-scheme: light){
+      :root{--bg:#f6f7fb; --bg-soft:#fff; --card:#fff; --text:#1c2230; --muted:#5d6a85; --border:rgba(21,34,66,.1); --border-strong:rgba(21,34,66,.18); --hover:rgba(21,34,66,.05); --shadow:0 10px 30px rgba(21,34,66,.08); color-scheme:light}
+    }
+    html[data-theme="dark"]{--bg:#0b0c10; --bg-soft:#11131a; --card:#151824; --text:#e6e8ef; --muted:#99a1b3; --border:rgba(255,255,255,.08); --border-strong:rgba(255,255,255,.14); --hover:rgba(255,255,255,.06); --shadow:0 10px 30px rgba(0,0,0,.35); color-scheme:dark}
+    html[data-theme="light"]{--bg:#f6f7fb; --bg-soft:#fff; --card:#fff; --text:#1c2230; --muted:#5d6a85; --border:rgba(21,34,66,.1); --border-strong:rgba(21,34,66,.18); --hover:rgba(21,34,66,.05); --shadow:0 10px 30px rgba(21,34,66,.08); color-scheme:light}
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic","Nanum Gothic",Arial,sans-serif}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:24px}
+    .top{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:20px}
+    .back{display:inline-flex; align-items:center; gap:6px; background:var(--card); border:1px solid var(--border-strong); border-radius:12px; padding:9px 14px; font-weight:600; box-shadow:var(--shadow)}
+    .theme-toggle{display:inline-flex; align-items:center; gap:8px; background:var(--card); color:var(--text); border:1px solid var(--border-strong); padding:9px 14px; border-radius:12px; cursor:pointer; font-size:14px; font-weight:600; box-shadow:var(--shadow)}
+    h1{font-size:clamp(24px,5vw,34px); font-weight:800; letter-spacing:.2px; margin:0 0 6px}
+    .subtitle{color:var(--muted); margin:0 0 28px; line-height:1.5}
+    .timeline{position:relative; margin-left:14px; padding-left:26px; border-left:2px solid var(--border-strong)}
+    .year-card{position:relative; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px 20px; margin-bottom:18px; box-shadow:var(--shadow)}
+    .year-card::before{
+      content:''; position:absolute; left:-35px; top:20px; width:12px; height:12px; border-radius:50%;
+      background:var(--brand); box-shadow:0 0 0 4px var(--bg);
+    }
+    .year-badge{display:inline-block; font-size:14px; font-weight:800; color:var(--brand); letter-spacing:.5px; margin-bottom:8px}
+    .goals{margin:0; padding-left:20px}
+    .goals li{margin:6px 0; line-height:1.55}
+    .goals li::marker{color:var(--brand); font-weight:700}
+    .video-card{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px; margin-top:24px; box-shadow:var(--shadow)}
+    .video-card h2{font-size:16px; font-weight:800; margin:0 0 12px}
+    .video-wrap{position:relative; width:100%; padding-top:56.25%; border-radius:10px; overflow:hidden}
+    .video-wrap iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+    footer{color:var(--muted); text-align:center; padding:36px 10px 56px; font-size:13px}
+  </style>
 </head>
-<body> 
-<br><br>
-<div style="width: 100%; font-size: 40px; font-weight: bold; text-align: center;">
-/Geunsik Homepage/
+<body>
+
+<div class="wrap">
+  <div class="top">
+    <a class="back" href="./index.html">&larr; Back to Home</a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+      <span id="theme-icon" aria-hidden="true">🌙</span> <span id="theme-label">Dark</span>
+    </button>
+  </div>
+
+  <h1>🎯 Yearly Goals & Roadmap</h1>
+  <p class="subtitle">A personal log of yearly goals across career, research, land, and language learning — newest first.</p>
+
+  <div class="timeline">
+    <div class="year-card">
+      <div class="year-badge">2026</div>
+      <ol class="goals">
+        <li>Land: Obtaining seeds in autumn</li>
+        <li>English: Telephone study</li>
+        <li>Papers: Submitting top-tier conference/journal</li>
+      </ol>
+    </div>
+
+    <div class="year-card">
+      <div class="year-badge">2025</div>
+      <ol class="goals">
+        <li>Land: Getting 2nd land in Jugok-li</li>
+        <li>English: Telephone study</li>
+      </ol>
+    </div>
+
+    <div class="year-card">
+      <div class="year-badge">2024</div>
+      <ol class="goals">
+        <li>S/W domain specialist: Cloud security</li>
+        <li>Tech.: Data Science Lev. 2</li>
+        <li>Land: Getting 2nd land in Jugok-li</li>
+        <li>English: Telephone study</li>
+      </ol>
+    </div>
+
+    <div class="year-card">
+      <div class="year-badge">2023</div>
+      <ol class="goals">
+        <li>YouTube channel: dudururu</li>
+        <li>Education: Ph.D. degree</li>
+        <li>Tech.: Data scientist</li>
+        <li>English: Telephone study</li>
+      </ol>
+    </div>
+
+    <div class="year-card">
+      <div class="year-badge">2022</div>
+      <ol class="goals">
+        <li>Ph.D.: Ph.D. degree</li>
+        <li>Coding: C programming</li>
+        <li>English: Telephone study</li>
+      </ol>
+    </div>
+
+    <div class="year-card">
+      <div class="year-badge">2021</div>
+      <ol class="goals">
+        <li>Ph.D.: Top-tier paper</li>
+        <li>Coding: C programming</li>
+        <li>English: Telephone & YouTube study</li>
+      </ol>
+    </div>
+
+    <div class="year-card">
+      <div class="year-badge">2020</div>
+      <ol class="goals">
+        <li>Ph.D.: Coursework (2 classes, 2 classes)</li>
+        <li>Paper: Submit a paper to an SCI journal</li>
+        <li>Coding: C programming</li>
+        <li>English: OPIC AL (with Friend Season1, OPIC scripts)</li>
+      </ol>
+    </div>
+
+    <div class="year-card">
+      <div class="year-badge">2019</div>
+      <ol class="goals">
+        <li>English: OPIC AL, conversation (Friend Season1 or Ted Me)</li>
+        <li>Coding: Getting Pro level</li>
+        <li>Paper: Submit a paper to a top-tier conference</li>
+        <li>Ph.D.: Coursework (4 classes, 4 classes)</li>
+      </ol>
+    </div>
+
+    <div class="year-card">
+      <div class="year-badge">2018</div>
+      <ol class="goals">
+        <li>Study English: Getting OPIC(AL) level and listening to Friend Season1</li>
+        <li>Getting SW(Pro) level</li>
+        <li>Helping IT contest of children</li>
+        <li>Growing crops in CheonAhn</li>
+      </ol>
+    </div>
+
+    <div class="year-card">
+      <div class="year-badge">2017</div>
+      <ol class="goals">
+        <li>Getting good lands via court auction</li>
+        <li>Teaching info olympiad to my children</li>
+        <li>Traveling with children in Japan</li>
+        <li>Getting opensource (Linux kernel) from Tesla</li>
+      </ol>
+    </div>
+
+    <div class="year-card">
+      <div class="year-badge">2016</div>
+      <ol class="goals">
+        <li>Writing top papers</li>
+        <li>Expanding technical domains</li>
+        <li>Teaching C programming to my children</li>
+        <li>Study court auction</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="video-card">
+    <h2>📺 YouTube</h2>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/jrmXt1d4iV0" title="Geunsik Lim YouTube video" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
 </div>
 
+<footer>
+  <div>© Geunsik Lim. <a href="./index.html">Back to homepage</a></div>
+</footer>
 
- <br><br>
-<b>* My goal for 2026:</b><br>
-1. Land : Obtaining seeds in autumn <br>
-2. English: Telephone Study <br> 
-3. Papers: Submitting top-tier conf/journal <br> 
-
- 
-<br><br>
-<b>* My goal for 2025:</b><br>
-1. Land : Getting 2nd land in Jugok-li
-2. English: Telephone Study <br>
-
-
-  
-<br><br>
-<b>* My goal for 2024:</b><br>
-1. S/W Domain Sepcialist: Cloud Security <br>
-3. Tech.: Data Science Lev. 2 <br>
-3. Land : Getting 2nd land in Jugok-li
-4. English: Telephone Study <br>
-
- 
-<br><br> 
-<b>* My goal for 2023:</b><br>
-1. Youtube Channel: dudururu <br>
-2. Education: Ph.D. degree <br> 
-3. Tech.: Data Scientiest <br>
-4. English: Telephone Study <br>
-<br><br>
- 
- 
- 
- 
-<b>* My goal for 2022:</b><br>
-1. Ph.D.: Ph.D. degress <br> 
-2. Coding: C programming <br>
-3. English: Telephone Study<br>
-<br><br>
- 
- 
-<b>* My goal for 2021:</b><br>
-1. Ph.D.: Top-tier paper<br> 
-2. Coding: C programming <br>
-3. English: Telephone & Youtube Study<br>
-<br><br>
-
-
-<b>* My goal for 2020:</b><br>
-1. Ph.D.: CourseWork (2class, 2class)<br> 
-2. Paper: Submit a paper to a SCI journal<br> 
-3. Coding: C programming <br>
-4. English: OPIC AL (with Friend Season1, OPIC scripts)<br>
-<br><br>
-
-
-<b>* My goal for 2019:</b><br>
-1. English: OPIC AL, Conversation (Friend Season1 or Ted Me)<br>
-2. Coding: Getting Pro level<br>
-3. Paper: Submit a paper to top-tier conference<br> 
-4. PhD: CourseWork (4class, 4class)<br> 
-<br><br>
- 
-<b>* My goal for 2018:</b><br>
-1. Study English: Getting OPIC(AL) level and Listening Friend Season1<br>
-2. Getting SW(Pro) level<br>
-3. Helping IT contest of children<br>
-4. Growing crops in CheonAhn<br>
-<br><br>
- 
-<b>* My goal for 2017:</b><br>
-1. Getting good lands via court auction<br>
-2. Teaching info olympiad to my children<br>
-3. Traveling with children in Japan <br>
-4. Getting opensource(Linux kernel) from Tesla<br>
-<br><br>
- 
-<b>* My goal for 2016:</b><br>
-1. Writing top papers<br>
-2. Expanding technical domains<br>
-3. Teaching c programming to my children<br>
-4. Study court auction<br>
-<br><br>
-
-<b>* Youtube: </b><br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jrmXt1d4iV0" frameborder="0" allowfullscreen></iframe>
-<br>
-<hr>
+<script>
+  var root = document.documentElement;
+  var themeBtn = document.getElementById('theme-toggle');
+  var themeIcon = document.getElementById('theme-icon');
+  var themeLabel = document.getElementById('theme-label');
+  function applyTheme(mode){
+    root.setAttribute('data-theme', mode);
+    themeIcon.textContent = mode === 'light' ? '☀️' : '🌙';
+    themeLabel.textContent = mode === 'light' ? 'Light' : 'Dark';
+  }
+  var savedTheme = localStorage.getItem('theme') ||
+    (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  applyTheme(savedTheme);
+  themeBtn.addEventListener('click', function(){
+    var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', next);
+    applyTheme(next);
+  });
+</script>
 </body>
 </html>
-
