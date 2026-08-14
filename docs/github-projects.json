@@ -1,0 +1,111 @@
+{
+  "generated_at": "2026-08-14T04:17:10Z",
+  "owner": "leemgs",
+  "count": 13,
+  "projects": [
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "https://leemgs.github.io/stock-quant-trader-kis/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-08-14T03:52:45Z",
+      "updated_at": "2026-08-14T03:52:48Z"
+    },
+    {
+      "name": "webinar",
+      "url": "https://leemgs.github.io/webinar/",
+      "description": "Webinar Calendar",
+      "repo_url": "https://github.com/leemgs/webinar",
+      "pushed_at": "2026-08-14T02:24:31Z",
+      "updated_at": "2026-08-14T00:00:54Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-08-14T01:03:23Z",
+      "updated_at": "2026-08-14T01:03:27Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-08-13T19:02:00Z",
+      "updated_at": "2026-08-13T19:02:13Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-08-13T02:58:19Z",
+      "updated_at": "2026-08-13T02:58:23Z"
+    },
+    {
+      "name": "conference_kiise",
+      "url": "https://leemgs.github.io/conference_kiise/",
+      "description": "Conference Schedule (by KIISE)",
+      "repo_url": "https://github.com/leemgs/conference_kiise",
+      "pushed_at": "2026-08-12T23:21:46Z",
+      "updated_at": "2026-08-12T23:21:49Z"
+    },
+    {
+      "name": "bucket-list",
+      "url": "https://leemgs.github.io/bucket-list/",
+      "description": "Bucket List",
+      "repo_url": "https://github.com/leemgs/bucket-list",
+      "pushed_at": "2026-08-12T23:09:56Z",
+      "updated_at": "2026-08-12T23:10:00Z"
+    },
+    {
+      "name": "ai-usage",
+      "url": "https://leemgs.github.io/ai-usage/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/ai-usage",
+      "pushed_at": "2026-08-12T22:52:09Z",
+      "updated_at": "2026-08-09T03:45:27Z"
+    },
+    {
+      "name": "mymemo",
+      "url": "https://leemgs.github.io/mymemo/",
+      "description": "My Memo",
+      "repo_url": "https://github.com/leemgs/mymemo",
+      "pushed_at": "2026-08-10T09:49:33Z",
+      "updated_at": "2026-08-10T09:50:26Z"
+    },
+    {
+      "name": "with-people",
+      "url": "https://leemgs.github.io/with-people/",
+      "description": "Photo collection to archive memorable recollection in my life.",
+      "repo_url": "https://github.com/leemgs/with-people",
+      "pushed_at": "2026-08-09T13:34:28Z",
+      "updated_at": "2026-08-09T13:34:37Z"
+    },
+    {
+      "name": "web-ssh",
+      "url": "https://leemgs.github.io/web-ssh/",
+      "description": "web-ssh",
+      "repo_url": "https://github.com/leemgs/web-ssh",
+      "pushed_at": "2026-08-09T07:23:22Z",
+      "updated_at": "2026-08-09T07:29:44Z"
+    },
+    {
+      "name": "truthprint",
+      "url": "https://leemgs.github.io/truthprint/",
+      "description": "Truthprint for synth text approach",
+      "repo_url": "https://github.com/leemgs/truthprint",
+      "pushed_at": "2026-07-24T08:07:52Z",
+      "updated_at": "2026-07-24T08:08:31Z"
+    },
+    {
+      "name": "ai-society-lab",
+      "url": "https://leemgs.github.io/ai-society-lab/",
+      "description": "AI Society Lab.",
+      "repo_url": "https://github.com/leemgs/ai-society-lab",
+      "pushed_at": "2025-12-09T04:25:52Z",
+      "updated_at": "2025-12-09T04:28:52Z"
+    }
+  ]
+}

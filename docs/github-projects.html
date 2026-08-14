@@ -18,7 +18,7 @@
       <div class="titlebar">Github Project</div>
       <div class="content">
         <h1>Published Projects</h1>
-        <p class="lead">Websites and web apps published with GitHub Pages from repositories owned by <a href="https://github.com/leemgs/">github.com/leemgs</a>. This list is loaded from GitHub so newly published projects appear automatically.</p>
+        <p class="lead">Websites and web apps published with GitHub Pages from repositories owned by <a href="https://github.com/leemgs/">github.com/leemgs</a> that ship their site from a <code>docs/</code> folder. This list is refreshed twice a day (09:00 and 21:00 KST) by GitHub Actions and ordered from the most recently updated project.</p>
         <div id="status" class="status" role="status">Loading published projects…</div>
         <div id="projects" class="project-grid" aria-live="polite"></div>
         <noscript><p class="status">JavaScript is required to retrieve the current project list. You can browse all repositories at <a href="https://github.com/leemgs?tab=repositories">GitHub</a>.</p></noscript>
@@ -28,38 +28,69 @@
   <script>
     const projects = document.querySelector('#projects');
     const status = document.querySelector('#status');
-    const endpoint = 'https://api.github.com/users/leemgs/repos?per_page=100&type=owner&sort=updated';
 
-    fetch(endpoint, {headers:{Accept:'application/vnd.github+json'}})
+    function card(name, url, description) {
+      const el = document.createElement('a');
+      el.className = 'project';
+      el.href = url;
+      el.target = '_blank';
+      el.rel = 'noopener';
+      const title = document.createElement('strong');
+      title.textContent = name;
+      const address = document.createElement('span');
+      address.textContent = url;
+      el.append(title, address);
+      if (description) {
+        const desc = document.createElement('span');
+        desc.className = 'desc';
+        desc.textContent = description;
+        el.append(desc);
+      }
+      return el;
+    }
+
+    function render(list) {
+      projects.textContent = '';
+      status.textContent = list.length
+        ? `${list.length} published project${list.length === 1 ? '' : 's'}`
+        : 'No separately published project was found.';
+      list.forEach(item => projects.append(card(item.name, item.url, item.description)));
+    }
+
+    // Primary source: the list pre-generated twice a day by GitHub Actions
+    // (scripts/generate-github-projects.mjs) — repos with a docs/ folder,
+    // most recently updated first.
+    fetch('github-projects.json', {cache: 'no-cache'})
       .then(response => {
-        if (!response.ok) throw new Error('GitHub returned ' + response.status);
+        if (!response.ok) throw new Error('project list returned ' + response.status);
         return response.json();
       })
-      .then(repositories => {
-        const published = repositories.filter(repo => repo.has_pages && repo.name !== 'leemgs.github.io');
-        status.textContent = published.length
-          ? `${published.length} published project${published.length === 1 ? '' : 's'}`
-          : 'No separately published project was found.';
-        published.forEach(repo => {
-          const url = repo.homepage && /^https?:\/\//.test(repo.homepage)
-            ? repo.homepage
-            : `https://leemgs.github.io/${encodeURIComponent(repo.name)}/`;
-          const card = document.createElement('a');
-          card.className = 'project';
-          card.href = url;
-          card.target = '_blank';
-          card.rel = 'noopener';
-          const name = document.createElement('strong');
-          name.textContent = repo.name;
-          const address = document.createElement('span');
-          address.textContent = url;
-          card.append(name, address);
-          projects.append(card);
-        });
-      })
-      .catch(error => {
-        status.innerHTML = 'The live project list could not be loaded. <a href="https://github.com/leemgs?tab=repositories">Browse the repositories on GitHub</a>.';
-        console.error(error);
+      .then(data => render(Array.isArray(data.projects) ? data.projects : []))
+      .catch(() => {
+        // Fallback: query the live GitHub API directly if the generated file
+        // is unavailable (e.g. the scheduled job has not run yet).
+        const endpoint = 'https://api.github.com/users/leemgs/repos?per_page=100&type=owner&sort=updated';
+        fetch(endpoint, {headers:{Accept:'application/vnd.github+json'}})
+          .then(response => {
+            if (!response.ok) throw new Error('GitHub returned ' + response.status);
+            return response.json();
+          })
+          .then(repositories => {
+            const published = repositories
+              .filter(repo => repo.has_pages && repo.name !== 'leemgs.github.io')
+              .map(repo => ({
+                name: repo.name,
+                url: repo.homepage && /^https?:\/\//.test(repo.homepage)
+                  ? repo.homepage
+                  : `https://leemgs.github.io/${encodeURIComponent(repo.name)}/`,
+                description: repo.description || '',
+              }));
+            render(published);
+          })
+          .catch(error => {
+            status.innerHTML = 'The live project list could not be loaded. <a href="https://github.com/leemgs?tab=repositories">Browse the repositories on GitHub</a>.';
+            console.error(error);
+          });
       });
   </script>
 </body>
