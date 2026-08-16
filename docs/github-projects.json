@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T01:04:48.303Z",
+  "generated_at": "2026-08-16T12:22:19.269Z",
   "owner": "leemgs",
   "count": 18,
   "projects": [
@@ -8,24 +8,48 @@
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-16T00:26:15Z",
-      "updated_at": "2026-08-16T00:26:19Z"
+      "pushed_at": "2026-08-16T12:11:36Z",
+      "updated_at": "2026-08-16T12:11:45Z"
+    },
+    {
+      "name": "myoci",
+      "url": "https://leemgs.github.io/myoci/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/myoci",
+      "pushed_at": "2026-08-16T12:00:29Z",
+      "updated_at": "2026-08-16T12:00:53Z"
+    },
+    {
+      "name": "with-people",
+      "url": "https://leemgs.github.io/with-people/",
+      "description": "Photo collection to archive memorable recollection in my life.",
+      "repo_url": "https://github.com/leemgs/with-people",
+      "pushed_at": "2026-08-16T11:34:32Z",
+      "updated_at": "2026-08-16T11:34:58Z"
+    },
+    {
+      "name": "ai-usage",
+      "url": "https://leemgs.github.io/ai-usage/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/ai-usage",
+      "pushed_at": "2026-08-16T11:33:40Z",
+      "updated_at": "2026-08-16T11:33:59Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-15T23:36:26Z",
-      "updated_at": "2026-08-15T23:36:30Z"
+      "pushed_at": "2026-08-16T11:30:31Z",
+      "updated_at": "2026-08-16T11:30:56Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-15T22:20:21Z",
-      "updated_at": "2026-08-15T22:20:30Z"
+      "pushed_at": "2026-08-16T07:31:09Z",
+      "updated_at": "2026-08-16T07:31:40Z"
     },
     {
       "name": "conference_field",
@@ -60,14 +84,6 @@
       "updated_at": "2026-08-12T23:10:00Z"
     },
     {
-      "name": "ai-usage",
-      "url": "https://leemgs.github.io/ai-usage/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/ai-usage",
-      "pushed_at": "2026-08-12T22:52:09Z",
-      "updated_at": "2026-08-09T03:45:27Z"
-    },
-    {
       "name": "mymemo",
       "url": "https://leemgs.github.io/mymemo/",
       "description": "My Memo",
@@ -76,28 +92,12 @@
       "updated_at": "2026-08-10T09:50:26Z"
     },
     {
-      "name": "with-people",
-      "url": "https://leemgs.github.io/with-people/",
-      "description": "Photo collection to archive memorable recollection in my life.",
-      "repo_url": "https://github.com/leemgs/with-people",
-      "pushed_at": "2026-08-09T13:34:28Z",
-      "updated_at": "2026-08-09T13:34:37Z"
-    },
-    {
       "name": "web-ssh",
       "url": "https://leemgs.github.io/web-ssh/",
       "description": "web-ssh",
       "repo_url": "https://github.com/leemgs/web-ssh",
       "pushed_at": "2026-08-09T07:23:22Z",
       "updated_at": "2026-08-09T07:29:44Z"
-    },
-    {
-      "name": "myoci",
-      "url": "https://leemgs.github.io/myoci/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/myoci",
-      "pushed_at": "2026-08-09T07:13:19Z",
-      "updated_at": "2026-08-09T07:13:36Z"
     },
     {
       "name": "truthprint",
