@@ -73,10 +73,33 @@
     const status = document.querySelector('#status');
     let source = '';
     let sha = '';
+    let ready = false;
+    let dirty = false;
+    let lastRange = null;
 
     function setStatus(message, type = '') {
       status.textContent = message;
       status.className = type;
+    }
+    function editableRoot() {
+      return frame.contentDocument && frame.contentDocument.querySelector('#editable-profile');
+    }
+    function saveRange() {
+      const win = frame.contentWindow;
+      const root = editableRoot();
+      if (!win || !root) return;
+      const selection = win.getSelection();
+      if (selection && selection.rangeCount) {
+        const range = selection.getRangeAt(0);
+        if (root.contains(range.commonAncestorContainer)) lastRange = range;
+      }
+    }
+    function restoreRange() {
+      const win = frame.contentWindow;
+      if (!win || !lastRange) return;
+      const selection = win.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(lastRange);
     }
     function decodeBase64(value) {
       const bytes = Uint8Array.from(atob(value.replace(/\n/g, '')), character => character.charCodeAt(0));
@@ -114,11 +137,17 @@
         const hero = parsed.querySelector('.hero-inner');
         const content = parsed.querySelector('.content');
         const styles = Array.from(parsed.head.querySelectorAll('style')).map(style => style.outerHTML).join('\n');
-        frame.srcdoc = `<!doctype html><html><head><base href="${location.origin}/">${styles}<style>body{background:#eef3f9;padding:18px}.hero-inner,.content{max-width:1100px;margin:0 auto 24px}.editable-region{outline:2px dashed #2879ed;outline-offset:5px}.editable-region:focus{outline:3px solid #2879ed}</style></head><body><div id="editable-profile"><div class="hero-inner editable-region">${hero ? hero.innerHTML : ''}</div><div class="content editable-region">${content ? content.innerHTML : ''}</div></div></body></html>`;
+        frame.srcdoc = `<!doctype html><html><head><base href="${location.origin}/about-me/">${styles}<style>body{background:#eef3f9;padding:18px}.hero-inner,.content{max-width:1100px;margin:0 auto 24px}.editable-region{outline:2px dashed #2879ed;outline-offset:5px}.editable-region:focus{outline:3px solid #2879ed}</style></head><body><div id="editable-profile"><div class="hero-inner editable-region">${hero ? hero.innerHTML : ''}</div><div class="content editable-region">${content ? content.innerHTML : ''}</div></div></body></html>`;
         frame.addEventListener('load', () => {
-          const editableProfile = frame.contentDocument.querySelector('#editable-profile');
+          const doc = frame.contentDocument;
+          const editableProfile = doc.querySelector('#editable-profile');
           editableProfile.contentEditable = 'true';
-          frame.contentDocument.querySelector('.hero-inner').focus();
+          doc.addEventListener('selectionchange', saveRange);
+          doc.addEventListener('input', () => { dirty = true; });
+          doc.addEventListener('mouseup', saveRange);
+          doc.addEventListener('keyup', saveRange);
+          doc.querySelector('.hero-inner').focus();
+          ready = true;
         }, {once:true});
         setStatus('편집 준비가 완료되었습니다.');
       } catch (error) {
@@ -126,11 +155,17 @@
       }
     }
     function command(name, value = null) {
+      if (!ready) return setStatus('편집기가 아직 준비되지 않았습니다.', 'error');
       frame.contentWindow.focus();
+      restoreRange();
       frame.contentDocument.execCommand(name, false, value);
+      dirty = true;
+      saveRange();
     }
+    // Keep the in-frame selection when a toolbar button steals focus.
+    document.querySelectorAll('.toolbar button').forEach(button => button.addEventListener('mousedown', event => event.preventDefault()));
     document.querySelectorAll('[data-command]').forEach(button => button.addEventListener('click', () => command(button.dataset.command)));
-    document.querySelector('#format').addEventListener('change', event => command('formatBlock', event.target.value));
+    document.querySelector('#format').addEventListener('change', event => command('formatBlock', `<${event.target.value}>`));
     document.querySelector('#link').addEventListener('click', () => {
       const url = prompt('연결할 URL을 입력하세요.', 'https://');
       if (url) command('createLink', url);
@@ -159,9 +194,15 @@
         if (!response.ok) throw new Error(data.message || `GitHub 저장 실패 (${response.status})`);
         sha = data.content.sha;
         source = editedHtml();
+        dirty = false;
         document.querySelector('#token').value = '';
         setStatus('저장했습니다. GitHub Pages 반영에는 잠시 시간이 걸릴 수 있습니다.', 'success');
       } catch (error) { setStatus(error.message, 'error'); }
+    });
+    window.addEventListener('beforeunload', event => {
+      if (!dirty) return;
+      event.preventDefault();
+      event.returnValue = '';
     });
     loadProfile();
   </script>
