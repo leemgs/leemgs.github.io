@@ -1,0 +1,151 @@
+{
+  "generated_at": "2026-08-17T01:06:40.691Z",
+  "owner": "leemgs",
+  "count": 18,
+  "projects": [
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-08-17T00:49:45Z",
+      "updated_at": "2026-08-17T00:49:51Z"
+    },
+    {
+      "name": "webinar",
+      "url": "https://leemgs.github.io/webinar/",
+      "description": "Webinar Calendar",
+      "repo_url": "https://github.com/leemgs/webinar",
+      "pushed_at": "2026-08-17T00:34:22Z",
+      "updated_at": "2026-08-17T00:34:27Z"
+    },
+    {
+      "name": "mymemo",
+      "url": "https://leemgs.github.io/mymemo/",
+      "description": "My Memo",
+      "repo_url": "https://github.com/leemgs/mymemo",
+      "pushed_at": "2026-08-17T00:33:23Z",
+      "updated_at": "2026-08-17T00:33:29Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "https://leemgs.github.io/stock-quant-trader-kis/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-08-17T00:24:56Z",
+      "updated_at": "2026-08-17T00:24:59Z"
+    },
+    {
+      "name": "conference_kiise",
+      "url": "https://leemgs.github.io/conference_kiise/",
+      "description": "Conference Schedule (by KIISE)",
+      "repo_url": "https://github.com/leemgs/conference_kiise",
+      "pushed_at": "2026-08-16T18:38:07Z",
+      "updated_at": "2026-08-16T18:38:12Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-08-16T18:24:32Z",
+      "updated_at": "2026-08-16T18:24:36Z"
+    },
+    {
+      "name": "web-ssh",
+      "url": "https://leemgs.github.io/web-ssh/",
+      "description": "web-ssh",
+      "repo_url": "https://github.com/leemgs/web-ssh",
+      "pushed_at": "2026-08-16T14:45:56Z",
+      "updated_at": "2026-08-16T14:46:49Z"
+    },
+    {
+      "name": "with-people",
+      "url": "https://leemgs.github.io/with-people/",
+      "description": "Photo collection to archive memorable recollection in my life.",
+      "repo_url": "https://github.com/leemgs/with-people",
+      "pushed_at": "2026-08-16T14:15:04Z",
+      "updated_at": "2026-08-16T14:15:49Z"
+    },
+    {
+      "name": "myoci",
+      "url": "https://leemgs.github.io/myoci/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/myoci",
+      "pushed_at": "2026-08-16T12:26:02Z",
+      "updated_at": "2026-08-16T12:26:06Z"
+    },
+    {
+      "name": "ai-usage",
+      "url": "https://leemgs.github.io/ai-usage/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/ai-usage",
+      "pushed_at": "2026-08-16T11:33:40Z",
+      "updated_at": "2026-08-16T11:33:59Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-08-13T02:58:19Z",
+      "updated_at": "2026-08-13T02:58:23Z"
+    },
+    {
+      "name": "bucket-list",
+      "url": "https://leemgs.github.io/bucket-list/",
+      "description": "Bucket List",
+      "repo_url": "https://github.com/leemgs/bucket-list",
+      "pushed_at": "2026-08-12T23:09:56Z",
+      "updated_at": "2026-08-12T23:10:00Z"
+    },
+    {
+      "name": "truthprint",
+      "url": "https://leemgs.github.io/truthprint/",
+      "description": "Truthprint for synth text approach",
+      "repo_url": "https://github.com/leemgs/truthprint",
+      "pushed_at": "2026-07-24T08:07:52Z",
+      "updated_at": "2026-07-24T08:08:31Z"
+    },
+    {
+      "name": "ai-suit-dashboard",
+      "url": "https://aigovsensing.github.io/ai-suit-dashboard/",
+      "description": "AI Litigation Dashboard",
+      "repo_url": "https://github.com/leemgs/ai-suit-dashboard",
+      "pushed_at": "2026-06-24T02:07:56Z",
+      "updated_at": "2026-06-24T01:20:14Z"
+    },
+    {
+      "name": "ai-society-lab",
+      "url": "https://leemgs.github.io/ai-society-lab/",
+      "description": "AI Society Lab.",
+      "repo_url": "https://github.com/leemgs/ai-society-lab",
+      "pushed_at": "2025-12-09T04:25:52Z",
+      "updated_at": "2025-12-09T04:28:52Z"
+    },
+    {
+      "name": "sage-mm",
+      "url": "https://leemgs.github.io/sage-mm/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/sage-mm",
+      "pushed_at": "2025-10-16T03:58:04Z",
+      "updated_at": "2025-10-16T03:58:08Z"
+    },
+    {
+      "name": "relix",
+      "url": "https://leemgs.github.io/relix/",
+      "description": "ReLiX: Reliability Forecasting in Continuous Integration Pipelines under Resource Constraints",
+      "repo_url": "https://github.com/leemgs/relix",
+      "pushed_at": "2025-09-23T07:37:06Z",
+      "updated_at": "2025-10-24T08:54:25Z"
+    },
+    {
+      "name": "my-jetson-nano-bot",
+      "url": "https://leemgs.github.io/my-jetson-nano-bot/",
+      "description": "This GitHub Repository is to develop Jetson Nano based Bot.",
+      "repo_url": "https://github.com/leemgs/my-jetson-nano-bot",
+      "pushed_at": "2022-12-09T15:13:39Z",
+      "updated_at": "2021-12-11T05:57:28Z"
+    }
+  ]
+}
