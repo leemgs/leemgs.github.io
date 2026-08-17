@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Websites and web apps published from Geunsik Lim's GitHub repositories.">
+  <title>Geunsik Lim — Github Projects</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/site-shell.css">
+</head>
+<body>
+  <nav class="site-menu" aria-label="Main menu">
+  <a href="/about-me/">About Me</a>
+  <a href="/github-projects/" aria-current="page">Github Projects</a>
+</nav>
+  <main class="shell">
+    <article class="window">
+      <div class="titlebar">Github Projects</div>
+      <div class="content">
+        <h1>Published Projects</h1>
+        <p class="lead">The 18 websites and web apps published with GitHub Pages from repositories owned by <a href="https://github.com/leemgs/">github.com/leemgs</a>. Projects are displayed in alphabetical order.</p>
+        <label class="search-label" for="project-search">Search projects</label>
+        <input id="project-search" class="project-search" type="search" placeholder="Search by project name or URL…" autocomplete="off">
+        <div id="status" class="status" role="status">Loading published projects…</div>
+        <div id="projects" class="project-grid" aria-live="polite"></div>
+        <noscript><p class="status">JavaScript is required to retrieve the current project list. You can browse all repositories at <a href="https://github.com/leemgs?tab=repositories">GitHub</a>.</p></noscript>
+      </div>
+    </article>
+  </main>
+  <script>
+    const projects = document.querySelector('#projects');
+    const status = document.querySelector('#status');
+    const search = document.querySelector('#project-search');
+    const endpoint = 'https://api.github.com/users/leemgs/repos?per_page=100&type=owner&sort=updated';
+
+    fetch(endpoint, {headers:{Accept:'application/vnd.github+json'}})
+      .then(response => {
+        if (!response.ok) throw new Error('GitHub returned ' + response.status);
+        return response.json();
+      })
+      .then(repositories => {
+        const published = repositories
+          .filter(repo => repo.has_pages && repo.name !== 'leemgs.github.io')
+          .sort((left, right) => left.name.localeCompare(right.name, 'en', {sensitivity:'base'}));
+        status.textContent = published.length
+          ? `${published.length} published project${published.length === 1 ? '' : 's'}`
+          : 'No separately published project was found.';
+        published.forEach(repo => {
+          const url = repo.homepage && /^https?:\/\//.test(repo.homepage)
+            ? repo.homepage
+            : `https://leemgs.github.io/${encodeURIComponent(repo.name)}/`;
+          const card = document.createElement('a');
+          card.className = 'project';
+          card.href = url;
+          card.target = '_blank';
+          card.rel = 'noopener';
+          card.dataset.search = `${repo.name} ${url}`.toLocaleLowerCase();
+          const name = document.createElement('strong');
+          name.textContent = repo.name;
+          const address = document.createElement('span');
+          address.textContent = url;
+          card.append(name, address);
+          projects.append(card);
+        });
+        filterProjects();
+      })
+      .catch(error => {
+        status.innerHTML = 'The live project list could not be loaded. <a href="https://github.com/leemgs?tab=repositories">Browse the repositories on GitHub</a>.';
+        console.error(error);
+      });
+
+    function filterProjects() {
+      const query = search.value.trim().toLocaleLowerCase();
+      let visible = 0;
+      projects.querySelectorAll('.project').forEach(card => {
+        const matches = !query || card.dataset.search.includes(query);
+        card.hidden = !matches;
+        if (matches) visible += 1;
+      });
+      if (query) status.textContent = `${visible} matching project${visible === 1 ? '' : 's'}`;
+    }
+    search.addEventListener('input', filterProjects);
+  </script>
+</body>
+</html>
