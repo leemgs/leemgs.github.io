@@ -1,0 +1,50 @@
+name: Update published projects list
+
+# Refresh docs/github-projects.json twice a day so the "Published Projects"
+# page always lists the leemgs repositories that publish a GitHub Pages site
+# from a docs/ folder, most recently updated first.
+#
+# KST (UTC+9, no daylight saving):
+#   00:00 UTC = 09:00 KST  (morning)
+#   12:00 UTC = 21:00 KST  (evening)
+on:
+  schedule:
+    - cron: '0 0 * * *'
+    - cron: '0 12 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-github-projects
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate project list
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-github-projects.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- docs/github-projects.json; then
+            echo "No changes to publish."
+          else
+            git add docs/github-projects.json
+            git commit -m "chore: refresh published projects list [skip ci]"
+            git push
+          fi

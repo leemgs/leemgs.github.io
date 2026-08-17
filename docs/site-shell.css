@@ -22,6 +22,7 @@ h1{margin:0 0 10px;font-size:clamp(2rem,6vw,3.4rem)}
 .project{display:block;padding:20px;border:1px solid #d5dfec;border-radius:11px;text-decoration:none;background:linear-gradient(145deg,#fff,#f1f6fc);transition:.18s}
 .project:hover{transform:translateY(-3px);border-color:#5793e7;box-shadow:0 9px 24px rgba(30,86,165,.17)}
 .project strong{display:block;color:var(--deep);font-size:1.08rem;margin-bottom:8px}
-.project span{color:var(--muted);font-size:.9rem;word-break:break-all}
+.project span{display:block;color:var(--muted);font-size:.9rem;word-break:break-all}
+.project span.desc{margin-top:8px;color:var(--text);word-break:normal}
 .status{margin-top:24px;padding:14px;border-radius:8px;background:#edf4fd;color:var(--deep)}
 @media(prefers-color-scheme:dark){:root{--paper:#242a33;--text:#f2f5fa;--muted:#abb8ca}.titlebar{background:linear-gradient(#444b55,#303640);border-color:#191d23}.project{background:linear-gradient(145deg,#303741,#252b34);border-color:#46505e}.project strong{color:#9ac3ff}.status{background:#303d50;color:#d5e7ff}}

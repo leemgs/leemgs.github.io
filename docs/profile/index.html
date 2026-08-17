@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <base href="/" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Geunsik Lim — Profile & Resume</title>
   <meta name="description" content="Homepage of Geunsik Lim, software engineer & researcher focusing on embedded systems, OS, and on-device AI." />
@@ -84,7 +85,7 @@
     /* Primary site navigation: intentionally limited to the two requested areas. */
     .site-menu{position:sticky;top:0;z-index:90;display:flex;justify-content:center;gap:10px;padding:10px 16px;
       background:rgba(20,43,80,.88);border-bottom:1px solid rgba(255,255,255,.25);backdrop-filter:blur(12px)}
-    .site-menu a{color:#fff;font-weight:800;padding:9px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.3);cursor:pointer}
+    .site-menu a{color:#fff;font-weight:800;padding:9px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.3)}
     .site-menu a:hover,.site-menu a[aria-current="page"]{text-decoration:none;background:linear-gradient(180deg,var(--sel-1),var(--sel-2));
       box-shadow:inset 0 1px rgba(255,255,255,.4),0 2px 6px rgba(0,0,0,.25)}
 
@@ -320,8 +321,8 @@
 <a class="sr-only" href="#profile">Skip to content</a>
 
 <nav class="site-menu" aria-label="Main menu">
-  <a href="/about-me/" aria-current="page">About Me</a>
-  <a href="/github-projects/">Github Projects</a>
+  <a href="/profile/" aria-current="page">About Me</a>
+  <a href="/github-projects.html">Github Project</a>
 </nav>
 
 <div id="scroll-progress"></div>
@@ -349,8 +350,7 @@
         </audio>
       </div>
       <div class="btns" style="margin-top:12px">
-        <a class="btn" href="https://github.com/leemgs/leemgs.github.io/blob/main/docs/index.html" target="_blank" rel="noopener">Edit on GitHub</a>
-        <a class="btn" href="/about-me/editor.html">Edit About Me (WYSIWYG)</a>
+        <a class="btn" href="https://github.com/leemgs/leemgs.github.io/blob/master/docs/index.html" target="_blank" rel="noopener">Edit on GitHub</a>
         <a class="btn" href="#toc-collapsible">Jump to TOC</a>
       </div>
     </div>
@@ -437,7 +437,6 @@
         <div><b>Twitter</b></div><div><a href="http://www.twitter.com/leemgs" target="_blank" rel="noopener">http://www.twitter.com/leemgs</a></div>
         <div><b>Facebook</b></div><div><a href="http://www.facebook.com/leemgs" target="_blank" rel="noopener">http://www.facebook.com/leemgs</a></div>
         <div><b>GitHub Account</b></div><div><a href="https://www.github.com/leemgs/" target="_blank" rel="noopener">https://www.github.com/leemgs/</a></div>
-        <div><b>Cloud</b></div><div><a href="https://myoci.mooo.com/" target="_blank" rel="noopener">Free Oracle Cloud Instance (OCI)</a></div>
         <div><b>MBTI Test</b></div>
         <div>
           <a href="https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-enfj?utm_source=results-assertive-protagonist&utm_medium=email&utm_campaign=ko&utm_content=type-personality-0" target="_blank" rel="noopener">ENFJ</a>
@@ -454,7 +453,7 @@
         <div><b>ScienseWISE</b></div><div><a href="http://sciencewise.info/users/Geunsik_Lim" target="_blank" rel="noopener">http://sciencewise.info/users/Geunsik_Lim</a></div>
         <div><b>OpenReview Account</b></div><div><a href="https://openreview.net/profile?id=~Geunsik_Lim1" target="_blank" rel="noopener">https://openreview.net/profile?id=~Geunsik_Lim1</a></div>
         <div><b>Researcher ID</b></div><div><a href="https://publons.com/researcher/AAJ-5623-2020" target="_blank" rel="noopener">https://publons.com/researcher/AAJ-5623-2020</a></div>
-        <div><b>ResearchGate</b></div><div><a href="https://www.researchgate.net/about-me/Geunsik-Lim-2" target="_blank" rel="noopener">https://www.researchgate.net/about-me/Geunsik-Lim-2/</a></div>
+        <div><b>ResearchGate</b></div><div><a href="https://www.researchgate.net/profile/Geunsik-Lim-2" target="_blank" rel="noopener">https://www.researchgate.net/profile/Geunsik-Lim-2/</a></div>
         <div><b>Publons ID</b></div><div><a href="https://publons.com/researcher/1390521/geunsik-lim/" target="_blank" rel="noopener">https://publons.com/researcher/1390521/geunsik-lim/</a></div>
         <div><b>DBLP ID</b></div><div><a href="https://dblp.org/pid/20/9588.html" target="_blank" rel="noopener">https://dblp.org/pid/20/9588</a></div>
         <div><b>Semantic Scholar</b></div><div><a href="https://www.semanticscholar.org/author/Geunsik-Lim/8537854" target="_blank" rel="noopener">https://www.semanticscholar.org/author/Geunsik-Lim/8537854</a></div>
@@ -699,8 +698,8 @@
         <span class="pill">Reviewer · TPC (Technical Program Committee)</span>
       </div>
       <ol>
-        <li><a href=https://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=7755>Reviewer for IEEE Transactions on Mobile Computing,</a> Aug-2026 ~</li>
-        <li><a href=https://attend.ieee.org/gem-2026/>TPC member for GEM 2026: 2026 IEEE Gaming, Entertainment, and Media Conference,</a> Jul-2026 ~</li>
+        <li><a href="https://mc.manuscriptcentral.com/tmc-cs" target="_blank" rel="noopener">IEEE Transactions on Mobile Computing (TMC), Reviewer</a>, Aug-2026 ~</li>
+        <li>TPC member for GEM 2026: 2026 IEEE Gaming, Entertainment, and Media Conference, Jul-2026 ~</li>
         <li><a href="https://bentham.manuscriptpoint.com/reviewer/Dashboard/show_dashboard/">Reviewer for BMS-EENG 2026: Embedded Deep Learning for RECENT ADVANCES IN ELECTRICAL & ELECTRONIC ENGINEERING</a> 2026-May ~ </li>                
         <li><a href="https://cmt3.research.microsoft.com/EDLIE2026/">Reviewer for EDL-IE 2026: Embedded Deep Learning for Real-Time Intelligent Environments</a> 2026-Mar ~ </li>        
         <li><a href="https://eajournals.org/ejcsit/">Reviewer for European Journal of Computer Sciences and Information Technology</a> 2025-Nov ~ </li>
