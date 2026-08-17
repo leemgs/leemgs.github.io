@@ -1,31 +1,79 @@
 {
-  "generated_at": "2026-08-16T12:22:19.269Z",
+  "generated_at": "2026-08-17T01:02:29.917Z",
   "owner": "leemgs",
   "count": 18,
   "projects": [
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-08-17T00:49:45Z",
+      "updated_at": "2026-08-17T00:49:51Z"
+    },
+    {
+      "name": "webinar",
+      "url": "https://leemgs.github.io/webinar/",
+      "description": "Webinar Calendar",
+      "repo_url": "https://github.com/leemgs/webinar",
+      "pushed_at": "2026-08-17T00:34:22Z",
+      "updated_at": "2026-08-17T00:34:27Z"
+    },
+    {
+      "name": "mymemo",
+      "url": "https://leemgs.github.io/mymemo/",
+      "description": "My Memo",
+      "repo_url": "https://github.com/leemgs/mymemo",
+      "pushed_at": "2026-08-17T00:33:23Z",
+      "updated_at": "2026-08-17T00:33:29Z"
+    },
     {
       "name": "stock-quant-trader-kis",
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-16T12:11:36Z",
-      "updated_at": "2026-08-16T12:11:45Z"
+      "pushed_at": "2026-08-17T00:24:56Z",
+      "updated_at": "2026-08-17T00:24:59Z"
     },
     {
-      "name": "myoci",
-      "url": "https://leemgs.github.io/myoci/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/myoci",
-      "pushed_at": "2026-08-16T12:00:29Z",
-      "updated_at": "2026-08-16T12:00:53Z"
+      "name": "conference_kiise",
+      "url": "https://leemgs.github.io/conference_kiise/",
+      "description": "Conference Schedule (by KIISE)",
+      "repo_url": "https://github.com/leemgs/conference_kiise",
+      "pushed_at": "2026-08-16T18:38:07Z",
+      "updated_at": "2026-08-16T18:38:12Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-08-16T18:24:32Z",
+      "updated_at": "2026-08-16T18:24:36Z"
+    },
+    {
+      "name": "web-ssh",
+      "url": "https://leemgs.github.io/web-ssh/",
+      "description": "web-ssh",
+      "repo_url": "https://github.com/leemgs/web-ssh",
+      "pushed_at": "2026-08-16T14:45:56Z",
+      "updated_at": "2026-08-16T14:46:49Z"
     },
     {
       "name": "with-people",
       "url": "https://leemgs.github.io/with-people/",
       "description": "Photo collection to archive memorable recollection in my life.",
       "repo_url": "https://github.com/leemgs/with-people",
-      "pushed_at": "2026-08-16T11:34:32Z",
-      "updated_at": "2026-08-16T11:34:58Z"
+      "pushed_at": "2026-08-16T14:15:04Z",
+      "updated_at": "2026-08-16T14:15:49Z"
+    },
+    {
+      "name": "myoci",
+      "url": "https://leemgs.github.io/myoci/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/myoci",
+      "pushed_at": "2026-08-16T12:26:02Z",
+      "updated_at": "2026-08-16T12:26:06Z"
     },
     {
       "name": "ai-usage",
@@ -36,30 +84,6 @@
       "updated_at": "2026-08-16T11:33:59Z"
     },
     {
-      "name": "webinar",
-      "url": "https://leemgs.github.io/webinar/",
-      "description": "Webinar Calendar",
-      "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-16T11:30:31Z",
-      "updated_at": "2026-08-16T11:30:56Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-16T07:31:09Z",
-      "updated_at": "2026-08-16T07:31:40Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-08-15T18:25:51Z",
-      "updated_at": "2026-08-15T18:26:01Z"
-    },
-    {
       "name": "used-notifier",
       "url": "https://leemgs.github.io/used-notifier/",
       "description": "Carrot maket product notifier",
@@ -68,36 +92,12 @@
       "updated_at": "2026-08-13T02:58:23Z"
     },
     {
-      "name": "conference_kiise",
-      "url": "https://leemgs.github.io/conference_kiise/",
-      "description": "Conference Schedule (by KIISE)",
-      "repo_url": "https://github.com/leemgs/conference_kiise",
-      "pushed_at": "2026-08-12T23:21:46Z",
-      "updated_at": "2026-08-12T23:21:49Z"
-    },
-    {
       "name": "bucket-list",
       "url": "https://leemgs.github.io/bucket-list/",
       "description": "Bucket List",
       "repo_url": "https://github.com/leemgs/bucket-list",
       "pushed_at": "2026-08-12T23:09:56Z",
       "updated_at": "2026-08-12T23:10:00Z"
-    },
-    {
-      "name": "mymemo",
-      "url": "https://leemgs.github.io/mymemo/",
-      "description": "My Memo",
-      "repo_url": "https://github.com/leemgs/mymemo",
-      "pushed_at": "2026-08-10T09:49:33Z",
-      "updated_at": "2026-08-10T09:50:26Z"
-    },
-    {
-      "name": "web-ssh",
-      "url": "https://leemgs.github.io/web-ssh/",
-      "description": "web-ssh",
-      "repo_url": "https://github.com/leemgs/web-ssh",
-      "pushed_at": "2026-08-09T07:23:22Z",
-      "updated_at": "2026-08-09T07:29:44Z"
     },
     {
       "name": "truthprint",
