@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Profile WYSIWYG Editor</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/site-shell.css">
+  <style>
+    .editor-shell{width:min(1500px,calc(100% - 24px));margin:24px auto 50px}
+    .editor-panel{padding:20px;background:var(--paper);border-radius:12px;box-shadow:0 12px 35px rgba(8,30,65,.35)}
+    .editor-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .editor-heading h1{font-size:clamp(1.5rem,4vw,2.4rem);margin:0}
+    .help{line-height:1.6;color:var(--muted);margin:10px 0 16px}
+    .toolbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:10px;border:1px solid #ccd8e8;border-radius:10px;background:#edf3fa}
+    .toolbar button,.toolbar select,.action{min-height:38px;padding:7px 12px;border:1px solid #9cacc0;border-radius:7px;background:#fff;color:#182237;font-weight:700;cursor:pointer}
+    .toolbar button:hover,.action:hover{border-color:#2879ed;background:#e6f0ff}
+    .toolbar .separator{height:26px;width:1px;background:#b9c5d5;margin:0 3px}
+    .editor-frame{display:block;width:100%;height:68vh;min-height:520px;margin-top:14px;border:1px solid #9fb0c5;border-radius:10px;background:#fff}
+    .save-panel{display:grid;grid-template-columns:minmax(220px,1fr) auto auto;gap:10px;margin-top:14px}
+    .save-panel input{min-width:0;padding:11px;border:1px solid #9cacc0;border-radius:7px;font:inherit}
+    .primary{background:#2879ed!important;color:#fff!important;border-color:#1f62bf!important}
+    #status{min-height:24px;margin:12px 2px 0;font-weight:700}
+    #status.error{color:#bd2525}#status.success{color:#167038}
+    @media(max-width:760px){.save-panel{grid-template-columns:1fr}.editor-frame{height:62vh}.toolbar .separator{display:none}}
+  </style>
+</head>
+<body>
+  <nav class="site-menu" aria-label="Main menu">
+  <a href="/about-me/" aria-current="page">About Me</a>
+  <a href="/github-projects/">Github Projects</a>
+</nav>
+  <main class="editor-shell">
+    <section class="editor-panel">
+      <div class="editor-heading">
+        <h1>프로필 WYSIWYG 편집기</h1>
+        <a class="action" href="/about-me/" target="_blank" rel="noopener">현재 프로필 보기</a>
+      </div>
+      <p class="help">아래 미리보기에서 About Me의 소개 영역과 상세 프로필을 직접 수정한 다음 GitHub fine-grained token을 입력하고 저장하세요. 토큰에는 <b>leemgs.github.io 저장소의 Contents: Read and write</b> 권한이 필요하며 브라우저에 저장되지 않습니다.</p>
+      <div class="toolbar" role="toolbar" aria-label="Text formatting">
+        <select id="format" aria-label="문단 형식">
+          <option value="p">문단</option><option value="h2">제목 2</option><option value="h3">제목 3</option>
+        </select>
+        <button type="button" data-command="bold" title="굵게"><b>B</b></button>
+        <button type="button" data-command="italic" title="기울임"><i>I</i></button>
+        <button type="button" data-command="underline" title="밑줄"><u>U</u></button>
+        <span class="separator"></span>
+        <button type="button" data-command="insertUnorderedList">글머리표</button>
+        <button type="button" data-command="insertOrderedList">번호 목록</button>
+        <button type="button" id="link">링크</button>
+        <button type="button" data-command="unlink">링크 해제</button>
+        <span class="separator"></span>
+        <button type="button" data-command="undo">실행 취소</button>
+        <button type="button" data-command="redo">다시 실행</button>
+      </div>
+      <iframe id="editor" class="editor-frame" title="프로필 편집 영역" sandbox="allow-same-origin"></iframe>
+      <div class="save-panel">
+        <input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="GitHub fine-grained personal access token" aria-label="GitHub token">
+        <button id="download" class="action" type="button">HTML 다운로드</button>
+        <button id="save" class="action primary" type="button">main에 저장</button>
+      </div>
+      <p id="status" role="status" aria-live="polite">프로필을 불러오는 중…</p>
+    </section>
+  </main>
+  <script>
+    const owner = 'leemgs';
+    const repository = 'leemgs.github.io';
+    const path = 'docs/about-me/index.html';
+    const branch = 'main';
+    const apiUrl = `https://api.github.com/repos/${owner}/${repository}/contents/${path}?ref=${branch}`;
+    const frame = document.querySelector('#editor');
+    const status = document.querySelector('#status');
+    let source = '';
+    let sha = '';
+
+    function setStatus(message, type = '') {
+      status.textContent = message;
+      status.className = type;
+    }
+    function decodeBase64(value) {
+      const bytes = Uint8Array.from(atob(value.replace(/\n/g, '')), character => character.charCodeAt(0));
+      return new TextDecoder().decode(bytes);
+    }
+    function encodeBase64(value) {
+      const bytes = new TextEncoder().encode(value);
+      let binary = '';
+      bytes.forEach(byte => { binary += String.fromCharCode(byte); });
+      return btoa(binary);
+    }
+    function editedHtml() {
+      if (!source) throw new Error('프로필 원본이 아직 준비되지 않았습니다.');
+      const original = new DOMParser().parseFromString(source, 'text/html');
+      const originalHero = original.querySelector('.hero-inner');
+      const originalContent = original.querySelector('.content');
+      const editedHero = frame.contentDocument.querySelector('.hero-inner');
+      const editedContent = frame.contentDocument.querySelector('.content');
+      if (!originalHero || !originalContent || !editedHero || !editedContent) {
+        throw new Error('편집할 About Me 영역을 찾을 수 없습니다.');
+      }
+      originalHero.innerHTML = editedHero.innerHTML;
+      originalContent.innerHTML = editedContent.innerHTML;
+      return '<!doctype html>\n' + original.documentElement.outerHTML + '\n';
+    }
+    async function loadProfile() {
+      try {
+        const response = await fetch(apiUrl, {headers:{Accept:'application/vnd.github+json'}});
+        if (!response.ok) throw new Error(`GitHub에서 프로필을 읽지 못했습니다 (${response.status}).`);
+        const data = await response.json();
+        source = decodeBase64(data.content);
+        sha = data.sha;
+        const parsed = new DOMParser().parseFromString(source, 'text/html');
+        parsed.querySelectorAll('script').forEach(script => script.remove());
+        const hero = parsed.querySelector('.hero-inner');
+        const content = parsed.querySelector('.content');
+        const styles = Array.from(parsed.head.querySelectorAll('style')).map(style => style.outerHTML).join('\n');
+        frame.srcdoc = `<!doctype html><html><head><base href="${location.origin}/">${styles}<style>body{background:#eef3f9;padding:18px}.hero-inner,.content{max-width:1100px;margin:0 auto 24px}.editable-region{outline:2px dashed #2879ed;outline-offset:5px}.editable-region:focus{outline:3px solid #2879ed}</style></head><body><div id="editable-profile"><div class="hero-inner editable-region">${hero ? hero.innerHTML : ''}</div><div class="content editable-region">${content ? content.innerHTML : ''}</div></div></body></html>`;
+        frame.addEventListener('load', () => {
+          const editableProfile = frame.contentDocument.querySelector('#editable-profile');
+          editableProfile.contentEditable = 'true';
+          frame.contentDocument.querySelector('.hero-inner').focus();
+        }, {once:true});
+        setStatus('편집 준비가 완료되었습니다.');
+      } catch (error) {
+        setStatus(error.message, 'error');
+      }
+    }
+    function command(name, value = null) {
+      frame.contentWindow.focus();
+      frame.contentDocument.execCommand(name, false, value);
+    }
+    document.querySelectorAll('[data-command]').forEach(button => button.addEventListener('click', () => command(button.dataset.command)));
+    document.querySelector('#format').addEventListener('change', event => command('formatBlock', event.target.value));
+    document.querySelector('#link').addEventListener('click', () => {
+      const url = prompt('연결할 URL을 입력하세요.', 'https://');
+      if (url) command('createLink', url);
+    });
+    document.querySelector('#download').addEventListener('click', () => {
+      try {
+        const blob = new Blob([editedHtml()], {type:'text/html;charset=utf-8'});
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob); link.download = 'index.html'; link.click();
+        URL.revokeObjectURL(link.href);
+        setStatus('수정된 index.html을 다운로드했습니다.', 'success');
+      } catch (error) { setStatus(error.message, 'error'); }
+    });
+    document.querySelector('#save').addEventListener('click', async () => {
+      const token = document.querySelector('#token').value.trim();
+      if (!token) return setStatus('GitHub token을 입력하세요.', 'error');
+      if (!confirm('수정한 프로필을 GitHub main 브랜치에 바로 저장할까요?')) return;
+      setStatus('GitHub main 브랜치에 저장하는 중…');
+      try {
+        const response = await fetch(apiUrl.split('?')[0], {
+          method:'PUT',
+          headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'},
+          body:JSON.stringify({message:'Update profile from web editor',content:encodeBase64(editedHtml()),sha,branch})
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.message || `GitHub 저장 실패 (${response.status})`);
+        sha = data.content.sha;
+        source = editedHtml();
+        document.querySelector('#token').value = '';
+        setStatus('저장했습니다. GitHub Pages 반영에는 잠시 시간이 걸릴 수 있습니다.', 'success');
+      } catch (error) { setStatus(error.message, 'error'); }
+    });
+    loadProfile();
+  </script>
+</body>
+</html>
