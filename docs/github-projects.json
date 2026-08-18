@@ -1,31 +1,55 @@
 {
-  "generated_at": "2026-08-18T01:00:44.296Z",
+  "generated_at": "2026-08-18T12:28:46.383Z",
   "owner": "leemgs",
   "count": 18,
   "projects": [
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-18T00:37:58Z",
-      "updated_at": "2026-08-18T00:38:08Z"
-    },
     {
       "name": "stock-quant-trader-kis",
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-18T00:25:09Z",
-      "updated_at": "2026-08-18T00:25:18Z"
+      "pushed_at": "2026-08-18T12:16:56Z",
+      "updated_at": "2026-08-18T12:26:39Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-17T23:35:50Z",
-      "updated_at": "2026-08-17T23:35:56Z"
+      "pushed_at": "2026-08-18T11:35:29Z",
+      "updated_at": "2026-08-18T11:35:33Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-08-18T11:11:54Z",
+      "updated_at": "2026-08-18T11:12:09Z"
+    },
+    {
+      "name": "ai-usage",
+      "url": "https://leemgs.github.io/ai-usage/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/ai-usage",
+      "pushed_at": "2026-08-18T10:56:38Z",
+      "updated_at": "2026-08-18T10:56:46Z"
+    },
+    {
+      "name": "myoci",
+      "url": "https://myoci.mooo.com/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/myoci",
+      "pushed_at": "2026-08-18T10:48:33Z",
+      "updated_at": "2026-08-18T10:50:52Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-08-18T07:37:22Z",
+      "updated_at": "2026-08-18T07:38:17Z"
     },
     {
       "name": "conference_kiise",
@@ -42,14 +66,6 @@
       "repo_url": "https://github.com/leemgs/conference_field",
       "pushed_at": "2026-08-17T18:35:39Z",
       "updated_at": "2026-08-17T18:35:57Z"
-    },
-    {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-08-17T13:15:37Z",
-      "updated_at": "2026-08-17T13:18:59Z"
     },
     {
       "name": "mymemo",
@@ -74,22 +90,6 @@
       "repo_url": "https://github.com/leemgs/with-people",
       "pushed_at": "2026-08-16T14:15:04Z",
       "updated_at": "2026-08-16T14:15:49Z"
-    },
-    {
-      "name": "myoci",
-      "url": "https://leemgs.github.io/myoci/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/myoci",
-      "pushed_at": "2026-08-16T12:26:02Z",
-      "updated_at": "2026-08-16T12:26:06Z"
-    },
-    {
-      "name": "ai-usage",
-      "url": "https://leemgs.github.io/ai-usage/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/ai-usage",
-      "pushed_at": "2026-08-16T11:33:40Z",
-      "updated_at": "2026-08-16T11:33:59Z"
     },
     {
       "name": "bucket-list",
