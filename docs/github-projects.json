@@ -1,39 +1,55 @@
 {
-  "generated_at": "2026-08-17T12:26:41.534Z",
+  "generated_at": "2026-08-18T01:00:44.296Z",
   "owner": "leemgs",
   "count": 18,
   "projects": [
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-08-18T00:37:58Z",
+      "updated_at": "2026-08-18T00:38:08Z"
+    },
     {
       "name": "stock-quant-trader-kis",
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-17T12:14:53Z",
-      "updated_at": "2026-08-17T12:16:49Z"
-    },
-    {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-08-17T11:44:04Z",
-      "updated_at": "2026-08-17T11:44:50Z"
+      "pushed_at": "2026-08-18T00:25:09Z",
+      "updated_at": "2026-08-18T00:25:18Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-17T11:36:33Z",
-      "updated_at": "2026-08-17T11:39:12Z"
+      "pushed_at": "2026-08-17T23:35:50Z",
+      "updated_at": "2026-08-17T23:35:56Z"
     },
     {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-17T07:52:18Z",
-      "updated_at": "2026-08-17T07:53:19Z"
+      "name": "conference_kiise",
+      "url": "https://leemgs.github.io/conference_kiise/",
+      "description": "Conference Schedule (by KIISE)",
+      "repo_url": "https://github.com/leemgs/conference_kiise",
+      "pushed_at": "2026-08-17T20:27:05Z",
+      "updated_at": "2026-08-17T20:27:08Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-08-17T18:35:39Z",
+      "updated_at": "2026-08-17T18:35:57Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-08-17T13:15:37Z",
+      "updated_at": "2026-08-17T13:18:59Z"
     },
     {
       "name": "mymemo",
@@ -42,22 +58,6 @@
       "repo_url": "https://github.com/leemgs/mymemo",
       "pushed_at": "2026-08-17T00:33:23Z",
       "updated_at": "2026-08-17T00:33:29Z"
-    },
-    {
-      "name": "conference_kiise",
-      "url": "https://leemgs.github.io/conference_kiise/",
-      "description": "Conference Schedule (by KIISE)",
-      "repo_url": "https://github.com/leemgs/conference_kiise",
-      "pushed_at": "2026-08-16T18:38:07Z",
-      "updated_at": "2026-08-16T18:38:12Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-08-16T18:24:32Z",
-      "updated_at": "2026-08-16T18:24:36Z"
     },
     {
       "name": "web-ssh",
