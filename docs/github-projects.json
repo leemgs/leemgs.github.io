@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T12:29:26.773Z",
+  "generated_at": "2026-08-20T01:01:14.783Z",
   "owner": "leemgs",
   "count": 18,
   "projects": [
@@ -8,32 +8,48 @@
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-19T12:16:49Z",
-      "updated_at": "2026-08-19T12:18:58Z"
+      "pushed_at": "2026-08-20T00:25:46Z",
+      "updated_at": "2026-08-20T00:25:57Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-19T11:36:08Z",
-      "updated_at": "2026-08-19T11:37:17Z"
+      "pushed_at": "2026-08-19T23:35:47Z",
+      "updated_at": "2026-08-19T23:35:51Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-19T07:37:40Z",
-      "updated_at": "2026-08-19T07:38:49Z"
+      "pushed_at": "2026-08-19T22:23:06Z",
+      "updated_at": "2026-08-19T22:23:11Z"
     },
     {
       "name": "conference_field",
       "url": "https://leemgs.github.io/conference_field/",
       "description": "Conference Calendar",
       "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-08-18T18:33:06Z",
-      "updated_at": "2026-08-18T18:36:24Z"
+      "pushed_at": "2026-08-19T18:29:29Z",
+      "updated_at": "2026-08-19T18:33:05Z"
+    },
+    {
+      "name": "web-ssh",
+      "url": "https://leemgs.github.io/web-ssh/",
+      "description": "web-ssh",
+      "repo_url": "https://github.com/leemgs/web-ssh",
+      "pushed_at": "2026-08-19T13:37:48Z",
+      "updated_at": "2026-08-16T14:46:49Z"
+    },
+    {
+      "name": "with-people",
+      "url": "https://leemgs.github.io/with-people/",
+      "description": "Photo collection to archive memorable recollection in my life.",
+      "repo_url": "https://github.com/leemgs/with-people",
+      "pushed_at": "2026-08-19T13:21:55Z",
+      "updated_at": "2026-08-19T13:31:38Z"
     },
     {
       "name": "used-notifier",
@@ -74,22 +90,6 @@
       "repo_url": "https://github.com/leemgs/mymemo",
       "pushed_at": "2026-08-17T00:33:23Z",
       "updated_at": "2026-08-17T00:33:29Z"
-    },
-    {
-      "name": "web-ssh",
-      "url": "https://leemgs.github.io/web-ssh/",
-      "description": "web-ssh",
-      "repo_url": "https://github.com/leemgs/web-ssh",
-      "pushed_at": "2026-08-16T14:45:56Z",
-      "updated_at": "2026-08-16T14:46:49Z"
-    },
-    {
-      "name": "with-people",
-      "url": "https://leemgs.github.io/with-people/",
-      "description": "Photo collection to archive memorable recollection in my life.",
-      "repo_url": "https://github.com/leemgs/with-people",
-      "pushed_at": "2026-08-16T14:15:04Z",
-      "updated_at": "2026-08-16T14:15:49Z"
     },
     {
       "name": "bucket-list",
