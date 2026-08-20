@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <title>Profile WYSIWYG Editor</title>
+  <title>Profile HTML Editor</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/site-shell.css">
   <style>
@@ -18,12 +18,17 @@
     .toolbar button:hover,.action:hover{border-color:#2879ed;background:#e6f0ff}
     .toolbar .separator{height:26px;width:1px;background:#b9c5d5;margin:0 3px}
     .editor-frame{display:block;width:100%;height:68vh;min-height:520px;margin-top:14px;border:1px solid #9fb0c5;border-radius:10px;background:#fff}
+    .mode-tabs{display:flex;gap:6px;margin-top:14px;border-bottom:1px solid #9fb0c5}
+    .mode-tab{padding:10px 16px;border:1px solid transparent;border-radius:8px 8px 0 0;background:transparent;color:#42526b;font:inherit;font-weight:700;cursor:pointer}
+    .mode-tab[aria-selected="true"]{margin-bottom:-1px;border-color:#9fb0c5 #9fb0c5 var(--paper);background:var(--paper);color:#145bb8}
+    .raw-editor{display:none;width:100%;height:68vh;min-height:520px;margin-top:14px;padding:14px;resize:vertical;border:1px solid #9fb0c5;border-radius:10px;background:#101827;color:#e8eef7;font:14px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2}
+    .raw-editor.active{display:block}.editor-frame[hidden],.toolbar[hidden]{display:none}
     .save-panel{display:grid;grid-template-columns:minmax(220px,1fr) auto auto;gap:10px;margin-top:14px}
     .save-panel input{min-width:0;padding:11px;border:1px solid #9cacc0;border-radius:7px;font:inherit}
     .primary{background:#2879ed!important;color:#fff!important;border-color:#1f62bf!important}
     #status{min-height:24px;margin:12px 2px 0;font-weight:700}
     #status.error{color:#bd2525}#status.success{color:#167038}
-    @media(max-width:760px){.save-panel{grid-template-columns:1fr}.editor-frame{height:62vh}.toolbar .separator{display:none}}
+    @media(max-width:760px){.save-panel{grid-template-columns:1fr}.editor-frame,.raw-editor{height:62vh}.toolbar .separator{display:none}}
   </style>
 </head>
 <body>
@@ -34,10 +39,14 @@
   <main class="editor-shell">
     <section class="editor-panel">
       <div class="editor-heading">
-        <h1>프로필 WYSIWYG 편집기</h1>
+        <h1>프로필 HTML 편집기</h1>
         <a class="action" href="/about-me/" target="_blank" rel="noopener">현재 프로필 보기</a>
       </div>
-      <p class="help">아래 미리보기에서 About Me의 소개 영역과 상세 프로필을 직접 수정한 다음 GitHub fine-grained token을 입력하고 저장하세요. 토큰에는 <b>leemgs.github.io 저장소의 Contents: Read and write</b> 권한이 필요하며 브라우저에 저장되지 않습니다.</p>
+      <p class="help">WYSIWYG 모드에서 화면을 직접 수정하거나, Raw HTML 모드에서 <code>index.html</code> 전체 내용을 편집한 다음 저장하세요. 모드를 전환하면 변경 내용이 서로 동기화됩니다. 토큰에는 <b>leemgs.github.io 저장소의 Contents: Read and write</b> 권한이 필요하며 브라우저에 저장되지 않습니다.</p>
+      <div class="mode-tabs" role="tablist" aria-label="편집 모드">
+        <button id="visual-tab" class="mode-tab" type="button" role="tab" aria-selected="true" aria-controls="editor">WYSIWYG</button>
+        <button id="raw-tab" class="mode-tab" type="button" role="tab" aria-selected="false" aria-controls="raw-editor">Raw HTML</button>
+      </div>
       <div class="toolbar" role="toolbar" aria-label="Text formatting">
         <select id="format" aria-label="문단 형식">
           <option value="p">문단</option><option value="h2">제목 2</option><option value="h3">제목 3</option>
@@ -54,7 +63,8 @@
         <button type="button" data-command="undo">실행 취소</button>
         <button type="button" data-command="redo">다시 실행</button>
       </div>
-      <iframe id="editor" class="editor-frame" title="프로필 편집 영역" sandbox="allow-same-origin"></iframe>
+      <iframe id="editor" class="editor-frame" role="tabpanel" aria-labelledby="visual-tab" title="프로필 WYSIWYG 편집 영역" sandbox="allow-same-origin"></iframe>
+      <textarea id="raw-editor" class="raw-editor" role="tabpanel" aria-labelledby="raw-tab" aria-label="Raw HTML 편집 영역" spellcheck="false" hidden></textarea>
       <div class="save-panel">
         <input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="GitHub fine-grained personal access token" aria-label="GitHub token">
         <button id="download" class="action" type="button">HTML 다운로드</button>
@@ -70,12 +80,15 @@
     const branch = 'main';
     const apiUrl = `https://api.github.com/repos/${owner}/${repository}/contents/${path}?ref=${branch}`;
     const frame = document.querySelector('#editor');
+    const rawEditor = document.querySelector('#raw-editor');
+    const toolbar = document.querySelector('.toolbar');
     const status = document.querySelector('#status');
     let source = '';
     let sha = '';
     let ready = false;
     let dirty = false;
     let lastRange = null;
+    let mode = 'visual';
 
     function setStatus(message, type = '') {
       status.textContent = message;
@@ -125,6 +138,52 @@
       originalContent.innerHTML = editedContent.innerHTML;
       return '<!doctype html>\n' + original.documentElement.outerHTML + '\n';
     }
+    function currentHtml() {
+      return mode === 'raw' ? rawEditor.value : editedHtml();
+    }
+    function renderVisual(html) {
+      const parsed = new DOMParser().parseFromString(html, 'text/html');
+      const hero = parsed.querySelector('.hero-inner');
+      const content = parsed.querySelector('.content');
+      if (!hero || !content) throw new Error('Raw HTML에서 편집할 .hero-inner 또는 .content 영역을 찾을 수 없습니다.');
+      parsed.querySelectorAll('script').forEach(script => script.remove());
+      const styles = Array.from(parsed.head.querySelectorAll('style')).map(style => style.outerHTML).join('\n');
+      ready = false;
+      lastRange = null;
+      frame.srcdoc = `<!doctype html><html><head><base href="${location.origin}/about-me/">${styles}<style>body{background:#eef3f9;padding:18px}.hero-inner,.content{max-width:1100px;margin:0 auto 24px}.editable-region{outline:2px dashed #2879ed;outline-offset:5px}.editable-region:focus{outline:3px solid #2879ed}</style></head><body><div id="editable-profile"><div class="hero-inner editable-region">${hero.innerHTML}</div><div class="content editable-region">${content.innerHTML}</div></div></body></html>`;
+      frame.addEventListener('load', () => {
+        const doc = frame.contentDocument;
+        const editableProfile = doc.querySelector('#editable-profile');
+        editableProfile.contentEditable = 'true';
+        doc.addEventListener('selectionchange', saveRange);
+        doc.addEventListener('input', () => { dirty = true; });
+        doc.addEventListener('mouseup', saveRange);
+        doc.addEventListener('keyup', saveRange);
+        doc.querySelector('.hero-inner').focus();
+        ready = true;
+        setStatus('WYSIWYG 편집 준비가 완료되었습니다.', 'success');
+      }, {once:true});
+    }
+    function setMode(nextMode) {
+      if (!ready && nextMode === 'raw') return setStatus('편집기가 아직 준비되지 않았습니다.', 'error');
+      try {
+        if (nextMode === 'raw' && mode === 'visual') rawEditor.value = editedHtml();
+        if (nextMode === 'visual' && mode === 'raw') {
+          source = rawEditor.value;
+          renderVisual(source);
+        }
+        mode = nextMode;
+        const visual = mode === 'visual';
+        frame.hidden = !visual;
+        toolbar.hidden = !visual;
+        rawEditor.hidden = visual;
+        rawEditor.classList.toggle('active', !visual);
+        document.querySelector('#visual-tab').setAttribute('aria-selected', String(visual));
+        document.querySelector('#raw-tab').setAttribute('aria-selected', String(!visual));
+        if (!visual) setStatus('전체 index.html을 Raw HTML로 편집할 수 있습니다.');
+        if (!visual) rawEditor.focus();
+      } catch (error) { setStatus(error.message, 'error'); }
+    }
     async function loadProfile() {
       try {
         const response = await fetch(apiUrl, {headers:{Accept:'application/vnd.github+json'}});
@@ -132,24 +191,7 @@
         const data = await response.json();
         source = decodeBase64(data.content);
         sha = data.sha;
-        const parsed = new DOMParser().parseFromString(source, 'text/html');
-        parsed.querySelectorAll('script').forEach(script => script.remove());
-        const hero = parsed.querySelector('.hero-inner');
-        const content = parsed.querySelector('.content');
-        const styles = Array.from(parsed.head.querySelectorAll('style')).map(style => style.outerHTML).join('\n');
-        frame.srcdoc = `<!doctype html><html><head><base href="${location.origin}/about-me/">${styles}<style>body{background:#eef3f9;padding:18px}.hero-inner,.content{max-width:1100px;margin:0 auto 24px}.editable-region{outline:2px dashed #2879ed;outline-offset:5px}.editable-region:focus{outline:3px solid #2879ed}</style></head><body><div id="editable-profile"><div class="hero-inner editable-region">${hero ? hero.innerHTML : ''}</div><div class="content editable-region">${content ? content.innerHTML : ''}</div></div></body></html>`;
-        frame.addEventListener('load', () => {
-          const doc = frame.contentDocument;
-          const editableProfile = doc.querySelector('#editable-profile');
-          editableProfile.contentEditable = 'true';
-          doc.addEventListener('selectionchange', saveRange);
-          doc.addEventListener('input', () => { dirty = true; });
-          doc.addEventListener('mouseup', saveRange);
-          doc.addEventListener('keyup', saveRange);
-          doc.querySelector('.hero-inner').focus();
-          ready = true;
-        }, {once:true});
-        setStatus('편집 준비가 완료되었습니다.');
+        renderVisual(source);
       } catch (error) {
         setStatus(error.message, 'error');
       }
@@ -170,9 +212,19 @@
       const url = prompt('연결할 URL을 입력하세요.', 'https://');
       if (url) command('createLink', url);
     });
+    document.querySelector('#visual-tab').addEventListener('click', () => setMode('visual'));
+    document.querySelector('#raw-tab').addEventListener('click', () => setMode('raw'));
+    rawEditor.addEventListener('input', () => { dirty = true; });
+    rawEditor.addEventListener('keydown', event => {
+      if (event.key !== 'Tab') return;
+      event.preventDefault();
+      const start = rawEditor.selectionStart;
+      rawEditor.setRangeText('  ', start, rawEditor.selectionEnd, 'end');
+      dirty = true;
+    });
     document.querySelector('#download').addEventListener('click', () => {
       try {
-        const blob = new Blob([editedHtml()], {type:'text/html;charset=utf-8'});
+        const blob = new Blob([currentHtml()], {type:'text/html;charset=utf-8'});
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob); link.download = 'index.html'; link.click();
         URL.revokeObjectURL(link.href);
@@ -185,18 +237,19 @@
       if (!confirm('수정한 프로필을 GitHub main 브랜치에 바로 저장할까요?')) return;
       setStatus('GitHub main 브랜치에 저장하는 중…');
       try {
+        const htmlToSave = currentHtml();
         const response = await fetch(apiUrl.split('?')[0], {
           method:'PUT',
           headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json'},
-          body:JSON.stringify({message:'Update profile from web editor',content:encodeBase64(editedHtml()),sha,branch})
+          body:JSON.stringify({message:'Update profile from web editor',content:encodeBase64(htmlToSave),sha,branch})
         });
         const data = await response.json();
         if (!response.ok) throw new Error(data.message || `GitHub 저장 실패 (${response.status})`);
         sha = data.content.sha;
-        source = editedHtml();
-        dirty = false;
+        source = htmlToSave;
+        dirty = currentHtml() !== htmlToSave;
         document.querySelector('#token').value = '';
-        setStatus('저장했습니다. GitHub Pages 반영에는 잠시 시간이 걸릴 수 있습니다.', 'success');
+        setStatus(dirty ? '저장 중 추가된 변경 사항이 남아 있습니다. 다시 저장해 주세요.' : '저장했습니다. GitHub Pages 반영에는 잠시 시간이 걸릴 수 있습니다.', dirty ? '' : 'success');
       } catch (error) { setStatus(error.message, 'error'); }
     });
     window.addEventListener('beforeunload', event => {
