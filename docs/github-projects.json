@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T01:01:14.783Z",
+  "generated_at": "2026-08-20T12:31:15.745Z",
   "owner": "leemgs",
   "count": 18,
   "projects": [
@@ -8,40 +8,40 @@
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-20T00:25:46Z",
-      "updated_at": "2026-08-20T00:25:57Z"
+      "pushed_at": "2026-08-20T12:18:47Z",
+      "updated_at": "2026-08-20T12:21:33Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-19T23:35:47Z",
-      "updated_at": "2026-08-19T23:35:51Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-19T22:23:06Z",
-      "updated_at": "2026-08-19T22:23:11Z"
+      "pushed_at": "2026-08-20T11:36:45Z",
+      "updated_at": "2026-08-20T11:39:38Z"
     },
     {
       "name": "conference_field",
       "url": "https://leemgs.github.io/conference_field/",
       "description": "Conference Calendar",
       "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-08-19T18:29:29Z",
-      "updated_at": "2026-08-19T18:33:05Z"
+      "pushed_at": "2026-08-20T11:18:33Z",
+      "updated_at": "2026-08-20T11:19:07Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-08-20T07:41:11Z",
+      "updated_at": "2026-08-20T07:42:38Z"
     },
     {
       "name": "web-ssh",
       "url": "https://leemgs.github.io/web-ssh/",
       "description": "web-ssh",
       "repo_url": "https://github.com/leemgs/web-ssh",
-      "pushed_at": "2026-08-19T13:37:48Z",
-      "updated_at": "2026-08-16T14:46:49Z"
+      "pushed_at": "2026-08-20T07:10:03Z",
+      "updated_at": "2026-08-20T07:12:19Z"
     },
     {
       "name": "with-people",
