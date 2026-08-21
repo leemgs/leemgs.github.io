@@ -1,47 +1,63 @@
 {
-  "generated_at": "2026-08-20T12:31:15.745Z",
+  "generated_at": "2026-08-21T01:05:15.351Z",
   "owner": "leemgs",
   "count": 18,
   "projects": [
+    {
+      "name": "conference_kiise",
+      "url": "https://leemgs.github.io/conference_kiise/",
+      "description": "Conference Schedule (by KIISE)",
+      "repo_url": "https://github.com/leemgs/conference_kiise",
+      "pushed_at": "2026-08-21T00:46:18Z",
+      "updated_at": "2026-08-21T00:46:28Z"
+    },
     {
       "name": "stock-quant-trader-kis",
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-20T12:18:47Z",
-      "updated_at": "2026-08-20T12:21:33Z"
-    },
-    {
-      "name": "webinar",
-      "url": "https://leemgs.github.io/webinar/",
-      "description": "Webinar Calendar",
-      "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-20T11:36:45Z",
-      "updated_at": "2026-08-20T11:39:38Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-08-20T11:18:33Z",
-      "updated_at": "2026-08-20T11:19:07Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-20T07:41:11Z",
-      "updated_at": "2026-08-20T07:42:38Z"
+      "pushed_at": "2026-08-21T00:27:49Z",
+      "updated_at": "2026-08-21T00:27:53Z"
     },
     {
       "name": "web-ssh",
       "url": "https://leemgs.github.io/web-ssh/",
       "description": "web-ssh",
       "repo_url": "https://github.com/leemgs/web-ssh",
-      "pushed_at": "2026-08-20T07:10:03Z",
-      "updated_at": "2026-08-20T07:12:19Z"
+      "pushed_at": "2026-08-21T00:19:13Z",
+      "updated_at": "2026-08-21T00:19:18Z"
+    },
+    {
+      "name": "webinar",
+      "url": "https://leemgs.github.io/webinar/",
+      "description": "Webinar Calendar",
+      "repo_url": "https://github.com/leemgs/webinar",
+      "pushed_at": "2026-08-20T23:39:20Z",
+      "updated_at": "2026-08-20T23:39:25Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-08-20T22:26:37Z",
+      "updated_at": "2026-08-20T22:27:37Z"
+    },
+    {
+      "name": "mymemo",
+      "url": "https://leemgs.github.io/mymemo/",
+      "description": "My Memo",
+      "repo_url": "https://github.com/leemgs/mymemo",
+      "pushed_at": "2026-08-20T20:30:29Z",
+      "updated_at": "2026-08-20T20:30:36Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-08-20T20:17:52Z",
+      "updated_at": "2026-08-20T20:22:39Z"
     },
     {
       "name": "with-people",
@@ -74,22 +90,6 @@
       "repo_url": "https://github.com/leemgs/myoci",
       "pushed_at": "2026-08-18T10:48:33Z",
       "updated_at": "2026-08-18T10:50:52Z"
-    },
-    {
-      "name": "conference_kiise",
-      "url": "https://leemgs.github.io/conference_kiise/",
-      "description": "Conference Schedule (by KIISE)",
-      "repo_url": "https://github.com/leemgs/conference_kiise",
-      "pushed_at": "2026-08-17T20:27:05Z",
-      "updated_at": "2026-08-17T20:27:08Z"
-    },
-    {
-      "name": "mymemo",
-      "url": "https://leemgs.github.io/mymemo/",
-      "description": "My Memo",
-      "repo_url": "https://github.com/leemgs/mymemo",
-      "pushed_at": "2026-08-17T00:33:23Z",
-      "updated_at": "2026-08-17T00:33:29Z"
     },
     {
       "name": "bucket-list",
