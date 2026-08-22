@@ -29,17 +29,43 @@
     const projects = document.querySelector('#projects');
     const status = document.querySelector('#status');
 
-    function card(name, url, description) {
-      const el = document.createElement('a');
+    function card(name, url, repoUrl, description) {
+      const el = document.createElement('article');
       el.className = 'project';
-      el.href = url;
-      el.target = '_blank';
-      el.rel = 'noopener';
       const title = document.createElement('strong');
       title.textContent = name;
+      const links = document.createElement('div');
+      links.className = 'project-links';
+      const siteLink = document.createElement('a');
+      siteLink.className = 'project-site';
+      siteLink.href = url;
+      siteLink.target = '_blank';
+      siteLink.rel = 'noopener';
       const address = document.createElement('span');
       address.textContent = url;
-      el.append(title, address);
+      siteLink.append(address);
+      links.append(siteLink);
+
+      if (repoUrl) {
+        const repoLink = document.createElement('a');
+        repoLink.className = 'repo-link';
+        repoLink.href = repoUrl;
+        repoLink.target = '_blank';
+        repoLink.rel = 'noopener';
+        repoLink.setAttribute('aria-label', `${name} GitHub repository`);
+        repoLink.title = 'View GitHub repository';
+        const repoIcon = document.createElement('img');
+        repoIcon.src = 'github-mark.svg';
+        repoIcon.alt = '';
+        repoIcon.width = 20;
+        repoIcon.height = 20;
+        const repoAddress = document.createElement('span');
+        repoAddress.textContent = repoUrl;
+        repoLink.append(repoIcon, repoAddress);
+        links.append(repoLink);
+      }
+
+      el.append(title, links);
       if (description) {
         const desc = document.createElement('span');
         desc.className = 'desc';
@@ -54,7 +80,7 @@
       status.textContent = list.length
         ? `${list.length} published project${list.length === 1 ? '' : 's'}`
         : 'No separately published project was found.';
-      list.forEach(item => projects.append(card(item.name, item.url, item.description)));
+      list.forEach(item => projects.append(card(item.name, item.url, item.repo_url, item.description)));
     }
 
     // Primary source: the list pre-generated twice a day by GitHub Actions
@@ -84,6 +110,7 @@
                   ? repo.homepage
                   : `https://leemgs.github.io/${encodeURIComponent(repo.name)}/`,
                 description: repo.description || '',
+                repo_url: repo.html_url,
               }));
             render(published);
           })
