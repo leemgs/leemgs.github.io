@@ -1,31 +1,47 @@
 {
-  "generated_at": "2026-08-22T01:01:23.428Z",
+  "generated_at": "2026-08-22T12:22:41.775Z",
   "owner": "leemgs",
-  "count": 18,
+  "count": 19,
   "projects": [
+    {
+      "name": "weekend-farm",
+      "url": "https://leemgs.github.io/weekend-farm/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/weekend-farm",
+      "pushed_at": "2026-08-22T12:12:43Z",
+      "updated_at": "2026-08-22T12:12:57Z"
+    },
     {
       "name": "stock-quant-trader-kis",
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-22T00:25:06Z",
-      "updated_at": "2026-08-22T00:25:16Z"
+      "pushed_at": "2026-08-22T12:11:45Z",
+      "updated_at": "2026-08-22T12:13:14Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-21T23:39:40Z",
-      "updated_at": "2026-08-21T23:39:49Z"
+      "pushed_at": "2026-08-22T11:29:23Z",
+      "updated_at": "2026-08-22T11:30:07Z"
+    },
+    {
+      "name": "mymemo",
+      "url": "https://leemgs.github.io/mymemo/",
+      "description": "My Memo",
+      "repo_url": "https://github.com/leemgs/mymemo",
+      "pushed_at": "2026-08-22T09:04:05Z",
+      "updated_at": "2026-08-22T09:04:19Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-21T22:24:41Z",
-      "updated_at": "2026-08-21T22:24:44Z"
+      "pushed_at": "2026-08-22T07:31:09Z",
+      "updated_at": "2026-08-22T07:31:29Z"
     },
     {
       "name": "conference_field",
@@ -58,14 +74,6 @@
       "repo_url": "https://github.com/leemgs/web-ssh",
       "pushed_at": "2026-08-21T01:38:23Z",
       "updated_at": "2026-08-21T01:38:27Z"
-    },
-    {
-      "name": "mymemo",
-      "url": "https://leemgs.github.io/mymemo/",
-      "description": "My Memo",
-      "repo_url": "https://github.com/leemgs/mymemo",
-      "pushed_at": "2026-08-20T20:30:29Z",
-      "updated_at": "2026-08-20T20:30:36Z"
     },
     {
       "name": "used-notifier",
