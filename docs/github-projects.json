@@ -1,47 +1,55 @@
 {
-  "generated_at": "2026-08-23T01:06:15.053Z",
+  "generated_at": "2026-08-23T12:23:04.542Z",
   "owner": "leemgs",
-  "count": 20,
+  "count": 21,
   "projects": [
-    {
-      "name": "github-projects",
-      "url": "https://leemgs.github.io/github-projects/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/github-projects",
-      "pushed_at": "2026-08-23T00:59:55Z",
-      "updated_at": "2026-08-23T01:00:15Z"
-    },
-    {
-      "name": "weekend-farm",
-      "url": "https://leemgs.github.io/weekend-farm/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/weekend-farm",
-      "pushed_at": "2026-08-23T00:56:07Z",
-      "updated_at": "2026-08-23T00:56:53Z"
-    },
     {
       "name": "stock-quant-trader-kis",
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-23T00:27:10Z",
-      "updated_at": "2026-08-23T00:27:33Z"
+      "pushed_at": "2026-08-23T12:12:18Z",
+      "updated_at": "2026-08-23T12:13:19Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-22T23:36:50Z",
-      "updated_at": "2026-08-22T23:36:56Z"
+      "pushed_at": "2026-08-23T11:29:16Z",
+      "updated_at": "2026-08-23T11:30:05Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-22T22:20:37Z",
-      "updated_at": "2026-08-22T22:20:40Z"
+      "pushed_at": "2026-08-23T07:33:21Z",
+      "updated_at": "2026-08-23T07:33:40Z"
+    },
+    {
+      "name": "semmelweis-pharm",
+      "url": "https://leemgs.github.io/semmelweis-pharm/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/semmelweis-pharm",
+      "pushed_at": "2026-08-23T06:57:08Z",
+      "updated_at": "2026-08-23T06:57:14Z"
+    },
+    {
+      "name": "weekend-farm",
+      "url": "https://leemgs.github.io/weekend-farm/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/weekend-farm",
+      "pushed_at": "2026-08-23T02:44:47Z",
+      "updated_at": "2026-08-23T02:44:50Z"
+    },
+    {
+      "name": "github-projects",
+      "url": "https://leemgs.github.io/github-projects/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/github-projects",
+      "pushed_at": "2026-08-23T01:22:38Z",
+      "updated_at": "2026-08-23T01:22:57Z"
     },
     {
       "name": "conference_field",
