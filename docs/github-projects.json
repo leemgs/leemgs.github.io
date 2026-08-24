@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T01:04:11.300Z",
+  "generated_at": "2026-08-24T12:32:09.147Z",
   "owner": "leemgs",
   "count": 21,
   "projects": [
@@ -8,24 +8,24 @@
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-24T00:26:59Z",
-      "updated_at": "2026-08-24T00:27:08Z"
+      "pushed_at": "2026-08-24T12:18:51Z",
+      "updated_at": "2026-08-24T12:21:31Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-23T23:34:46Z",
-      "updated_at": "2026-08-23T23:34:57Z"
+      "pushed_at": "2026-08-24T11:36:51Z",
+      "updated_at": "2026-08-24T11:39:54Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-23T22:20:21Z",
-      "updated_at": "2026-08-23T22:20:40Z"
+      "pushed_at": "2026-08-24T07:57:49Z",
+      "updated_at": "2026-08-24T07:58:33Z"
     },
     {
       "name": "conference_kiise",
