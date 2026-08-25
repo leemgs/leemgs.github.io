@@ -1,31 +1,39 @@
 {
-  "generated_at": "2026-08-25T01:03:33.534Z",
+  "generated_at": "2026-08-25T12:32:04.513Z",
   "owner": "leemgs",
   "count": 21,
   "projects": [
-    {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-08-25T00:45:12Z",
-      "updated_at": "2026-08-25T00:45:18Z"
-    },
     {
       "name": "stock-quant-trader-kis",
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-25T00:26:22Z",
-      "updated_at": "2026-08-25T00:27:53Z"
+      "pushed_at": "2026-08-25T12:19:36Z",
+      "updated_at": "2026-08-25T12:29:14Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-24T23:36:33Z",
-      "updated_at": "2026-08-24T23:37:16Z"
+      "pushed_at": "2026-08-25T11:36:00Z",
+      "updated_at": "2026-08-25T11:36:39Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-08-25T07:43:02Z",
+      "updated_at": "2026-08-25T07:44:27Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-08-25T03:39:04Z",
+      "updated_at": "2026-08-25T03:39:29Z"
     },
     {
       "name": "semmelweis-pharm",
@@ -42,14 +50,6 @@
       "repo_url": "https://github.com/leemgs/myoci",
       "pushed_at": "2026-08-24T22:47:31Z",
       "updated_at": "2026-08-24T22:47:35Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-24T22:24:49Z",
-      "updated_at": "2026-08-24T22:24:53Z"
     },
     {
       "name": "conference_field",
