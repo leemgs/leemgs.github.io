@@ -1,31 +1,63 @@
 {
-  "generated_at": "2026-08-24T12:32:09.147Z",
+  "generated_at": "2026-08-25T01:03:33.534Z",
   "owner": "leemgs",
   "count": 21,
   "projects": [
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-08-25T00:45:12Z",
+      "updated_at": "2026-08-25T00:45:18Z"
+    },
     {
       "name": "stock-quant-trader-kis",
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-24T12:18:51Z",
-      "updated_at": "2026-08-24T12:21:31Z"
+      "pushed_at": "2026-08-25T00:26:22Z",
+      "updated_at": "2026-08-25T00:27:53Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-24T11:36:51Z",
-      "updated_at": "2026-08-24T11:39:54Z"
+      "pushed_at": "2026-08-24T23:36:33Z",
+      "updated_at": "2026-08-24T23:37:16Z"
+    },
+    {
+      "name": "semmelweis-pharm",
+      "url": "https://leemgs.github.io/semmelweis-pharm/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/semmelweis-pharm",
+      "pushed_at": "2026-08-24T23:10:45Z",
+      "updated_at": "2026-08-24T23:10:51Z"
+    },
+    {
+      "name": "myoci",
+      "url": "https://myoci.mooo.com/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/myoci",
+      "pushed_at": "2026-08-24T22:47:31Z",
+      "updated_at": "2026-08-24T22:47:35Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-24T07:57:49Z",
-      "updated_at": "2026-08-24T07:58:33Z"
+      "pushed_at": "2026-08-24T22:24:49Z",
+      "updated_at": "2026-08-24T22:24:53Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-08-24T18:36:14Z",
+      "updated_at": "2026-08-24T18:36:34Z"
     },
     {
       "name": "conference_kiise",
@@ -36,28 +68,12 @@
       "updated_at": "2026-08-23T18:39:41Z"
     },
     {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-08-23T18:26:32Z",
-      "updated_at": "2026-08-23T18:26:38Z"
-    },
-    {
       "name": "weekend-farm",
       "url": "https://leemgs.github.io/weekend-farm/",
       "description": "",
       "repo_url": "https://github.com/leemgs/weekend-farm",
       "pushed_at": "2026-08-23T13:48:57Z",
       "updated_at": "2026-08-23T13:49:34Z"
-    },
-    {
-      "name": "semmelweis-pharm",
-      "url": "https://leemgs.github.io/semmelweis-pharm/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/semmelweis-pharm",
-      "pushed_at": "2026-08-23T06:57:08Z",
-      "updated_at": "2026-08-23T06:57:14Z"
     },
     {
       "name": "github-projects",
@@ -92,28 +108,12 @@
       "updated_at": "2026-08-21T01:38:27Z"
     },
     {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-08-18T11:11:54Z",
-      "updated_at": "2026-08-18T11:12:09Z"
-    },
-    {
       "name": "ai-usage",
       "url": "https://leemgs.github.io/ai-usage/",
       "description": "",
       "repo_url": "https://github.com/leemgs/ai-usage",
       "pushed_at": "2026-08-18T10:56:38Z",
       "updated_at": "2026-08-18T10:56:46Z"
-    },
-    {
-      "name": "myoci",
-      "url": "https://myoci.mooo.com/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/myoci",
-      "pushed_at": "2026-08-18T10:48:33Z",
-      "updated_at": "2026-08-18T10:50:52Z"
     },
     {
       "name": "bucket-list",
