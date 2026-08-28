@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T21:30:15.511Z",
+  "generated_at": "2026-08-28T08:53:14.606Z",
   "owner": "leemgs",
   "count": 21,
   "projects": [
@@ -8,24 +8,32 @@
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-27T21:01:52Z",
-      "updated_at": "2026-08-27T21:02:58Z"
+      "pushed_at": "2026-08-28T06:57:33Z",
+      "updated_at": "2026-08-28T06:58:15Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-27T18:06:29Z",
-      "updated_at": "2026-08-27T18:11:15Z"
+      "pushed_at": "2026-08-28T05:58:14Z",
+      "updated_at": "2026-08-28T05:58:19Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-08-28T02:08:44Z",
+      "updated_at": "2026-08-28T02:10:55Z"
     },
     {
       "name": "stock-quant-trader-kis",
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-27T16:52:12Z",
-      "updated_at": "2026-08-27T16:58:43Z"
+      "pushed_at": "2026-08-28T01:47:51Z",
+      "updated_at": "2026-08-28T01:47:55Z"
     },
     {
       "name": "used-notifier",
@@ -34,14 +42,6 @@
       "repo_url": "https://github.com/leemgs/used-notifier",
       "pushed_at": "2026-08-27T09:23:06Z",
       "updated_at": "2026-08-27T09:31:42Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-08-26T19:50:02Z",
-      "updated_at": "2026-08-26T20:30:07Z"
     },
     {
       "name": "web-ssh",
