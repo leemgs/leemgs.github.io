@@ -1,55 +1,63 @@
 {
-  "generated_at": "2026-08-29T05:29:02.975Z",
+  "generated_at": "2026-08-29T15:59:29.012Z",
   "owner": "leemgs",
   "count": 21,
   "projects": [
-    {
-      "name": "sage-mm",
-      "url": "https://leemgs.github.io/sage-mm/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/sage-mm",
-      "pushed_at": "2026-08-29T04:58:14Z",
-      "updated_at": "2026-08-29T04:58:22Z"
-    },
     {
       "name": "stock-quant-trader-kis",
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-29T04:21:42Z",
-      "updated_at": "2026-08-29T04:21:54Z"
+      "pushed_at": "2026-08-29T15:46:05Z",
+      "updated_at": "2026-08-29T15:47:25Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-29T04:12:49Z",
-      "updated_at": "2026-08-29T04:12:57Z"
-    },
-    {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-08-29T04:00:54Z",
-      "updated_at": "2026-08-29T04:03:32Z"
+      "pushed_at": "2026-08-29T15:38:04Z",
+      "updated_at": "2026-08-29T15:39:07Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-29T03:31:13Z",
-      "updated_at": "2026-08-29T03:31:32Z"
+      "pushed_at": "2026-08-29T12:58:49Z",
+      "updated_at": "2026-08-29T12:58:54Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-08-29T07:11:14Z",
+      "updated_at": "2026-08-29T07:11:21Z"
+    },
+    {
+      "name": "sage-mm",
+      "url": "https://leemgs.github.io/sage-mm/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/sage-mm",
+      "pushed_at": "2026-08-29T06:53:03Z",
+      "updated_at": "2026-08-29T06:53:27Z"
     },
     {
       "name": "mymemo",
       "url": "https://leemgs.github.io/mymemo/",
       "description": "My Memo",
       "repo_url": "https://github.com/leemgs/mymemo",
-      "pushed_at": "2026-08-29T02:20:04Z",
-      "updated_at": "2026-08-29T02:21:26Z"
+      "pushed_at": "2026-08-29T06:45:15Z",
+      "updated_at": "2026-08-29T06:45:40Z"
+    },
+    {
+      "name": "truthprint",
+      "url": "https://leemgs.github.io/truthprint/",
+      "description": "Truthprint for synth text approach",
+      "repo_url": "https://github.com/leemgs/truthprint",
+      "pushed_at": "2026-08-29T06:27:59Z",
+      "updated_at": "2026-08-29T06:28:18Z"
     },
     {
       "name": "conference_field",
@@ -58,14 +66,6 @@
       "repo_url": "https://github.com/leemgs/conference_field",
       "pushed_at": "2026-08-29T01:32:02Z",
       "updated_at": "2026-08-29T01:32:06Z"
-    },
-    {
-      "name": "truthprint",
-      "url": "https://leemgs.github.io/truthprint/",
-      "description": "Truthprint for synth text approach",
-      "repo_url": "https://github.com/leemgs/truthprint",
-      "pushed_at": "2026-08-29T00:16:48Z",
-      "updated_at": "2026-08-29T00:16:52Z"
     },
     {
       "name": "web-ssh",
