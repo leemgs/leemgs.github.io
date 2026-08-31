@@ -1,31 +1,55 @@
 {
-  "generated_at": "2026-08-30T15:47:36.715Z",
+  "generated_at": "2026-08-31T03:23:23.687Z",
   "owner": "leemgs",
   "count": 21,
   "projects": [
-    {
-      "name": "webinar",
-      "url": "https://leemgs.github.io/webinar/",
-      "description": "Webinar Calendar",
-      "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-08-30T15:20:52Z",
-      "updated_at": "2026-08-30T15:20:59Z"
-    },
     {
       "name": "stock-quant-trader-kis",
       "url": "https://leemgs.github.io/stock-quant-trader-kis/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-08-30T13:20:48Z",
-      "updated_at": "2026-08-30T13:20:56Z"
+      "pushed_at": "2026-08-31T02:26:45Z",
+      "updated_at": "2026-08-31T02:26:58Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-08-30T12:37:36Z",
-      "updated_at": "2026-08-30T12:38:06Z"
+      "pushed_at": "2026-08-31T02:16:59Z",
+      "updated_at": "2026-08-31T02:17:50Z"
+    },
+    {
+      "name": "webinar",
+      "url": "https://leemgs.github.io/webinar/",
+      "description": "Webinar Calendar",
+      "repo_url": "https://github.com/leemgs/webinar",
+      "pushed_at": "2026-08-31T01:25:42Z",
+      "updated_at": "2026-08-31T01:25:46Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-08-30T22:19:57Z",
+      "updated_at": "2026-08-30T22:20:11Z"
+    },
+    {
+      "name": "conference_kiise",
+      "url": "https://leemgs.github.io/conference_kiise/",
+      "description": "Conference Schedule (by KIISE)",
+      "repo_url": "https://github.com/leemgs/conference_kiise",
+      "pushed_at": "2026-08-30T20:54:27Z",
+      "updated_at": "2026-08-30T20:54:31Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-08-30T20:27:18Z",
+      "updated_at": "2026-08-30T20:27:59Z"
     },
     {
       "name": "weekend-farm",
@@ -34,14 +58,6 @@
       "repo_url": "https://github.com/leemgs/weekend-farm",
       "pushed_at": "2026-08-30T11:02:29Z",
       "updated_at": "2026-08-30T11:03:44Z"
-    },
-    {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-08-30T09:38:48Z",
-      "updated_at": "2026-08-30T09:39:15Z"
     },
     {
       "name": "sage-mm",
@@ -58,14 +74,6 @@
       "repo_url": "https://github.com/leemgs/mymemo",
       "pushed_at": "2026-08-30T05:17:10Z",
       "updated_at": "2026-08-30T05:17:37Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-08-29T20:22:03Z",
-      "updated_at": "2026-08-29T20:22:07Z"
     },
     {
       "name": "truthprint",
@@ -98,14 +106,6 @@
       "repo_url": "https://github.com/leemgs/myoci",
       "pushed_at": "2026-08-24T22:47:31Z",
       "updated_at": "2026-08-24T22:47:35Z"
-    },
-    {
-      "name": "conference_kiise",
-      "url": "https://leemgs.github.io/conference_kiise/",
-      "description": "Conference Schedule (by KIISE)",
-      "repo_url": "https://github.com/leemgs/conference_kiise",
-      "pushed_at": "2026-08-23T18:38:52Z",
-      "updated_at": "2026-08-23T18:39:41Z"
     },
     {
       "name": "github-projects",
