@@ -1,15 +1,47 @@
 {
-  "generated_at": "2026-09-03T15:33:18.083Z",
+  "generated_at": "2026-09-04T02:45:50.992Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-09-04T02:04:25Z",
+      "updated_at": "2026-09-04T02:04:29Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-09-04T01:27:16Z",
+      "updated_at": "2026-09-04T01:27:19Z"
+    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-09-03T15:00:55Z",
-      "updated_at": "2026-09-03T15:02:05Z"
+      "pushed_at": "2026-09-04T01:00:30Z",
+      "updated_at": "2026-09-04T01:00:38Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-09-03T23:48:01Z",
+      "updated_at": "2026-09-03T23:48:05Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-09-03T20:38:24Z",
+      "updated_at": "2026-09-03T20:41:18Z"
     },
     {
       "name": "ai-society-lab",
@@ -20,44 +52,12 @@
       "updated_at": "2026-09-03T13:01:30Z"
     },
     {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-09-03T12:16:32Z",
-      "updated_at": "2026-09-03T12:18:31Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-09-03T11:57:15Z",
-      "updated_at": "2026-09-03T11:58:09Z"
-    },
-    {
       "name": "bucket-list",
       "url": "https://leemgs.github.io/bucket-list/",
       "description": "Bucket List",
       "repo_url": "https://github.com/leemgs/bucket-list",
       "pushed_at": "2026-09-03T09:46:34Z",
       "updated_at": "2026-09-03T09:48:55Z"
-    },
-    {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-09-03T07:09:57Z",
-      "updated_at": "2026-09-03T07:10:52Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-09-02T20:28:36Z",
-      "updated_at": "2026-09-02T20:28:52Z"
     },
     {
       "name": "github-projects",
