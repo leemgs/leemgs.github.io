@@ -1,31 +1,47 @@
 {
-  "generated_at": "2026-09-04T15:31:01.996Z",
+  "generated_at": "2026-09-05T02:47:16.462Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
-    {
-      "name": "webinar",
-      "url": "https://leemgs.github.io/webinar/",
-      "description": "Webinar Calendar",
-      "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-09-04T14:58:32Z",
-      "updated_at": "2026-09-04T15:01:43Z"
-    },
     {
       "name": "stock-quant-trader-kis",
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-09-04T12:17:03Z",
-      "updated_at": "2026-09-04T12:23:45Z"
+      "pushed_at": "2026-09-05T01:28:50Z",
+      "updated_at": "2026-09-05T01:28:53Z"
+    },
+    {
+      "name": "webinar",
+      "url": "https://leemgs.github.io/webinar/",
+      "description": "Webinar Calendar",
+      "repo_url": "https://github.com/leemgs/webinar",
+      "pushed_at": "2026-09-05T00:55:06Z",
+      "updated_at": "2026-09-05T00:55:10Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-09-04T11:59:53Z",
-      "updated_at": "2026-09-04T12:01:28Z"
+      "pushed_at": "2026-09-04T23:44:54Z",
+      "updated_at": "2026-09-04T23:44:58Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-09-04T20:14:37Z",
+      "updated_at": "2026-09-04T20:14:40Z"
+    },
+    {
+      "name": "ai-usage",
+      "url": "https://leemgs.github.io/ai-usage/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/ai-usage",
+      "pushed_at": "2026-09-04T16:22:01Z",
+      "updated_at": "2026-09-04T16:22:05Z"
     },
     {
       "name": "github-projects",
@@ -34,14 +50,6 @@
       "repo_url": "https://github.com/leemgs/github-projects",
       "pushed_at": "2026-09-04T10:05:08Z",
       "updated_at": "2026-09-04T10:06:14Z"
-    },
-    {
-      "name": "ai-usage",
-      "url": "https://leemgs.github.io/ai-usage/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/ai-usage",
-      "pushed_at": "2026-09-04T09:57:24Z",
-      "updated_at": "2026-09-04T09:58:08Z"
     },
     {
       "name": "used-notifier",
@@ -58,14 +66,6 @@
       "repo_url": "https://github.com/leemgs/ai-society-lab",
       "pushed_at": "2026-09-04T09:52:39Z",
       "updated_at": "2026-09-04T09:58:15Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-09-03T20:38:24Z",
-      "updated_at": "2026-09-03T20:41:18Z"
     },
     {
       "name": "bucket-list",
