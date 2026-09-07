@@ -1,31 +1,39 @@
 {
-  "generated_at": "2026-09-07T02:43:08.003Z",
+  "generated_at": "2026-09-07T16:56:49.890Z",
   "owner": "leemgs",
-  "count": 20,
+  "count": 21,
   "projects": [
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-09-07T01:21:39Z",
-      "updated_at": "2026-09-07T01:21:43Z"
-    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-09-07T00:56:31Z",
-      "updated_at": "2026-09-07T00:56:35Z"
+      "pushed_at": "2026-09-07T16:26:16Z",
+      "updated_at": "2026-09-07T16:26:25Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-09-07T13:42:40Z",
+      "updated_at": "2026-09-07T13:43:11Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-09-06T23:30:11Z",
-      "updated_at": "2026-09-06T23:30:15Z"
+      "pushed_at": "2026-09-07T13:17:59Z",
+      "updated_at": "2026-09-07T13:19:09Z"
+    },
+    {
+      "name": "sage-mm",
+      "url": "https://leemgs.github.io/sage-mm/",
+      "description": "(for DTV) A Self‑Adaptive Controller with EWMA and online ridge‑regression schedulers",
+      "repo_url": "https://github.com/leemgs/sage-mm",
+      "pushed_at": "2026-09-07T13:09:38Z",
+      "updated_at": "2026-09-07T13:10:25Z"
     },
     {
       "name": "conference_kiise",
