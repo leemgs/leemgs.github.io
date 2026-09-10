@@ -1,23 +1,39 @@
 {
-  "generated_at": "2026-09-09T15:40:09.413Z",
+  "generated_at": "2026-09-10T02:56:10.388Z",
   "owner": "leemgs",
   "count": 21,
   "projects": [
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-09-10T01:33:25Z",
+      "updated_at": "2026-09-10T01:33:32Z"
+    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-09-09T15:11:16Z",
-      "updated_at": "2026-09-09T15:34:54Z"
+      "pushed_at": "2026-09-10T01:04:23Z",
+      "updated_at": "2026-09-10T01:04:29Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-09-09T14:54:32Z",
-      "updated_at": "2026-09-09T15:02:52Z"
+      "pushed_at": "2026-09-09T23:51:33Z",
+      "updated_at": "2026-09-09T23:51:39Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-09-09T20:27:33Z",
+      "updated_at": "2026-09-09T20:27:39Z"
     },
     {
       "name": "sage-mm",
@@ -26,22 +42,6 @@
       "repo_url": "https://github.com/leemgs/sage-mm",
       "pushed_at": "2026-09-09T13:40:03Z",
       "updated_at": "2026-09-09T13:43:55Z"
-    },
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-09-09T12:30:31Z",
-      "updated_at": "2026-09-09T12:34:18Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-09-08T20:43:08Z",
-      "updated_at": "2026-09-08T20:43:23Z"
     },
     {
       "name": "mymemo",
