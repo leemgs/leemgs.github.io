@@ -1,31 +1,47 @@
 {
-  "generated_at": "2026-09-11T02:50:40.651Z",
+  "generated_at": "2026-09-11T15:37:18.996Z",
   "owner": "leemgs",
   "count": 21,
   "projects": [
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-09-11T01:32:33Z",
-      "updated_at": "2026-09-11T01:32:36Z"
-    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-09-11T01:02:00Z",
-      "updated_at": "2026-09-11T01:02:03Z"
+      "pushed_at": "2026-09-11T14:59:37Z",
+      "updated_at": "2026-09-11T14:59:41Z"
+    },
+    {
+      "name": "sage-mm",
+      "url": "https://leemgs.github.io/sage-mm/",
+      "description": "(for DTV) A Self‑Adaptive Controller with EWMA and online ridge‑regression schedulers",
+      "repo_url": "https://github.com/leemgs/sage-mm",
+      "pushed_at": "2026-09-11T13:38:40Z",
+      "updated_at": "2026-09-11T13:38:44Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-09-11T12:22:05Z",
+      "updated_at": "2026-09-11T12:22:09Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-09-10T23:44:55Z",
-      "updated_at": "2026-09-10T23:44:59Z"
+      "pushed_at": "2026-09-11T12:02:20Z",
+      "updated_at": "2026-09-11T12:02:24Z"
+    },
+    {
+      "name": "github-projects",
+      "url": "https://leemgs.github.io/github-projects/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/github-projects",
+      "pushed_at": "2026-09-11T05:07:21Z",
+      "updated_at": "2026-09-11T05:07:23Z"
     },
     {
       "name": "conference_field",
@@ -42,14 +58,6 @@
       "repo_url": "https://github.com/leemgs/used-notifier",
       "pushed_at": "2026-09-10T12:41:42Z",
       "updated_at": "2026-09-10T12:44:01Z"
-    },
-    {
-      "name": "sage-mm",
-      "url": "https://leemgs.github.io/sage-mm/",
-      "description": "(for DTV) A Self‑Adaptive Controller with EWMA and online ridge‑regression schedulers",
-      "repo_url": "https://github.com/leemgs/sage-mm",
-      "pushed_at": "2026-09-10T12:33:56Z",
-      "updated_at": "2026-09-10T12:36:19Z"
     },
     {
       "name": "mymemo",
@@ -90,14 +98,6 @@
       "repo_url": "https://github.com/leemgs/ai-usage",
       "pushed_at": "2026-09-04T16:22:01Z",
       "updated_at": "2026-09-04T16:22:05Z"
-    },
-    {
-      "name": "github-projects",
-      "url": "https://leemgs.github.io/github-projects/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/github-projects",
-      "pushed_at": "2026-09-04T10:05:08Z",
-      "updated_at": "2026-09-04T10:06:14Z"
     },
     {
       "name": "ai-society-lab",
