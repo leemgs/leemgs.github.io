@@ -1,15 +1,39 @@
 {
-  "generated_at": "2026-09-10T15:35:32.669Z",
+  "generated_at": "2026-09-11T02:50:40.651Z",
   "owner": "leemgs",
   "count": 21,
   "projects": [
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-09-11T01:32:33Z",
+      "updated_at": "2026-09-11T01:32:36Z"
+    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-09-10T15:03:51Z",
-      "updated_at": "2026-09-10T15:13:47Z"
+      "pushed_at": "2026-09-11T01:02:00Z",
+      "updated_at": "2026-09-11T01:02:03Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-09-10T23:44:55Z",
+      "updated_at": "2026-09-10T23:44:59Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-09-10T20:23:18Z",
+      "updated_at": "2026-09-10T20:23:22Z"
     },
     {
       "name": "used-notifier",
@@ -28,14 +52,6 @@
       "updated_at": "2026-09-10T12:36:19Z"
     },
     {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-09-10T12:23:32Z",
-      "updated_at": "2026-09-10T12:24:49Z"
-    },
-    {
       "name": "mymemo",
       "url": "https://leemgs.github.io/mymemo/",
       "description": "My Memo",
@@ -44,28 +60,12 @@
       "updated_at": "2026-09-10T12:07:15Z"
     },
     {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-09-10T12:04:16Z",
-      "updated_at": "2026-09-10T12:04:48Z"
-    },
-    {
       "name": "with-people",
       "url": "https://leemgs.github.io/with-people/",
       "description": "Photo collection to archive memorable recollection in my life.",
       "repo_url": "https://github.com/leemgs/with-people",
       "pushed_at": "2026-09-10T10:59:52Z",
       "updated_at": "2026-09-10T11:00:47Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-09-09T20:27:33Z",
-      "updated_at": "2026-09-09T20:27:39Z"
     },
     {
       "name": "conference_kiise",
