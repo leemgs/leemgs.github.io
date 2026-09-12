@@ -1,31 +1,39 @@
 {
-  "generated_at": "2026-09-12T02:58:25.572Z",
+  "generated_at": "2026-09-12T14:43:12.462Z",
   "owner": "leemgs",
-  "count": 20,
+  "count": 21,
   "projects": [
     {
       "name": "stock-quant-trader-kis",
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-09-12T01:38:39Z",
-      "updated_at": "2026-09-12T01:38:42Z"
+      "pushed_at": "2026-09-12T14:25:22Z",
+      "updated_at": "2026-09-12T14:25:25Z"
+    },
+    {
+      "name": "sage-mm",
+      "url": "https://leemgs.github.io/sage-mm/",
+      "description": "(for DTV) A Self‑Adaptive Controller with EWMA and online ridge‑regression schedulers",
+      "repo_url": "https://github.com/leemgs/sage-mm",
+      "pushed_at": "2026-09-12T14:23:17Z",
+      "updated_at": "2026-09-12T14:23:20Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-09-12T01:07:34Z",
-      "updated_at": "2026-09-12T01:07:38Z"
+      "pushed_at": "2026-09-12T14:01:16Z",
+      "updated_at": "2026-09-12T14:01:20Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-09-11T23:54:02Z",
-      "updated_at": "2026-09-11T23:54:07Z"
+      "pushed_at": "2026-09-12T11:28:51Z",
+      "updated_at": "2026-09-12T11:28:54Z"
     },
     {
       "name": "conference_field",
