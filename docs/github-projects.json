@@ -1,31 +1,55 @@
 {
-  "generated_at": "2026-09-16T03:10:31.777Z",
+  "generated_at": "2026-09-16T15:51:28.442Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-09-16T01:47:40Z",
-      "updated_at": "2026-09-16T01:47:43Z"
-    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-09-16T01:24:13Z",
-      "updated_at": "2026-09-16T01:24:16Z"
+      "pushed_at": "2026-09-16T15:28:18Z",
+      "updated_at": "2026-09-16T15:28:21Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-09-16T12:51:52Z",
+      "updated_at": "2026-09-16T12:51:56Z"
+    },
+    {
+      "name": "weekend-farm",
+      "url": "https://leemgs.github.io/weekend-farm/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/weekend-farm",
+      "pushed_at": "2026-09-16T12:51:24Z",
+      "updated_at": "2026-09-16T12:51:34Z"
+    },
+    {
+      "name": "truthprint",
+      "url": "https://leemgs.github.io/truthprint/",
+      "description": "Truthprint for synth text approach",
+      "repo_url": "https://github.com/leemgs/truthprint",
+      "pushed_at": "2026-09-16T12:40:13Z",
+      "updated_at": "2026-09-16T12:40:17Z"
+    },
+    {
+      "name": "mymemo",
+      "url": "https://leemgs.github.io/mymemo/",
+      "description": "My Memo",
+      "repo_url": "https://github.com/leemgs/mymemo",
+      "pushed_at": "2026-09-16T12:32:24Z",
+      "updated_at": "2026-09-16T12:32:30Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-09-15T23:58:56Z",
-      "updated_at": "2026-09-15T23:58:59Z"
+      "pushed_at": "2026-09-16T12:26:14Z",
+      "updated_at": "2026-09-16T12:26:18Z"
     },
     {
       "name": "conference_field",
@@ -52,14 +76,6 @@
       "updated_at": "2026-09-13T12:37:28Z"
     },
     {
-      "name": "mymemo",
-      "url": "https://leemgs.github.io/mymemo/",
-      "description": "My Memo",
-      "repo_url": "https://github.com/leemgs/mymemo",
-      "pushed_at": "2026-09-13T11:19:38Z",
-      "updated_at": "2026-09-13T11:19:42Z"
-    },
-    {
       "name": "github-projects",
       "url": "https://leemgs.github.io/github-projects/",
       "description": "",
@@ -74,14 +90,6 @@
       "repo_url": "https://github.com/leemgs/with-people",
       "pushed_at": "2026-09-10T10:59:52Z",
       "updated_at": "2026-09-10T11:00:47Z"
-    },
-    {
-      "name": "weekend-farm",
-      "url": "https://leemgs.github.io/weekend-farm/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/weekend-farm",
-      "pushed_at": "2026-09-05T07:39:54Z",
-      "updated_at": "2026-09-05T07:39:58Z"
     },
     {
       "name": "ai-usage",
@@ -106,14 +114,6 @@
       "repo_url": "https://github.com/leemgs/bucket-list",
       "pushed_at": "2026-09-03T09:46:34Z",
       "updated_at": "2026-09-03T09:48:55Z"
-    },
-    {
-      "name": "truthprint",
-      "url": "https://leemgs.github.io/truthprint/",
-      "description": "Truthprint for synth text approach",
-      "repo_url": "https://github.com/leemgs/truthprint",
-      "pushed_at": "2026-08-29T06:27:59Z",
-      "updated_at": "2026-08-29T06:28:18Z"
     },
     {
       "name": "web-ssh",
