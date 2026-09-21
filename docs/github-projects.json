@@ -1,39 +1,47 @@
 {
-  "generated_at": "2026-09-20T15:10:51.621Z",
+  "generated_at": "2026-09-21T03:09:34.997Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
-    {
-      "name": "webinar",
-      "url": "https://leemgs.github.io/webinar/",
-      "description": "Webinar Calendar",
-      "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-09-20T14:41:49Z",
-      "updated_at": "2026-09-20T14:41:53Z"
-    },
     {
       "name": "stock-quant-trader-kis",
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-09-20T12:38:51Z",
-      "updated_at": "2026-09-20T12:38:54Z"
+      "pushed_at": "2026-09-21T01:46:30Z",
+      "updated_at": "2026-09-21T01:46:33Z"
+    },
+    {
+      "name": "webinar",
+      "url": "https://leemgs.github.io/webinar/",
+      "description": "Webinar Calendar",
+      "repo_url": "https://github.com/leemgs/webinar",
+      "pushed_at": "2026-09-21T01:05:08Z",
+      "updated_at": "2026-09-21T01:05:11Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-09-20T12:02:33Z",
-      "updated_at": "2026-09-20T12:02:36Z"
+      "pushed_at": "2026-09-20T23:53:08Z",
+      "updated_at": "2026-09-20T23:53:11Z"
+    },
+    {
+      "name": "conference_kiise",
+      "url": "https://leemgs.github.io/conference_kiise/",
+      "description": "Conference Schedule (by KIISE)",
+      "repo_url": "https://github.com/leemgs/conference_kiise",
+      "pushed_at": "2026-09-20T20:39:39Z",
+      "updated_at": "2026-09-20T20:39:43Z"
     },
     {
       "name": "conference_field",
       "url": "https://leemgs.github.io/conference_field/",
       "description": "Conference Calendar",
       "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-09-19T19:56:55Z",
-      "updated_at": "2026-09-19T19:56:59Z"
+      "pushed_at": "2026-09-20T20:11:50Z",
+      "updated_at": "2026-09-20T20:11:53Z"
     },
     {
       "name": "mymemo",
@@ -58,14 +66,6 @@
       "repo_url": "https://github.com/leemgs/weekend-farm",
       "pushed_at": "2026-09-17T03:35:25Z",
       "updated_at": "2026-09-17T03:35:29Z"
-    },
-    {
-      "name": "conference_kiise",
-      "url": "https://leemgs.github.io/conference_kiise/",
-      "description": "Conference Schedule (by KIISE)",
-      "repo_url": "https://github.com/leemgs/conference_kiise",
-      "pushed_at": "2026-09-13T20:38:18Z",
-      "updated_at": "2026-09-13T20:38:22Z"
     },
     {
       "name": "used-notifier",
