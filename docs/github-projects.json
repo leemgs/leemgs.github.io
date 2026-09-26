@@ -1,15 +1,39 @@
 {
-  "generated_at": "2026-09-25T16:13:55.141Z",
+  "generated_at": "2026-09-26T03:21:12.034Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-09-26T02:04:57Z",
+      "updated_at": "2026-09-26T02:05:01Z"
+    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-09-25T15:54:14Z",
-      "updated_at": "2026-09-25T15:54:18Z"
+      "pushed_at": "2026-09-26T01:33:29Z",
+      "updated_at": "2026-09-26T01:33:33Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-09-26T00:23:08Z",
+      "updated_at": "2026-09-26T00:23:11Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-09-25T21:03:02Z",
+      "updated_at": "2026-09-25T21:03:06Z"
     },
     {
       "name": "truthprint",
@@ -18,30 +42,6 @@
       "repo_url": "https://github.com/leemgs/truthprint",
       "pushed_at": "2026-09-25T13:47:37Z",
       "updated_at": "2026-09-25T13:47:41Z"
-    },
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-09-25T13:02:17Z",
-      "updated_at": "2026-09-25T13:02:21Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-09-25T12:35:03Z",
-      "updated_at": "2026-09-25T12:35:07Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-09-24T21:06:44Z",
-      "updated_at": "2026-09-24T21:06:48Z"
     },
     {
       "name": "used-notifier",
