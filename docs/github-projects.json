@@ -1,31 +1,39 @@
 {
-  "generated_at": "2026-09-29T04:02:42.592Z",
+  "generated_at": "2026-09-29T17:22:45.019Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-09-29T17:03:41Z",
+      "updated_at": "2026-09-29T17:03:50Z"
+    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-09-29T02:41:54Z",
-      "updated_at": "2026-09-29T02:41:57Z"
+      "pushed_at": "2026-09-29T16:56:08Z",
+      "updated_at": "2026-09-29T16:56:14Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-09-29T02:23:50Z",
-      "updated_at": "2026-09-29T02:23:54Z"
+      "pushed_at": "2026-09-29T13:45:53Z",
+      "updated_at": "2026-09-29T13:46:10Z"
     },
     {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-09-28T23:59:33Z",
-      "updated_at": "2026-09-28T23:59:36Z"
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-09-29T06:41:11Z",
+      "updated_at": "2026-09-29T06:41:16Z"
     },
     {
       "name": "conference_field",
@@ -42,14 +50,6 @@
       "repo_url": "https://github.com/leemgs/truthprint",
       "pushed_at": "2026-09-28T08:04:36Z",
       "updated_at": "2026-09-27T12:00:53Z"
-    },
-    {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-09-27T23:12:20Z",
-      "updated_at": "2026-09-27T23:12:25Z"
     },
     {
       "name": "conference_kiise",
