@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T03:57:47.586Z",
+  "generated_at": "2026-10-01T17:47:39.443Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
@@ -8,32 +8,32 @@
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-10-01T02:04:42Z",
-      "updated_at": "2026-10-01T02:04:45Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-10-01T01:41:21Z",
-      "updated_at": "2026-10-01T01:41:24Z"
-    },
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-10-01T00:52:20Z",
-      "updated_at": "2026-10-01T00:52:23Z"
+      "pushed_at": "2026-10-01T17:25:21Z",
+      "updated_at": "2026-10-01T17:25:25Z"
     },
     {
       "name": "truthprint",
       "url": "https://leemgs.github.io/truthprint/",
       "description": "Truthprint for synth text approach",
       "repo_url": "https://github.com/leemgs/truthprint",
-      "pushed_at": "2026-10-01T00:33:18Z",
-      "updated_at": "2026-10-01T00:33:23Z"
+      "pushed_at": "2026-10-01T16:02:49Z",
+      "updated_at": "2026-10-01T16:02:55Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-10-01T14:50:32Z",
+      "updated_at": "2026-10-01T14:50:39Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-10-01T14:12:19Z",
+      "updated_at": "2026-10-01T14:12:24Z"
     },
     {
       "name": "conference_field",
