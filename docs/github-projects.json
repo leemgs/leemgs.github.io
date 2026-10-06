@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T04:41:51.665Z",
+  "generated_at": "2026-10-06T17:40:34.672Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
@@ -8,24 +8,32 @@
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-10-06T03:23:04Z",
-      "updated_at": "2026-10-06T03:23:08Z"
+      "pushed_at": "2026-10-06T17:26:28Z",
+      "updated_at": "2026-10-06T17:26:34Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-10-06T02:57:58Z",
-      "updated_at": "2026-10-06T02:58:01Z"
+      "pushed_at": "2026-10-06T17:11:33Z",
+      "updated_at": "2026-10-06T17:11:37Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-10-06T02:05:28Z",
-      "updated_at": "2026-10-06T02:05:32Z"
+      "pushed_at": "2026-10-06T13:56:39Z",
+      "updated_at": "2026-10-06T13:56:44Z"
+    },
+    {
+      "name": "truthprint",
+      "url": "https://leemgs.github.io/truthprint/",
+      "description": "Truthprint for synth text approach",
+      "repo_url": "https://github.com/leemgs/truthprint",
+      "pushed_at": "2026-10-06T07:24:16Z",
+      "updated_at": "2026-10-06T07:24:21Z"
     },
     {
       "name": "conference_kiise",
@@ -42,14 +50,6 @@
       "repo_url": "https://github.com/leemgs/conference_field",
       "pushed_at": "2026-10-05T23:39:30Z",
       "updated_at": "2026-10-05T23:39:34Z"
-    },
-    {
-      "name": "truthprint",
-      "url": "https://leemgs.github.io/truthprint/",
-      "description": "Truthprint for synth text approach",
-      "repo_url": "https://github.com/leemgs/truthprint",
-      "pushed_at": "2026-10-05T07:00:40Z",
-      "updated_at": "2026-10-05T07:00:45Z"
     },
     {
       "name": "myoci",
