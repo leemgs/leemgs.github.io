@@ -1,8 +1,56 @@
 {
-  "generated_at": "2026-10-05T03:53:58.235Z",
+  "generated_at": "2026-10-06T04:41:51.665Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-10-06T03:23:04Z",
+      "updated_at": "2026-10-06T03:23:08Z"
+    },
+    {
+      "name": "webinar",
+      "url": "https://leemgs.github.io/webinar/",
+      "description": "Webinar Calendar",
+      "repo_url": "https://github.com/leemgs/webinar",
+      "pushed_at": "2026-10-06T02:57:58Z",
+      "updated_at": "2026-10-06T02:58:01Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-10-06T02:05:28Z",
+      "updated_at": "2026-10-06T02:05:32Z"
+    },
+    {
+      "name": "conference_kiise",
+      "url": "https://leemgs.github.io/conference_kiise/",
+      "description": "Conference Schedule (by KIISE)",
+      "repo_url": "https://github.com/leemgs/conference_kiise",
+      "pushed_at": "2026-10-06T01:09:11Z",
+      "updated_at": "2026-10-06T01:09:13Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-10-05T23:39:30Z",
+      "updated_at": "2026-10-05T23:39:34Z"
+    },
+    {
+      "name": "truthprint",
+      "url": "https://leemgs.github.io/truthprint/",
+      "description": "Truthprint for synth text approach",
+      "repo_url": "https://github.com/leemgs/truthprint",
+      "pushed_at": "2026-10-05T07:00:40Z",
+      "updated_at": "2026-10-05T07:00:45Z"
+    },
     {
       "name": "myoci",
       "url": "https://myoci.mooo.com/",
@@ -10,54 +58,6 @@
       "repo_url": "https://github.com/leemgs/myoci",
       "pushed_at": "2026-10-05T03:24:10Z",
       "updated_at": "2026-10-05T03:24:15Z"
-    },
-    {
-      "name": "webinar",
-      "url": "https://leemgs.github.io/webinar/",
-      "description": "Webinar Calendar",
-      "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-10-05T01:56:28Z",
-      "updated_at": "2026-10-05T01:56:31Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-10-05T00:27:38Z",
-      "updated_at": "2026-10-05T00:27:42Z"
-    },
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-10-05T00:14:54Z",
-      "updated_at": "2026-10-05T00:14:57Z"
-    },
-    {
-      "name": "conference_kiise",
-      "url": "https://leemgs.github.io/conference_kiise/",
-      "description": "Conference Schedule (by KIISE)",
-      "repo_url": "https://github.com/leemgs/conference_kiise",
-      "pushed_at": "2026-10-04T21:11:12Z",
-      "updated_at": "2026-10-04T21:11:15Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-10-04T20:51:01Z",
-      "updated_at": "2026-10-04T20:51:04Z"
-    },
-    {
-      "name": "truthprint",
-      "url": "https://leemgs.github.io/truthprint/",
-      "description": "Truthprint for synth text approach",
-      "repo_url": "https://github.com/leemgs/truthprint",
-      "pushed_at": "2026-10-04T14:30:47Z",
-      "updated_at": "2026-10-04T14:30:52Z"
     },
     {
       "name": "used-notifier",
