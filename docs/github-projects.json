@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T04:25:03.787Z",
+  "generated_at": "2026-10-09T17:47:33.571Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
@@ -8,24 +8,32 @@
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-10-09T03:10:35Z",
-      "updated_at": "2026-10-09T03:10:39Z"
+      "pushed_at": "2026-10-09T17:34:20Z",
+      "updated_at": "2026-10-09T17:34:24Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-10-09T03:00:34Z",
-      "updated_at": "2026-10-09T03:00:38Z"
+      "pushed_at": "2026-10-09T17:29:39Z",
+      "updated_at": "2026-10-09T17:29:43Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-10-09T01:46:11Z",
-      "updated_at": "2026-10-09T01:46:15Z"
+      "pushed_at": "2026-10-09T14:09:21Z",
+      "updated_at": "2026-10-09T14:09:26Z"
+    },
+    {
+      "name": "truthprint",
+      "url": "https://leemgs.github.io/truthprint/",
+      "description": "Truthprint for synth text approach",
+      "repo_url": "https://github.com/leemgs/truthprint",
+      "pushed_at": "2026-10-09T08:39:14Z",
+      "updated_at": "2026-10-09T08:39:19Z"
     },
     {
       "name": "conference_field",
@@ -50,14 +58,6 @@
       "repo_url": "https://github.com/leemgs/mymemo",
       "pushed_at": "2026-10-08T01:45:39Z",
       "updated_at": "2026-10-08T01:45:43Z"
-    },
-    {
-      "name": "truthprint",
-      "url": "https://leemgs.github.io/truthprint/",
-      "description": "Truthprint for synth text approach",
-      "repo_url": "https://github.com/leemgs/truthprint",
-      "pushed_at": "2026-10-06T07:24:16Z",
-      "updated_at": "2026-10-06T07:24:21Z"
     },
     {
       "name": "conference_kiise",
