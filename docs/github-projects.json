@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-10-13T05:19:04.871Z",
+  "generated_at": "2026-10-13T18:42:47.247Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-10-13T04:28:55Z",
-      "updated_at": "2026-10-13T04:29:00Z"
-    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-10-13T03:35:39Z",
-      "updated_at": "2026-10-13T03:35:42Z"
+      "pushed_at": "2026-10-13T18:08:04Z",
+      "updated_at": "2026-10-13T18:08:09Z"
     },
     {
       "name": "stock-quant-trader-kis",
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-10-13T01:39:12Z",
-      "updated_at": "2026-10-13T01:39:15Z"
+      "pushed_at": "2026-10-13T17:10:46Z",
+      "updated_at": "2026-10-13T17:10:50Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-10-13T14:49:16Z",
+      "updated_at": "2026-10-13T14:50:17Z"
     },
     {
       "name": "conference_field",
