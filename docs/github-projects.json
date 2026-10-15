@@ -1,31 +1,39 @@
 {
-  "generated_at": "2026-10-15T03:02:27.537Z",
+  "generated_at": "2026-10-15T16:02:42.223Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-10-15T01:55:42Z",
-      "updated_at": "2026-10-15T01:55:46Z"
-    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-10-15T01:31:33Z",
-      "updated_at": "2026-10-15T01:31:37Z"
+      "pushed_at": "2026-10-15T15:40:39Z",
+      "updated_at": "2026-10-15T15:40:44Z"
+    },
+    {
+      "name": "with-people",
+      "url": "https://leemgs.github.io/with-people/",
+      "description": "Photo collection to archive memorable recollection in my life.",
+      "repo_url": "https://github.com/leemgs/with-people",
+      "pushed_at": "2026-10-15T14:47:28Z",
+      "updated_at": "2026-10-15T14:47:33Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-10-15T12:53:30Z",
+      "updated_at": "2026-10-15T12:53:34Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-10-15T01:05:20Z",
-      "updated_at": "2026-10-15T01:05:23Z"
+      "pushed_at": "2026-10-15T12:28:34Z",
+      "updated_at": "2026-10-15T12:28:38Z"
     },
     {
       "name": "conference_field",
@@ -90,14 +98,6 @@
       "repo_url": "https://github.com/leemgs/github-projects",
       "pushed_at": "2026-09-11T05:07:21Z",
       "updated_at": "2026-09-11T05:07:23Z"
-    },
-    {
-      "name": "with-people",
-      "url": "https://leemgs.github.io/with-people/",
-      "description": "Photo collection to archive memorable recollection in my life.",
-      "repo_url": "https://github.com/leemgs/with-people",
-      "pushed_at": "2026-09-10T10:59:52Z",
-      "updated_at": "2026-09-10T11:00:47Z"
     },
     {
       "name": "ai-usage",
