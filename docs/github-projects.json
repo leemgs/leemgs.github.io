@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-10-19T03:06:32.623Z",
+  "generated_at": "2026-10-19T18:03:24.667Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
     {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-10-19T01:53:46Z",
-      "updated_at": "2026-10-19T01:53:49Z"
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-10-19T17:56:41Z",
+      "updated_at": "2026-10-19T17:56:46Z"
     },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-10-19T01:12:27Z",
-      "updated_at": "2026-10-19T01:12:31Z"
+      "pushed_at": "2026-10-19T17:30:57Z",
+      "updated_at": "2026-10-19T17:31:01Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-10-19T15:01:45Z",
+      "updated_at": "2026-10-19T15:01:50Z"
     },
     {
       "name": "truthprint",
       "url": "https://leemgs.github.io/truthprint/",
       "description": "Truthprint for synth text approach",
       "repo_url": "https://github.com/leemgs/truthprint",
-      "pushed_at": "2026-10-19T00:24:04Z",
-      "updated_at": "2026-10-19T00:24:08Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-10-18T23:56:11Z",
-      "updated_at": "2026-10-18T23:56:15Z"
+      "pushed_at": "2026-10-19T05:55:13Z",
+      "updated_at": "2026-10-19T05:55:17Z"
     },
     {
       "name": "conference_kiise",
