@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-10-23T03:14:33.480Z",
+  "generated_at": "2026-10-23T16:11:40.254Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
     {
-      "name": "truthprint",
-      "url": "https://leemgs.github.io/truthprint/",
-      "description": "Truthprint for synth text approach",
-      "repo_url": "https://github.com/leemgs/truthprint",
-      "pushed_at": "2026-10-23T02:41:18Z",
-      "updated_at": "2026-10-23T02:41:22Z"
+      "name": "webinar",
+      "url": "https://leemgs.github.io/webinar/",
+      "description": "Webinar Calendar",
+      "repo_url": "https://github.com/leemgs/webinar",
+      "pushed_at": "2026-10-23T15:49:51Z",
+      "updated_at": "2026-10-23T15:49:55Z"
     },
     {
       "name": "stock-quant-trader-kis",
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-10-23T02:03:36Z",
-      "updated_at": "2026-10-23T02:03:40Z"
-    },
-    {
-      "name": "webinar",
-      "url": "https://leemgs.github.io/webinar/",
-      "description": "Webinar Calendar",
-      "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-10-23T01:31:33Z",
-      "updated_at": "2026-10-23T01:31:37Z"
+      "pushed_at": "2026-10-23T14:29:09Z",
+      "updated_at": "2026-10-23T14:29:13Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-10-23T01:05:45Z",
-      "updated_at": "2026-10-23T01:05:48Z"
+      "pushed_at": "2026-10-23T12:26:27Z",
+      "updated_at": "2026-10-23T12:26:31Z"
+    },
+    {
+      "name": "truthprint",
+      "url": "https://leemgs.github.io/truthprint/",
+      "description": "Truthprint for synth text approach",
+      "repo_url": "https://github.com/leemgs/truthprint",
+      "pushed_at": "2026-10-23T09:41:13Z",
+      "updated_at": "2026-10-23T09:41:17Z"
     },
     {
       "name": "conference_field",
