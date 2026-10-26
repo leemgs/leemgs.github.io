@@ -1,47 +1,47 @@
 {
-  "generated_at": "2026-10-26T03:02:46.093Z",
+  "generated_at": "2026-10-26T18:00:41.665Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-10-26T01:51:23Z",
-      "updated_at": "2026-10-26T01:51:26Z"
-    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar (Action Runner: Self-hosted)",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-10-26T01:16:21Z",
-      "updated_at": "2026-10-26T01:16:24Z"
+      "pushed_at": "2026-10-26T17:21:10Z",
+      "updated_at": "2026-10-26T17:21:15Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-10-26T14:35:55Z",
+      "updated_at": "2026-10-26T14:35:59Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-10-25T23:50:30Z",
-      "updated_at": "2026-10-25T23:50:33Z"
+      "pushed_at": "2026-10-26T13:55:49Z",
+      "updated_at": "2026-10-26T13:55:54Z"
     },
     {
       "name": "truthprint",
       "url": "https://leemgs.github.io/truthprint/",
       "description": "Truthprint for synth text approach",
       "repo_url": "https://github.com/leemgs/truthprint",
-      "pushed_at": "2026-10-25T23:21:32Z",
-      "updated_at": "2026-10-25T23:21:37Z"
+      "pushed_at": "2026-10-26T11:23:52Z",
+      "updated_at": "2026-10-26T11:20:21Z"
     },
     {
       "name": "conference_kiise",
       "url": "https://leemgs.github.io/conference_kiise/",
       "description": "Conference Schedule (by KIISE)",
       "repo_url": "https://github.com/leemgs/conference_kiise",
-      "pushed_at": "2026-10-25T20:41:32Z",
-      "updated_at": "2026-10-25T20:41:36Z"
+      "pushed_at": "2026-10-26T07:16:32Z",
+      "updated_at": "2026-10-26T07:16:36Z"
     },
     {
       "name": "conference_field",
