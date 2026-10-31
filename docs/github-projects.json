@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T17:32:10.031Z",
+  "generated_at": "2026-10-31T03:55:30.856Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
@@ -8,24 +8,32 @@
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar (Action Runner: Self-hosted)",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-10-30T17:09:49Z",
-      "updated_at": "2026-10-30T17:09:54Z"
+      "pushed_at": "2026-10-31T02:24:43Z",
+      "updated_at": "2026-10-31T02:24:46Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-10-30T16:52:02Z",
-      "updated_at": "2026-10-30T16:52:07Z"
+      "pushed_at": "2026-10-31T01:26:39Z",
+      "updated_at": "2026-10-31T01:26:42Z"
     },
     {
       "name": "stock-quant-trader-kis",
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-10-30T14:36:37Z",
-      "updated_at": "2026-10-30T14:36:41Z"
+      "pushed_at": "2026-10-31T01:07:08Z",
+      "updated_at": "2026-10-31T01:07:12Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-10-30T21:54:58Z",
+      "updated_at": "2026-10-30T21:55:01Z"
     },
     {
       "name": "truthprint",
@@ -34,14 +42,6 @@
       "repo_url": "https://github.com/leemgs/truthprint",
       "pushed_at": "2026-10-29T23:14:22Z",
       "updated_at": "2026-10-29T23:10:55Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-10-29T22:19:37Z",
-      "updated_at": "2026-10-29T22:19:41Z"
     },
     {
       "name": "conference_kiise",
