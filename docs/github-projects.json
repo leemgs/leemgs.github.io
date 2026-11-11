@@ -1,30 +1,14 @@
 {
-  "generated_at": "2026-11-11T04:32:57.744Z",
+  "generated_at": "2026-11-11T19:04:14.079Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
-    {
-      "name": "truthprint",
-      "url": "https://leemgs.github.io/truthprint/",
-      "description": "Truthprint for synth text approach",
-      "repo_url": "https://github.com/leemgs/truthprint",
-      "pushed_at": "2026-11-11T03:37:19Z",
-      "updated_at": "2026-11-10T14:08:54Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-11-11T03:35:39Z",
-      "updated_at": "2026-11-11T02:43:53Z"
-    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar (Action Runner: Self-hosted)",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-11-11T02:52:51Z",
+      "pushed_at": "2026-11-11T18:37:34Z",
       "updated_at": "2026-11-11T03:52:54Z"
     },
     {
@@ -32,8 +16,32 @@
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-11-11T00:15:57Z",
-      "updated_at": "2026-11-11T01:16:00Z"
+      "pushed_at": "2026-11-11T17:29:40Z",
+      "updated_at": "2026-11-11T18:29:44Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-11-11T15:57:16Z",
+      "updated_at": "2026-11-11T16:57:21Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-11-11T14:55:58Z",
+      "updated_at": "2026-11-11T15:56:02Z"
+    },
+    {
+      "name": "truthprint",
+      "url": "https://leemgs.github.io/truthprint/",
+      "description": "Truthprint for synth text approach",
+      "repo_url": "https://github.com/leemgs/truthprint",
+      "pushed_at": "2026-11-11T03:37:19Z",
+      "updated_at": "2026-11-11T04:37:23Z"
     },
     {
       "name": "conference_field",
@@ -42,14 +50,6 @@
       "repo_url": "https://github.com/leemgs/conference_field",
       "pushed_at": "2026-11-10T22:46:19Z",
       "updated_at": "2026-11-10T23:46:22Z"
-    },
-    {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-11-10T19:58:05Z",
-      "updated_at": "2026-11-10T21:54:30Z"
     },
     {
       "name": "conference_kiise",
