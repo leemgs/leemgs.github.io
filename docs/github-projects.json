@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T04:48:16.756Z",
+  "generated_at": "2026-11-14T17:30:55.951Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
@@ -8,24 +8,32 @@
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar (Action Runner: Self-hosted)",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-11-14T03:12:49Z",
+      "pushed_at": "2026-11-14T17:05:04Z",
       "updated_at": "2026-11-12T04:55:56Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-11-14T01:59:13Z",
-      "updated_at": "2026-11-12T16:47:36Z"
     },
     {
       "name": "stock-quant-trader-kis",
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-11-14T00:30:08Z",
+      "pushed_at": "2026-11-14T16:10:24Z",
       "updated_at": "2026-11-12T15:01:24Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-11-14T13:58:00Z",
+      "updated_at": "2026-11-12T16:47:36Z"
+    },
+    {
+      "name": "truthprint",
+      "url": "https://leemgs.github.io/truthprint/",
+      "description": "Truthprint for synth text approach",
+      "repo_url": "https://github.com/leemgs/truthprint",
+      "pushed_at": "2026-11-14T07:51:01Z",
+      "updated_at": "2026-11-11T04:37:23Z"
     },
     {
       "name": "conference_field",
@@ -42,14 +50,6 @@
       "repo_url": "https://github.com/leemgs/used-notifier",
       "pushed_at": "2026-11-13T17:01:49Z",
       "updated_at": "2026-11-11T16:57:21Z"
-    },
-    {
-      "name": "truthprint",
-      "url": "https://leemgs.github.io/truthprint/",
-      "description": "Truthprint for synth text approach",
-      "repo_url": "https://github.com/leemgs/truthprint",
-      "pushed_at": "2026-11-11T03:37:19Z",
-      "updated_at": "2026-11-11T04:37:23Z"
     },
     {
       "name": "conference_kiise",
