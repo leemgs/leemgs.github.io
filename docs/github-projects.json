@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T04:40:21.312Z",
+  "generated_at": "2026-11-15T18:18:45.676Z",
   "owner": "leemgs",
   "count": 20,
   "projects": [
@@ -8,23 +8,15 @@
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar (Action Runner: Self-hosted)",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-11-15T02:42:05Z",
+      "pushed_at": "2026-11-15T17:48:53Z",
       "updated_at": "2026-11-12T04:55:56Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-11-15T01:31:17Z",
-      "updated_at": "2026-11-12T16:47:36Z"
     },
     {
       "name": "stock-quant-trader-kis",
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-11-15T01:21:22Z",
+      "pushed_at": "2026-11-15T16:39:21Z",
       "updated_at": "2026-11-12T15:01:24Z"
     },
     {
@@ -32,8 +24,16 @@
       "url": "https://leemgs.github.io/used-notifier/",
       "description": "Carrot maket product notifier",
       "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-11-15T01:13:06Z",
+      "pushed_at": "2026-11-15T15:48:23Z",
       "updated_at": "2026-11-11T16:57:21Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-11-15T14:32:05Z",
+      "updated_at": "2026-11-12T16:47:36Z"
     },
     {
       "name": "conference_field",
