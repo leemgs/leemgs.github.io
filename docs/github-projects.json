@@ -1,38 +1,54 @@
 {
-  "generated_at": "2026-11-16T04:36:40.921Z",
+  "generated_at": "2026-11-16T21:28:29.815Z",
   "owner": "leemgs",
-  "count": 20,
+  "count": 21,
   "projects": [
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-11-16T03:17:17Z",
-      "updated_at": "2026-11-12T15:01:24Z"
-    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar (Action Runner: Self-hosted)",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-11-16T02:52:07Z",
+      "pushed_at": "2026-11-16T21:02:48Z",
       "updated_at": "2026-11-12T04:55:56Z"
+    },
+    {
+      "name": "samsung-substandard",
+      "url": "https://leemgs.github.io/samsung-substandard/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/samsung-substandard",
+      "pushed_at": "2026-11-16T18:46:26Z",
+      "updated_at": "2026-11-16T04:54:12Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-11-16T18:08:18Z",
+      "updated_at": "2026-11-11T16:57:21Z"
     },
     {
       "name": "stock-alert",
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-11-16T01:35:22Z",
+      "pushed_at": "2026-11-16T16:46:27Z",
       "updated_at": "2026-11-12T16:47:36Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-11-16T12:07:32Z",
+      "updated_at": "2026-11-12T15:01:24Z"
     },
     {
       "name": "conference_kiise",
       "url": "https://leemgs.github.io/conference_kiise/",
       "description": "Conference Schedule (by KIISE)",
       "repo_url": "https://github.com/leemgs/conference_kiise",
-      "pushed_at": "2026-11-15T22:42:04Z",
+      "pushed_at": "2026-11-16T09:53:07Z",
       "updated_at": "2026-11-08T21:55:09Z"
     },
     {
@@ -42,14 +58,6 @@
       "repo_url": "https://github.com/leemgs/conference_field",
       "pushed_at": "2026-11-15T22:24:57Z",
       "updated_at": "2026-11-12T00:58:46Z"
-    },
-    {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-11-15T15:48:23Z",
-      "updated_at": "2026-11-11T16:57:21Z"
     },
     {
       "name": "truthprint",
