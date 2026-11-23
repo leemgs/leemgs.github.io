@@ -1,55 +1,79 @@
 {
-  "generated_at": "2026-11-23T05:35:50.869Z",
+  "generated_at": "2026-11-23T23:08:47.407Z",
   "owner": "leemgs",
   "count": 22,
   "projects": [
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-11-23T04:07:29Z",
-      "updated_at": "2026-11-12T15:01:24Z"
-    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar (Action Runner: Self-hosted)",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-11-23T03:50:41Z",
+      "pushed_at": "2026-11-23T22:40:43Z",
       "updated_at": "2026-11-12T04:55:56Z"
-    },
-    {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-11-23T02:59:16Z",
-      "updated_at": "2026-11-11T16:57:21Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-11-23T02:39:25Z",
-      "updated_at": "2026-11-12T16:47:36Z"
     },
     {
       "name": "weekend-farm",
       "url": "https://leemgs.github.io/weekend-farm/",
       "description": "",
       "repo_url": "https://github.com/leemgs/weekend-farm",
-      "pushed_at": "2026-11-23T02:39:22Z",
+      "pushed_at": "2026-11-23T22:24:04Z",
       "updated_at": "2026-09-26T13:48:43Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-11-23T18:59:46Z",
+      "updated_at": "2026-11-12T16:47:36Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-11-23T16:33:23Z",
+      "updated_at": "2026-11-12T15:01:24Z"
+    },
+    {
+      "name": "samsung-substandard",
+      "url": "https://leemgs.github.io/samsung-substandard/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/samsung-substandard",
+      "pushed_at": "2026-11-23T14:32:06Z",
+      "updated_at": "2026-11-16T23:06:36Z"
     },
     {
       "name": "conference_kiise",
       "url": "https://leemgs.github.io/conference_kiise/",
       "description": "Conference Schedule (by KIISE)",
       "repo_url": "https://github.com/leemgs/conference_kiise",
-      "pushed_at": "2026-11-22T23:29:22Z",
+      "pushed_at": "2026-11-23T12:02:11Z",
       "updated_at": "2026-11-08T21:55:09Z"
+    },
+    {
+      "name": "mymemo",
+      "url": "https://leemgs.github.io/mymemo/",
+      "description": "My Memo",
+      "repo_url": "https://github.com/leemgs/mymemo",
+      "pushed_at": "2026-11-23T07:59:51Z",
+      "updated_at": "2026-10-08T01:45:43Z"
+    },
+    {
+      "name": "bucket-list",
+      "url": "https://leemgs.github.io/bucket-list/",
+      "description": "Bucket List",
+      "repo_url": "https://github.com/leemgs/bucket-list",
+      "pushed_at": "2026-11-23T07:55:16Z",
+      "updated_at": "2026-09-03T09:48:55Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-11-23T07:54:35Z",
+      "updated_at": "2026-11-11T16:57:21Z"
     },
     {
       "name": "conference_field",
@@ -66,14 +90,6 @@
       "repo_url": "https://github.com/leemgs/semmelweis-pharm",
       "pushed_at": "2026-11-22T12:52:12Z",
       "updated_at": "2026-08-24T23:10:51Z"
-    },
-    {
-      "name": "samsung-substandard",
-      "url": "https://leemgs.github.io/samsung-substandard/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/samsung-substandard",
-      "pushed_at": "2026-11-22T12:32:51Z",
-      "updated_at": "2026-11-16T23:06:36Z"
     },
     {
       "name": "climate-radar",
@@ -98,14 +114,6 @@
       "repo_url": "https://github.com/leemgs/with-people",
       "pushed_at": "2026-10-15T14:47:28Z",
       "updated_at": "2026-10-15T14:47:33Z"
-    },
-    {
-      "name": "mymemo",
-      "url": "https://leemgs.github.io/mymemo/",
-      "description": "My Memo",
-      "repo_url": "https://github.com/leemgs/mymemo",
-      "pushed_at": "2026-10-08T01:45:39Z",
-      "updated_at": "2026-10-08T01:45:43Z"
     },
     {
       "name": "myoci",
@@ -138,14 +146,6 @@
       "repo_url": "https://github.com/leemgs/ai-society-lab",
       "pushed_at": "2026-09-04T09:52:39Z",
       "updated_at": "2026-09-04T09:58:15Z"
-    },
-    {
-      "name": "bucket-list",
-      "url": "https://leemgs.github.io/bucket-list/",
-      "description": "Bucket List",
-      "repo_url": "https://github.com/leemgs/bucket-list",
-      "pushed_at": "2026-09-03T09:46:34Z",
-      "updated_at": "2026-09-03T09:48:55Z"
     },
     {
       "name": "web-ssh",
