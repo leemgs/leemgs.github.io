@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-24T08:14:35.784Z",
+  "generated_at": "2026-11-24T21:47:19.929Z",
   "owner": "leemgs",
-  "count": 22,
+  "count": 23,
   "projects": [
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar (Action Runner: Self-hosted)",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-11-24T07:06:22Z",
+      "pushed_at": "2026-11-24T21:13:35Z",
       "updated_at": "2026-11-12T04:55:56Z"
     },
     {
@@ -16,8 +16,48 @@
       "url": "https://leemgs.github.io/stock-alert/",
       "description": "Stock Alert to catch min/max price of specified stocks in realtime",
       "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-11-24T05:45:11Z",
+      "pushed_at": "2026-11-24T18:39:48Z",
       "updated_at": "2026-11-12T16:47:36Z"
+    },
+    {
+      "name": "samsung-substandard",
+      "url": "https://leemgs.github.io/samsung-substandard/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/samsung-substandard",
+      "pushed_at": "2026-11-24T14:50:27Z",
+      "updated_at": "2026-11-16T23:06:36Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-11-24T14:19:54Z",
+      "updated_at": "2026-11-12T15:01:24Z"
+    },
+    {
+      "name": "pension",
+      "url": "https://leemgs.github.io/pension/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/pension",
+      "pushed_at": "2026-11-24T12:53:30Z",
+      "updated_at": "2026-11-24T12:29:57Z"
+    },
+    {
+      "name": "climate-radar",
+      "url": "https://leemgs.github.io/climate-radar/",
+      "description": "Climate Radar:This repository provides a lightweight, fully reproducible reference implementation of the Climate RADAR pipeline",
+      "repo_url": "https://github.com/leemgs/climate-radar",
+      "pushed_at": "2026-11-24T12:33:42Z",
+      "updated_at": "2026-11-13T11:40:02Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-11-24T10:17:52Z",
+      "updated_at": "2026-11-11T16:57:21Z"
     },
     {
       "name": "conference_field",
@@ -28,28 +68,12 @@
       "updated_at": "2026-11-12T00:58:46Z"
     },
     {
-      "name": "climate-radar",
-      "url": "https://leemgs.github.io/climate-radar/",
-      "description": "Climate Radar:This repository provides a lightweight, fully reproducible reference implementation of the Climate RADAR pipeline",
-      "repo_url": "https://github.com/leemgs/climate-radar",
-      "pushed_at": "2026-11-24T03:35:35Z",
-      "updated_at": "2026-11-13T11:40:02Z"
-    },
-    {
       "name": "semmelweis-pharm",
       "url": "https://leemgs.github.io/semmelweis-pharm/",
       "description": "",
       "repo_url": "https://github.com/leemgs/semmelweis-pharm",
       "pushed_at": "2026-11-24T03:34:34Z",
       "updated_at": "2026-08-24T23:10:51Z"
-    },
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-11-24T03:29:11Z",
-      "updated_at": "2026-11-12T15:01:24Z"
     },
     {
       "name": "conference_kiise",
@@ -68,14 +92,6 @@
       "updated_at": "2026-09-26T13:48:43Z"
     },
     {
-      "name": "samsung-substandard",
-      "url": "https://leemgs.github.io/samsung-substandard/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/samsung-substandard",
-      "pushed_at": "2026-11-23T14:32:06Z",
-      "updated_at": "2026-11-16T23:06:36Z"
-    },
-    {
       "name": "mymemo",
       "url": "https://leemgs.github.io/mymemo/",
       "description": "My Memo",
@@ -90,14 +106,6 @@
       "repo_url": "https://github.com/leemgs/bucket-list",
       "pushed_at": "2026-11-23T07:55:16Z",
       "updated_at": "2026-09-03T09:48:55Z"
-    },
-    {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-11-23T07:54:35Z",
-      "updated_at": "2026-11-11T16:57:21Z"
     },
     {
       "name": "truthprint",
