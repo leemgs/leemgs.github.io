@@ -1,8 +1,40 @@
 {
-  "generated_at": "2026-11-26T06:42:30.254Z",
+  "generated_at": "2026-11-26T20:45:31.488Z",
   "owner": "leemgs",
   "count": 23,
   "projects": [
+    {
+      "name": "webinar",
+      "url": "https://leemgs.github.io/webinar/",
+      "description": "Webinar Calendar (Action Runner: Self-hosted)",
+      "repo_url": "https://github.com/leemgs/webinar",
+      "pushed_at": "2026-11-26T20:13:06Z",
+      "updated_at": "2026-11-12T04:55:56Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-11-26T17:32:25Z",
+      "updated_at": "2026-11-12T16:47:36Z"
+    },
+    {
+      "name": "samsung-substandard",
+      "url": "https://leemgs.github.io/samsung-substandard/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/samsung-substandard",
+      "pushed_at": "2026-11-26T13:51:36Z",
+      "updated_at": "2026-11-16T23:06:36Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-11-26T13:15:36Z",
+      "updated_at": "2026-11-12T15:01:24Z"
+    },
     {
       "name": "used-notifier",
       "url": "https://leemgs.github.io/used-notifier/",
@@ -12,44 +44,12 @@
       "updated_at": "2026-11-11T16:57:21Z"
     },
     {
-      "name": "webinar",
-      "url": "https://leemgs.github.io/webinar/",
-      "description": "Webinar Calendar (Action Runner: Self-hosted)",
-      "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-11-26T05:04:33Z",
-      "updated_at": "2026-11-12T04:55:56Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-11-26T03:58:22Z",
-      "updated_at": "2026-11-12T16:47:36Z"
-    },
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-11-26T03:48:28Z",
-      "updated_at": "2026-11-12T15:01:24Z"
-    },
-    {
       "name": "conference_field",
       "url": "https://leemgs.github.io/conference_field/",
       "description": "Conference Calendar",
       "repo_url": "https://github.com/leemgs/conference_field",
       "pushed_at": "2026-11-26T01:28:13Z",
       "updated_at": "2026-11-12T00:58:46Z"
-    },
-    {
-      "name": "samsung-substandard",
-      "url": "https://leemgs.github.io/samsung-substandard/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/samsung-substandard",
-      "pushed_at": "2026-11-25T14:17:02Z",
-      "updated_at": "2026-11-16T23:06:36Z"
     },
     {
       "name": "pension",
