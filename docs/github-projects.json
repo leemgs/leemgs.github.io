@@ -1,23 +1,39 @@
 {
-  "generated_at": "2026-11-27T06:33:37.812Z",
+  "generated_at": "2026-11-27T20:30:23.253Z",
   "owner": "leemgs",
   "count": 23,
   "projects": [
-    {
-      "name": "stock-quant-trader-kis",
-      "url": "http://leemgs.mooo.com:8501/",
-      "description": "KIS-based Stock Quant Trader 🚀",
-      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-11-27T05:27:34Z",
-      "updated_at": "2026-11-12T15:01:24Z"
-    },
     {
       "name": "webinar",
       "url": "https://leemgs.github.io/webinar/",
       "description": "Webinar Calendar (Action Runner: Self-hosted)",
       "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-11-27T05:08:00Z",
+      "pushed_at": "2026-11-27T20:03:03Z",
       "updated_at": "2026-11-12T04:55:56Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-11-27T17:15:11Z",
+      "updated_at": "2026-11-12T16:47:36Z"
+    },
+    {
+      "name": "stock-quant-trader-kis",
+      "url": "http://leemgs.mooo.com:8501/",
+      "description": "KIS-based Stock Quant Trader 🚀",
+      "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
+      "pushed_at": "2026-11-27T15:39:38Z",
+      "updated_at": "2026-11-12T15:01:24Z"
+    },
+    {
+      "name": "samsung-substandard",
+      "url": "https://leemgs.github.io/samsung-substandard/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/samsung-substandard",
+      "pushed_at": "2026-11-27T13:49:27Z",
+      "updated_at": "2026-11-16T23:06:36Z"
     },
     {
       "name": "climate-radar",
@@ -26,14 +42,6 @@
       "repo_url": "https://github.com/leemgs/climate-radar",
       "pushed_at": "2026-11-27T05:00:25Z",
       "updated_at": "2026-11-13T11:40:02Z"
-    },
-    {
-      "name": "samsung-substandard",
-      "url": "https://leemgs.github.io/samsung-substandard/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/samsung-substandard",
-      "pushed_at": "2026-11-27T04:51:16Z",
-      "updated_at": "2026-11-16T23:06:36Z"
     },
     {
       "name": "used-notifier",
@@ -50,14 +58,6 @@
       "repo_url": "https://github.com/leemgs/pension",
       "pushed_at": "2026-11-27T04:43:31Z",
       "updated_at": "2026-11-24T12:29:57Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-11-27T03:56:55Z",
-      "updated_at": "2026-11-12T16:47:36Z"
     },
     {
       "name": "conference_field",
