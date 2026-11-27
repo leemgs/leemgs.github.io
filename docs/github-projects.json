@@ -1,71 +1,71 @@
 {
-  "generated_at": "2026-11-26T20:45:31.488Z",
+  "generated_at": "2026-11-27T06:33:37.812Z",
   "owner": "leemgs",
   "count": 23,
   "projects": [
-    {
-      "name": "webinar",
-      "url": "https://leemgs.github.io/webinar/",
-      "description": "Webinar Calendar (Action Runner: Self-hosted)",
-      "repo_url": "https://github.com/leemgs/webinar",
-      "pushed_at": "2026-11-26T20:13:06Z",
-      "updated_at": "2026-11-12T04:55:56Z"
-    },
-    {
-      "name": "stock-alert",
-      "url": "https://leemgs.github.io/stock-alert/",
-      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
-      "repo_url": "https://github.com/leemgs/stock-alert",
-      "pushed_at": "2026-11-26T17:32:25Z",
-      "updated_at": "2026-11-12T16:47:36Z"
-    },
-    {
-      "name": "samsung-substandard",
-      "url": "https://leemgs.github.io/samsung-substandard/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/samsung-substandard",
-      "pushed_at": "2026-11-26T13:51:36Z",
-      "updated_at": "2026-11-16T23:06:36Z"
-    },
     {
       "name": "stock-quant-trader-kis",
       "url": "http://leemgs.mooo.com:8501/",
       "description": "KIS-based Stock Quant Trader 🚀",
       "repo_url": "https://github.com/leemgs/stock-quant-trader-kis",
-      "pushed_at": "2026-11-26T13:15:36Z",
+      "pushed_at": "2026-11-27T05:27:34Z",
       "updated_at": "2026-11-12T15:01:24Z"
     },
     {
-      "name": "used-notifier",
-      "url": "https://leemgs.github.io/used-notifier/",
-      "description": "Carrot maket product notifier",
-      "repo_url": "https://github.com/leemgs/used-notifier",
-      "pushed_at": "2026-11-26T05:20:14Z",
-      "updated_at": "2026-11-11T16:57:21Z"
-    },
-    {
-      "name": "conference_field",
-      "url": "https://leemgs.github.io/conference_field/",
-      "description": "Conference Calendar",
-      "repo_url": "https://github.com/leemgs/conference_field",
-      "pushed_at": "2026-11-26T01:28:13Z",
-      "updated_at": "2026-11-12T00:58:46Z"
-    },
-    {
-      "name": "pension",
-      "url": "https://leemgs.github.io/pension/",
-      "description": "",
-      "repo_url": "https://github.com/leemgs/pension",
-      "pushed_at": "2026-11-24T22:46:35Z",
-      "updated_at": "2026-11-24T12:29:57Z"
+      "name": "webinar",
+      "url": "https://leemgs.github.io/webinar/",
+      "description": "Webinar Calendar (Action Runner: Self-hosted)",
+      "repo_url": "https://github.com/leemgs/webinar",
+      "pushed_at": "2026-11-27T05:08:00Z",
+      "updated_at": "2026-11-12T04:55:56Z"
     },
     {
       "name": "climate-radar",
       "url": "https://leemgs.github.io/climate-radar/",
       "description": "Climate Radar:This repository provides a lightweight, fully reproducible reference implementation of the Climate RADAR pipeline",
       "repo_url": "https://github.com/leemgs/climate-radar",
-      "pushed_at": "2026-11-24T12:33:42Z",
+      "pushed_at": "2026-11-27T05:00:25Z",
       "updated_at": "2026-11-13T11:40:02Z"
+    },
+    {
+      "name": "samsung-substandard",
+      "url": "https://leemgs.github.io/samsung-substandard/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/samsung-substandard",
+      "pushed_at": "2026-11-27T04:51:16Z",
+      "updated_at": "2026-11-16T23:06:36Z"
+    },
+    {
+      "name": "used-notifier",
+      "url": "https://leemgs.github.io/used-notifier/",
+      "description": "Carrot maket product notifier",
+      "repo_url": "https://github.com/leemgs/used-notifier",
+      "pushed_at": "2026-11-27T04:50:35Z",
+      "updated_at": "2026-11-11T16:57:21Z"
+    },
+    {
+      "name": "pension",
+      "url": "https://leemgs.github.io/pension/",
+      "description": "",
+      "repo_url": "https://github.com/leemgs/pension",
+      "pushed_at": "2026-11-27T04:43:31Z",
+      "updated_at": "2026-11-24T12:29:57Z"
+    },
+    {
+      "name": "stock-alert",
+      "url": "https://leemgs.github.io/stock-alert/",
+      "description": "Stock Alert to catch min/max price of specified stocks in realtime",
+      "repo_url": "https://github.com/leemgs/stock-alert",
+      "pushed_at": "2026-11-27T03:56:55Z",
+      "updated_at": "2026-11-12T16:47:36Z"
+    },
+    {
+      "name": "conference_field",
+      "url": "https://leemgs.github.io/conference_field/",
+      "description": "Conference Calendar",
+      "repo_url": "https://github.com/leemgs/conference_field",
+      "pushed_at": "2026-11-27T01:25:56Z",
+      "updated_at": "2026-11-12T00:58:46Z"
     },
     {
       "name": "semmelweis-pharm",
